@@ -1,0 +1,292 @@
+\chapter{Axioma del supremo (axioma de completitud)}
+\begin{tcolorbox}
+\begin{def.}[Definición de extremo superior (Supremo)]
+Un número $B$ se denomina extremo superior o supremo de un conjunto no vacío $S$ si $B$ tiene las dos propiedades siguientes:
+\begin{enumerate}[\bfseries a)]
+\item $B$ es una cota superior de $S$.
+$$ x\leq B,\;\; \forall x \in S $$
+\item Ningún número menor que $B$ es cota superior para $S$.
+$$Si \; t  \in \mathbb{R}, \; cumple \; x \leq t \; \; para \; todo \; x \in S, \; entonces \; B \leq t$$
+\end{enumerate}
+Se designa por $B = supS$.
+\end{def.}
+\begin{def.}[Definición de extremo inferior (Ínfimo)]
+Un número $L$ se llama extremo inferior (o ínfimo) de $S$ si:
+\begin{enumerate}[\bfseries a)]
+\item $L$ es una cota inferior para $S$,
+$$L\leq x, \, \, \forall x \in S$$
+\item Ningún número mayor que $L$ es cota inferior para $S$.
+$$Si \; t\leq x, \, \; \forall x \in S, \, \, entonces \, t\leq L $$
+\end{enumerate}
+El extremo inferior de $S$, cuando existe, es único y se designa por $infS$. Si $S$ posee mínimo, entonces $minS=infS$\\
+\end{def.}
+\end{tcolorbox}
+
+%teorema 3.1
+\begin{teo}
+Dos números distintos no pueden ser extremos superiores para el mismo conjunto.\\\\
+Demostración.- \; Sean $B$ y $C$ dos extremos superiores para un conjunto $S$. La propiedad $b)$ de la definición 3.1 implica que $C\geq B$ puesto que $B$ es extremo superior; análogamente, $B \geq C$ ya que $C$ es extremo superior. Luego $B = C$ \\\\
+\end{teo}
+
+\begin{tcolorbox}
+\begin{axioma}
+Todo conjunto no vacío $S$ de números reales acotado superiormente posee extremo superior; esto es, existe un número real $B$ tal que $B=supS$.\\
+\end{axioma}
+\end{tcolorbox}
+
+%teorema 3.2
+\begin{teo}
+Todo conjunto no vacío $S$ acotado inferiormente posee extremo inferior  o ínfimo; esto es, existe un número real $L$ tal que $L=infS$.\\\\
+Demostración.- \; Sea $-S$ el conjunto de los números opuestos de los de $S$. Entonces $-S$ es no vacío y acotado superiormente. El axioma 10 nos dice que existe un número $B$ que es extremo superior de $-S$. Es fácil ver que $-B=infS$.\\\\
+\end{teo}
+
+\section*{Propiedad Arquimediana del sistema de los números reales}
+%teorema 3.3
+\begin{teo}
+El conjunto $P$ de los enteros positivos 1,2,3,... no está acotado superiormente.\\\\
+Demostración.- \; Supóngase $P$ acotado superiormente. Demostraremos que esto nos conduce a una contradicción. Puesto que P no es vacío, el axioma 10 nos dice que $P$ tiene supremo, sea este $b$. El número $b-1$, siendo menor que $b$, no puede ser cota superior de $P$. Por b) de la definición 3.1 existe $n>b-1$ es decir $b-1 \in P, \; b-1<b \; \; \exists n \in P:\; b-1<n$. Para este $n$ tenemos $n+1>b$. Puesto que $n+1$ pertenece a $P$, esto contradice el que $b$ sea una cota superior para $P$. \\\\
+\end{teo}
+
+%teorema 3.4
+\begin{teo}
+Para cada real $x$ existe un entero positivo $n$ tal que $n>x$\\\\
+Demostración.- \; Si no fuera así, $x$ sería una cota superior de $P$, en contradicción con el teorema 3.3.\\\\
+\end{teo}
+
+%teorema 3.5
+\begin{teo}
+Si $x>0$ e $y$ es un número real arbitrario, existe un entero positivo $n$ tal que $nx>y$\\\\
+Demostración.- \; Aplicar teorema 3.4 cambiando $x$ por $y/x$.\\\\
+\end{teo}
+
+%teorema 3.6 
+\begin{teo}
+Si tres números reales $a$, $x$, e $y$ satisfacen las desigualdades $a\leq x \leq a+\displaystyle\frac{y}{n}$ para todo entero $n \geq 1$, entonces $x=a$\\\\
+Demostración.- \; Si $x>a$, el teorema 3.5 nos menciona que existe un entero positivo que satisface $n(x-a)>y$, en contradicción de la hipótesis, luego $x>a$ no satisface para todo número real $x$ y $a$, con lo que deberá ser $x=a$.\\\\
+\end{teo} 
+
+\section*{Propiedades fundamentales del extremo superior ó supremo}
+%teorema 3.7
+\begin{teo}
+Sea $h$ un número positivo dado y $S$ un conjunto de números reales.
+\begin{enumerate}[\bfseries a)]
+\item Si $S$ tiene extremo superior o supremo, para un cierto $x$ de $S$ se tiene 
+$$x>supS-h$$
+Demostración.- \; Si es $x\leq supS -h$ para todo $x$ de $S$, entonces $supS-h$ sería una cota superior de $S$ menor que su supremo. Por consiguiente debe ser $x>supS-h$ por lo menos para un $x$ de $S$.
+\item Si $S$ tiene extremo inferior o ínfimo, para un cierto $x$ de $S$ se tiene 
+$$x<infS+h$$
+Demostración.- \; Si es $x \geq supS+h$ para todo $x$ de $S$, entonces $supS+h$ sería una cota inferior de $S$ mayor que su ínfimo. Por consiguiente debe ser $x<supS+h$ por lo menos para un $x$ de $S$.
+\end{enumerate}
+\end{teo}
+
+%teorema 3.8
+\begin{teo}[Propiedad aditiva]
+Dados dos subconjuntos no vacíos $A$ y $B$ de $\mathbb{R}$, sea $C$ el conjunto
+$$C=\lbrace a+b / a\in A, \; b \in B   \rbrace$$
+\begin{enumerate}[\bfseries a)]
+\item Si $A$ y $B$ poseen supremo, entonces $C$ tiene supremo, y 
+$$supC= supA + supB$$
+Demostración.- \; Supongamos que $A$ y $B$ tengan supremo. Si $c \in C$, entonces $c=a+b$, donde $a\in A$ y $b\in B.$ Por consiguiente $c \leq supA +supB$; de modo que $supA + supB$ es una cota superior de $C$. esto demuestra por el axioma 10 que $C$ tiene supremo y que 
+$$supC \leq supA + supB$$
+Sea ahora $n$ un entero positivo cualquiera. Según el teorema 3.7 $\left( con \; h=1/n \right)$ existen un $a$ en $A$ y un $b$ en $B$ tales que:
+$$a>supA - \displaystyle\frac{1}{n} \; y \; b>supB -\frac{1}{n}$$
+Sumando estas desigualdades, se obtiene 
+$$a+b>supA +supB -\displaystyle\frac{2}{n}, \; \; ó  \; \; supA + supB < a+b+\frac{2}{n} \leq supC +\frac{2}{n}$$
+puesto que $a+b \leq supC.$ Por consiguiente hemos demostrado que
+$$supC \leq supA + supB < supC + \displaystyle\frac{2}{n}$$
+para todo entero $n \geq 1.$ En virtud del teorema 3.6, debe ser $supC = supA+supB.$ Esto demuestra $a)$\\
+\item Si $A$ y $B$ tienen ínfimo, entonces $C$ tiene ínfimo, e
+$$infC = infA+ infB$$ 
+Demostración.- \; Supongamos que $A$ y $B$ tengan ínfimo. Si $c \in C$, entonces $c=a+b$, donde $a\in A$ y $b\in B.$ Por consiguiente $c \geq infA +infB$; de modo que $infA + infB$ es una cota inferior de $C$. esto demuestra por el axioma 10 que $C$ tiene ínfimo y que 
+$$infC \geq infA + infB$$
+Sea ahora $n$ un entero positivo cualquiera. Según el teorema 3.7 $\left( con \; h=1/n \right)$ existen un $a$ en $A$ y un $b$ en $B$ tales que:
+$$a<infA + \displaystyle\frac{1}{n} \;\;  y \; \; b<infB + \frac{1}{n}$$
+Sumando estas desigualdades, se obtiene 
+$$a+b<infA +infB +\displaystyle\frac{2}{n}, \; \; ó \; \;  infA+infB \leq infC \leq a+b < infA+infB + \displaystyle\frac{2}{n} $$
+puesto que $a+b \geq infC$ Por consiguiente hemos demostrado que
+$$infA+ infB \leq infC <infA + infB + \displaystyle\frac{2}{n}$$
+para todo entero $n \geq 1.$ En virtud del teorema 3.6, debe ser $supA+supB = infC.$ Esto demuestra $b)$\\\\
+\end{enumerate}
+\end{teo}
+
+%teorema 3.9
+\begin{teo}
+Dados dos subconjuntos no vacíos $S$ y $T$ de $\mathbb{R}$ tales que $$s\leq t$$ para todo $s$ en $S$ y todo $t$ en $T$. Entonces $S$ tiene supremo, $T$ ínfimo, y se verifica $$supS\leq infT$$\\\\
+Demostración.- \; Cada $t$ de $T$ es corta superior para $S$. Por consiguiente $S$ tiene supremo que satisface la desigualdad $supS\leq T$ para todo $t$ de $S$. Luego $supS$ es una cota inferior de $T$, con lo cual $T$ tiene ínfimo que no puede ser menor que $supS$. Dicho de otro modo, se tiene $supS\leq infT$, como se afirmó.\\\\
+\end{teo}
+
+\section*{Ejercicios y demostraciones}
+\subsection[Demostraciones]{Demostraciones\footnote{Tom Apostol Vol 1, pag. 34-35}}
+%teorema 3.10
+\begin{teo}
+Si $x$ e $y$ son números reales cualesquiera, $x<y$, demostrar que existe por lo menos un número real $z$ tal que $x<z<y$\\\\
+Demostración.- \; Sea $S$ un conjunto no vacío de $\mathbb{R}$, por axioma 10 se tiene un supremo llamemosle $z$, por definición $x\leq z$ para todo $x\in S$, ahora si $y\in \mathbb{R}$ \; que cumple $x\leq y$, para todo $x\in S$, entonces $z\leq y$, por lo tanto $x\leq z \leq y$ esto  nos muestra que existe por lo menos un número real que cumple la condición $x<z<y$. \\\\
+\end{teo}
+
+%teorema 3.11
+\begin{teo}
+Si x es un número real arbitrario, probar que existen enteros $m$ y $n$ tales que $m<x<n$\\\\
+Demostración.- \;  Sea $n\in \mathbb{Z}^+$ en virtud del axioma 5 se verifica $n+m=0$, donde $m$ es el opuesto de $n$, esto nos dice que $m<n$ y por teorema anterior se tiene $m<x<n$.\\\\
+\end{teo}
+
+%teorema 3.12
+\begin{teo}
+Si $x>0$, demuestre que existe un entero positivo $n$ tal que $1/n<x$\\\\
+Demostración.- \; Sea $y=1$ entonces por teorema 3.5 \; $nx>1$, por lo tanto $1/n<x$ \\\\
+\end{teo}
+
+%teorema 3.13
+\begin{teo}
+Si $x$ es un número real arbitrario, demostrar que existe un entero $n$ único que verifica las desigualdades $n\leq x < n+1$. Este $n$ se denomina la parte entera de $x$, se delega por $[x]$. Por ejemplo, $[5]=5,\; \left[ \frac{5}{2}\right] =2, \; \left[ -\frac{8}{2} \right]=-3$\\\\
+Demostración.-\; Primero probemos la existencia de $n$,
+\begin{itemize}
+\item  Sea $1\leq a $  \; y  \; $\; S=\lbrace m \in \mathbb{N}/\; m \leq a \rbrace$\\ 
+Vemos que $S$ es no vacío pues contiene a 1, y \; $a$ \; es un cota superior de $S$, luego por axioma del supremo, existe un número $s=supS$, entonces por teorema 3.7 \; con $h=1$ resulta:
+$$n>s-1 \; \; ó \; \; s<n+1, \; \; para \; algún n \; de \; S \; \; \; (1) $$
+Como $z \in S$, se cumple $z\leq a$ y solo falta probar que $a<z+1$. En efecto, si fuese $z+1\leq a$, entonces $n+1 \in S$ y por la propiedad a), se tendría $n+1\leq s$, en contradicción con (1).   \\
+Por tanto, el número entero positivo $n$ cumple con $n\leq a < n+1$
+\item $0\leq a < 1$\\
+En este caso, el entero $n=0$ cumple con la propiedad requerida.
+\item $a<0$
+Entonces $-a>0$ \; y por los dos casos anteriores, existe un entero u tal que $u\leq a< u+1$ de donde $-u-1<a\leq -u$.\\
+Definiendo $n$ por  
+\begin{equation}
+n = \left\lbrace
+\begin{array}{lcr}
+-u-1 & si & a<-u\\
+\textup{si } & x\leq 5 & a=-u
+\end{array}        
+\right.
+\end{equation}
+se prueba fácilmente que $z\leq a < z+1$
+\end{itemize}
+Luego demostramos la unicidad. Sea $w$ y $z$ dos números enteros tal que, $w\leq a < w + 1$ y $z \leq a < z + 1$ debemos probar que $w=z$. Si fuesen distintos, podemos suponer que $z<w$. Entonces $w-z\geq 1$, esto es $z+1\leq w$, y de $a<z+1\leq w \leq a$ resulta una contradicción ya que $a<a$ luego se cumple que $w=z$. \\\\ 
+\end{teo}
+
+%teorema 3.14
+\begin{teo}
+Si $a$ e $b$ son números reales arbitrarios, $a<b$, probar que existe por l menos un número racional $r$ tal que $a<r<b$ y deducir de ello que existen infinitos. Esta propiedad se expresa diciendo que el conjunto de los números racionales es denso en el sistema de los números reales.\\\\
+Demostración.- \, Por la propiedad arquimediana, para el número $\displaystyle\frac{1}{b-a}$ existe un número natural $d$ tal que $\displaystyle\frac{1}{b-a}$, de donde 
+$$db-da>1 \; \; ó \; \, da+1<da \; \, \, (1)$$
+y también si $z$=parte entera de $da$
+$$z\leq da < z+1 \, \, \, (2)$$
+Sea $q=\displaystyle\frac{n}{d}$, con $n=z+1$. Entonces $q$ es un número racional y cumple $x<q<y$ pues:
+$$a= d\displaystyle\frac{a}{d} < \frac{z+1}{d}<q=\frac{z+1}{d}\leq \frac{da+1}{d}<d\frac{b}{d}=b$$. y por ser $\displaystyle\frac{z+1}{d}$ deducimos que existen infinitos números racionales entre $a$ e $b$\\\\
+\end{teo}
+
+%teorema 3.15
+\begin{teo}
+Si $x$ es racional, $x\neq 0$, e y es irracional, demostrar que $x+y$, $x-y$, $xy$, $x/y$, son todos irracionales.
+\begin{itemize}
+\item $x+y$, \, $x-y$\\
+Supongamos que la suma nos da un racional, es decir $\displaystyle\frac{q}{p}+y=\frac{s}{t}\; para \; s,t\neq 0$, por lo tanto $y = \displaystyle\frac{qt+sp}{tp}$, así llegamos a una contradicción, en virtud del axioma 7 (la suma y multiplicación de dos racionales nos da otros racionales).\\
+$x-y$ Se puede comprobar de similar manera a la anterior demostración.\\
+\item $xy$, \, $x/y$, \; $y/x$\\
+Supongamos que el producto nos da un número racional, por lo tanto $\frac{p}{q}\cdot y = \displaystyle\frac{t}{s}$ para $q,s \neq 0$ y $ \displaystyle y = \frac{sq}{pt}$ en contradicción con la hipótesis. De igual manera se comprueba que $x/y$ es irracional.\\\\
+\end{itemize}
+\end{teo}
+
+%teorema 3.16
+\begin{teo}
+¿La suma o el producto de dos números irracionales es siempre irracional?\\\\
+Demostración.- \, No siempre se cumple la proposición, veamos dos contra ejemplos.\\
+Sea $a$ un número irracional entonces por teorema anterior $1-a$ es irracional, así $a+(1-a)=1$, sabiendo que $1\in \mathbb{R}$. Por otro lado sabemos que $\displaystyle\frac{1}{a}$ es irracional, por lo tanto $1\in \mathbb{R}$.\\\\
+\end{teo}	
+
+%teorema 3.17
+\begin{teo}
+Si $x$ e $y$ son números reales cualesquiera, $x<y$, demostrar que existe por lo menos un número irracional $z$ tal que $x<z<y$ y deducir que existen infinitos\\\\
+Demostración.- \; Sea $0<x<y$ e $i$ un número irracional, por propiedad arquimediana  $y-x>\displaystyle\frac{i}{n}$ \; ó \; $\displaystyle x+ \frac{i}{n}<y$. \\\\
+por teorema 3.15 \; se tiene que $\dfrac{i}{n}$ es irracional llamemosle $z$ por lo tanto  $x+z>x$, luego existe $x<z<y$. Y de $\dfrac{i}{n}$  deducimos que existen infinitos números irracionales que cumplen la condición.\\\\
+\end{teo}
+
+%teorema 3.18
+\begin{teo}
+Un entero $n$ se llama par si $n=2m$ para un cierto entero $m$, e impar si $n+1$ es par demostrar las afirmaciones siguientes:
+\begin{enumerate}[\bfseries a)]
+\item Un entero no puede ser a la vez par e impar.\\\\
+Demostración.- \; Sean $2k$ y $2i+1$ dos enteros par e impar a la vez  entonces $2k=2i+1$ ó  $(k-i)=\dfrac{1}{2}$  lo cual no es cierto, ya que la resta de dos números pares siempre da par, por lo tanto es par o es impar pero no los dos al mismo tiempo.\\
+\item Todo entero es par o es impar.\\\\
+Demostración.- \; Por inciso a) \; $2k\neq 2k-1$ para $k\in \mathbb{Z}$, por la tricotomía ó $2k < 2k-1$ ó $2k > 2k-1$ lo cual se cumple pero no ambos a la vez.\\  
+\item La suma o el producto de dos enteros pares es par. ¿ Qué se puede decir acerca de la suma o del producto de dos enteros impares ?\\\\
+Demostración.- \; Sea $k\in \mathbb{R}$ entonces $2k+2k=4k=2(2k)$. Luego para el producto $2k\cdot 2k = 4k^2=2(2k^2)$\\
+Por otra parte $(2k-1)+(2k-1)=4k-2=2(2k-1)$. No pasa lo mismo para el producto ya que  $(2k-1)(2k-1)=2k^2-4k+1=2(2k^2-2k)+1$\\\\
+\item Si $n^2$ es par, también lo es $n$. Si $a^2=2b^2$, siendo $a$ y $b$ enteros, entonces $a$ y $b$ son ambos pares.\\\\
+Demostración.- \;  Si $n$ es impar entonces $n^2$ es impar, reciprocamente hablando, entonces sea $n^2=(2k-1)^2$ para $k\in \mathbb{R}$, por lo tanto $2(2k^2+4k)-1$ es impar.\\
+Por otro lado, sea $a=2k$, $b=2k-1$ '; y \; $k\in \mathbb{Z}$ entonces $(2k)^2=2(2k-1)^2$, por lo tanto $k=\dfrac{1}{2}$, esto contradice $k\in \mathbb{Z}$.\\
+\item Todo número racional puede expresarse en la forma $a/b$, donde $a$ y $b$ enteros, uno de los cuales por lo menos es impar.\\\\
+demostración.- \;  \textcolor{green}{Por demostrar xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+\end{enumerate}
+\end{teo}
+
+%teorema 3.19
+\begin{teo}
+Demostrar que no existe número racional cuyo cuadrado sea 2.\\\\
+Demostración.- \; Utilizaremos el método de reducción al absurdo. Supongamos que n es impar, es decir, $n=2k+1\; k \in \mathbb{Z}$, ahora operando:
+$$n^2=(2k+1)^2 \Rightarrow  n^2 = 4k^2 +4k + 1 \Rightarrow n^2=2(2k^2+2k)+1$$
+Sabemos que $2k^2+2k$ es un número entero cualquiera, por lo tanto podemos realizar un cambio de variable, $2k^2+2k = k^{'}$, entonces:
+$$n^2=2k^{'} +1$$
+Se tiene una contradicción ya por teorema anterior se de dijo que $n^2$ es par, por lo tanto queda demostrado la proposición.  
+Ahora si estamos con la facultad de demostrar que  $\sqrt{2}$ es irracional.\\
+Supongamos que $\sqrt{2}$ es racional, es decir, existen números enteros tales que:
+$$\displaystyle\frac{p}{q}=\sqrt{2}$$
+Supongamos también que $p$ y $q$ no tienen divisor común mas que el 1. Se tiene:
+$$p^2=2q^2$$
+Esto nos muestra que $p^2$ es par y  por la previa demostración tenemos que $p$ es par. En otras palabras $p = 2k, \; \forall k \in \mathbb{Z}$, entonces:
+$$(2k)^2 = 2q^2 \Rightarrow 4k^2 = 2q2 \Rightarrow 2k^2 = q^2 $$
+Esto demuestra que $q^2$ es par y en consecuencia que $q$ es par. Así pues, son pares tanto $p$ como $q$ en contradicción con el hecho de que $p$ y $q$ no tienen divisores comunes. Esta contradicción completa la demostración.\\\\
+\end{teo}
+
+%teorema 3.20
+\begin{teo}
+La propiedad arquimediana del sistema de números reales se dedujo como consecuencia del axioma del supremo. Demostrar que el conjunto de los números racionales satisface la propiedad arquimediana pero no la del supremo. Esto demuestra que la propiedad arquimediana no implica el axioma del supremo.\\\\
+Demostración.- \; Está claro que que el conjunto de los racionales satisface la propiedad arquimediana ya que si $x=\dfrac{p}{q}$ e $y=\dfrac{s}{t}$ para $q,\; t \neq 0$ entonces $\dfrac{p}{q}\cdot n>\dfrac{s}{t}$.\\
+Por otra parte sea $S$ el conjunto de todos los racionales y supongase que esta acotado superiormente, por axioma 10 se tiene supremo, llamemosle $B$, entonces $x\leq B, \; \; x \in S$, luego existe $t\in \mathbb{R}$ tal que $B\leq t$, así por teorema 3.14 \; $B<x<t$,  esto contradice que $B$ sea supremo.\\\\ 
+\end{teo}
+
+
+   
+\section{Existencia de raíces cuadradas de los números reales no negativos}
+\paragraph{Nota}
+Los números negativos no pueden tener raíces cuadradas, pues si $x^2=a$, al ser $a$ un cuadrado ha de ser no negativo (en virtud del teorema 2.5). Además, si $a=0$, $x=0$ es la única raíz cuadrada (por el teorema 1.11). Supóngase, pues $a>0$. Si $x^2=a$ entonces $x\leq 0$ y $(-x)^2=a$, por lo tanto, $x$ y su opuesto son ambos raíces cuadradas. Pero a lo sumo tiene dos, porque si $x^2=a$ e $y^2=a$, entonces $x^2=y^2$ \; y \; $(x+y)(x-y)=0$, en virtud del teorema 1.11, \; ó $x=y$ ó $x=-y$. Por lo tanto, si $a$ tiene raíces cuadradas, tiene exactamente dos.
+\begin{tcolorbox}
+\begin{def.}
+Si $a\geq 0$, su raíz cuadrada no negativa se indicará por $a^{1/2}$ o por $\sqrt{a}$. Si $a>0$, la raíz cuadrada negativa es $-a^{1/2}$ ó $-\sqrt{a}$
+\end{def.}
+\end{tcolorbox}
+\begin{teo}
+Cada número real no negativo $a$ tiene una raíz cuadrada no negativa única.\\\\
+Demostración.- \; Si $a=0$, entonces $0$ es la única raíz cuadrada. Supóngase pues que $a>0$. Sea $S$ el conjunto de todos los números reales positivos $x$ tales que $x^2\leq a$. Puesto que $(1+a)^2>a$, el número $(a+1)$ es una cota superior de $S$. Pero, $S$ es no vacío, pues $a/(1+a)$ pertenece a $S$; en efecto $a^2\leq a(1+a)^2$ y por lo tanto $a^2/(1+a)^2\leq a$. En virtud del axioma 10, $S$ tiene un supremo que se designa por $b$. Nótese que $b\geq a/(1+a)$ y por lo tanto $b>0$. Existen sólo tres posibilidades: $b^2>a$, $b^2<a$, $b^2=a$.\\
+Supóngase $b^2>a$ y sea $c=b-(b^2-a)/(2b)/(2b)=\dfrac{1}{2}(b+a/b)$. Entonces $a<c<b$ \; y \; $c^2=b^2-(b^2-a)+(b^2-a)^2/4b^2=a+(b^2-a)^2/(4b^2)>a$. Por lo tanto, $c^2>x^2$ para todo $x \in S$, es decir, $c>x$ para cada $x \in S$; luego $c$ es una cota superior de $S$, y puesto que $c<b$ se tiene una contradicción con el hecho de ser $b$ el extremo superior de $S$. Por tanto, la desigualdad $b^2>a$ es imposible.\\
+Supóngase $b^2<a$. Puesto que $b>0$ se puede elegir un número positivo $c$ tal que $c<b$ y tal que $c<(a-b^2)7(3b). Se tiene entonecs$ $$(b+c)^2=b^2+c(2b+c)< b^2 +3bc < b^2 + (a-b^2)=a$$ es decir, $b+c$ pertenece a $S$. Como $b+c>b,$ esta desigualdad está en contradicción con que $b$ sea una cota superior de $S$. Por lo tanto, la desigualdad $b^2<a$ es imposible y sólo queda como posible $b^2=a$\\\\
+\end{teo}
+ 
+\section{Raíces de orden superior. Potencias racionales}
+El axioma del extremo superior se puede utilizar también para probar la existencia de raíces de orden superior. Por ejemplo, si $n$ es un entero positivo impar, para cada real $x$ existe un número real $y$, y uno sólo tal que $x^n=x$. Esta $y$ se denomina raíz n-sima de $x$ y se indica por:
+\begin{tcolorbox}
+\begin{def.}
+$$y=x^{\frac{1}{n}} \; \; ó \; \; y=\sqrt[n]{x}$$
+\end{def.}
+\end{tcolorbox}
+Si $n$ es par, la situación es un poco distinta. En este caso, si $x$ es negativo, no existe un número real $y$ tal que $y^n = x$, puesto que $y^n\geq 0$ para cada número real $y$. Sin embargo, si $x$ es positivo, se puede probar que existe un número positivo y sólo uno tal que $y^n = x$. Este $y$ se denomina la raíz n-sima positiva de $x$ y se indica por los símbolos anteriormente mencionados. Puesto que $n$ es par, $(-y)^n = y^n$ y, por tanto, cada $x > 0$ tiene dos raíces n-simas reales, $y$ e $-y$. Sin embargo, los símbolos $x^{\frac{1}{n}}$ y $\sqrt[n]{x}$; se reservan para la raíz n-sima positiva.\\
+\begin{tcolorbox}
+\begin{def.}
+Si $r$ es un número racional positivo, sea $r = m/n$, donde $m$ y $n$ son enteros positivos, se define como: $$x^r= x^{m/n }=(x^m)^{\frac{1}{n}},$$ es decir como raíz n-sima de $x^m$, siempre que ésta exista.\\ 
+\end{def.}
+\begin{def.}  
+Si $x\neq 0$, se define $$x^{-r} = \dfrac{1}{x^r},$$ con tal que $x^r$ esté definida.
+\end{def.}
+\end{tcolorbox}
+ Partiendo de esas definiciones, es fácil comprobar que las leyes usuales de los exponentes son válidas para exponentes racionales: 
+\begin{tcolorbox}
+\begin{prop} Propiedades de potencia.\\
+\begin{center}
+\begin{enumerate}[\bfseries 1.]
+\item $x^r \cdot x^s =  x^{r+s}$
+\item $(x^r)^s=x^{rs}$
+\item $(xy)^r=x^r \cdot y^r$
+\item $\left( \dfrac{x}{y} \right)^r=\dfrac{x^r}{y^r}$
+\end{enumerate}
+\end{center}
+\end{prop}
+\end{tcolorbox}

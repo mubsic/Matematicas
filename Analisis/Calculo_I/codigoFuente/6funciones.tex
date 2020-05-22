@@ -1,0 +1,73 @@
+\chapter{Funciones}
+\begin{tcolorbox}
+\begin{def.}
+Si $f$ \; y \; $g$ son dos funciones cualesquiera, podemos definir una nueva función $f+g$ denominada \textbf{suma} de $f+g$ mediante la ecuación:
+$$(f+g)(x)=f(x)+g(x)$$
+Para el conjunto de todos los $x$ que están a la vez en el dominio de $f$ y en el dominio de $g$, es decir: $$dominio \; (f+g)=dominio \; f \; \cap \; dominio \; g$$\\
+\end{def.}
+\begin{def.}
+El dominio de $f \cdot g$ es $dominio \; f \cap \; dominio \; g$ $$(f \cdot g)(x)=f(x)\cdot g(x)$$\\
+\end{def.}
+\begin{def.} Se expresa por dominio $f$ $\cap$ dominio $g$ $\cap$ ${x:g(x)\neq 0}$
+$$\left( \dfrac{f}{g}\right) (x)=\dfrac{f(x)}{g(x)}$$ \\
+\end{def.}
+\begin{def.}[Función constante]
+$$(c \cdot g)(x)=c \cdot g(x)$$\\
+\end{def.}
+\end{tcolorbox}
+
+\begin{teo}
+$(f+g)+h=f+(g+h)$\\\\
+Demostración.- \; \textbf{La demostración es característica de casi todas las demostraciones que prueban que dos funciones son iguales: se debe hacer ver que las dos funciones tienen el mismo dominio y el mismo valor para cualquier número del dominio.} Observese que al interpretar la definición de cada lado se obtiene:
+\begin{center}
+\begin{tabular}{r c l}
+$\left[ (f+g) + h \right](x)$&=&$(f+g)(x)+h(x)$\\
+&=&$\left[ f(x) +g(x) \right] +h(x)$\\\\
+&y&\\\\
+$\left[ f+(g+h) \right](x)$&=&$f(x)+(g+h)(x)$\\
+&=&$f(x)+\left[ g(x)+h(x) \right]$\\\\
+\end{tabular}
+\end{center}
+Es esta demostración no se ha mencionado la igualdad de los dos dominios porque esta igualdad parece obvia desde el momento en que empezamos a escribir estas ecuaciones: el dominio de $(f+g)+h$ y el de $f+(g+h)$ es evidentemente dominio $f$ $\cap$ dominio $g$ $\cap$ dominio $h$. nosotros escribimos, naturalmente $f+g+h$ por $(f+g)+h=f+(g+h)$\\\\
+\end{teo}
+
+\begin{teo}
+Es igual fácil demostrar que $(f\cdot g)\cdot g=f\cdot (g \cdot h)$ y ésta función se designa por $f \cdot g \cdot h$. Las ecuaciones $f+g=g+f$ \; y \; $f\cdot g=g \cdot f$ no deben presentar ninguna dificultad.\\\\
+\end{teo}
+
+\begin{tcolorbox}
+\begin{def.}[Composición de función]
+$$(f \circ g)(x)=f(g(x))$$
+El dominio de $f\circ g$ es $\lbrace $ $x$ : $x$ está en el dominio de $g$ \: y \; $g(x)$ está en el dominio de $f$ $\rbrace$
+$$D_{f \circ g}= \lbrace x \; / \; x \in D_g \; \land \; g(x)\in D_f \rbrace$$
+\end{def.}
+\begin{prop}
+$(f \circ g) \circ h = f \circ (g \circ h)$   La demostración es una trivalidad.
+\end{prop}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+\begin{def.}\footnote{Definición de Tom Apostol}
+Decimos que dos pares ordenados $(a,b)$ \; y \; $(c,d)$ son iguales si sólo si sus primeros elementos son iguales y sus segundos elementos son iguales.\\  $$(a,b)=(c,d) \; \; \mbox{si sólo si} \; \; a=c \; \; y  \; \; b=d$$
+\end{def.}
+
+\begin{def.}[Definición de función]\footnote{Definición de Tom Apostol}
+Una función $f$ es un conjunto de pares ordenados $(x,y)$ ninguno de los cuales tiene el mismo primer elemento.\\
+Por lo tanto, $$\forall x \in D_f, \exists y \; /\; (x,y)\in f$$ 
+Esto es, para todo $x$ en el dominio de la $f$ existe exactamente un $y$ tal que $(x,y) \in f$
+Es costumbre escribir $y=f(x)$ en lugar de $(x,y)\in f$, por lo tanto, $$\forall x \in D_f, \exists y \; / \; y=f(x)$$
+\end{def.}
+\end{tcolorbox}
+\begin{tcolorbox}
+\begin{def.} \footnote{Definición de Michael Spivak}
+Una \textbf{función} es una colección de pares de números con la siguiente propiedad: Si $(a,b)$ \; y \; $a,c$ pertenecen ambos a la colección, entonces $b=c$; en otras palabras, la colección no debe contener dos pares distintos con el mismo primer elemento.\\
+\end{def.}
+
+\begin{def.} \footnote{Definición de Michael Spivak}
+Si $f$ es una función, el \textbf{dominio} de $f$ es el conjunto de todos los $a$ para los que existe algún $b$ tal que $(a,b)$ está en $f$. Si $a$ está en el dominio de $f$, se sigue de la definición de función que existe, en efecto, un número $b$ único tal que $(a,b)$ está en $f$. Este $b$ único se designa por $f(a)$.\\
+
+
+
+  
+\end{def.}
+\end{tcolorbox}

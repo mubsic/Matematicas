@@ -1,0 +1,662 @@
+\chapter{Propiedades de los números reales}
+El conjunto de los números reales, tiene definido dos operaciones básicas: la adición, la multiplicación y una relación de orden menor que, denotada por <, que satisfacen las siguientes propiedades básicas, llamadas axiomas de números reales.\\
+
+%Axiomas
+\section{Axiomas de adición}
+\begin{center}
+\begin{tabular}{c r l}
+A1&$\forall a,b \in \mathbb{R} \Rightarrow a+b\in \mathbb{R}$&Clausura o cerradura \\ \label{A1}
+A2&$a+b=b+a$&Conmutatividad para la Adición\\ \label{A2}
+A3&$a+(b+c)=(a+b)+c$&Asociatividad para la Adición\\ \label{A3}
+A4&$\exists \; ! \; 0: a+0=a \forall a \in \mathbb{R} $&Neutro Aditivo\\ \label{A4}
+A5&$\forall a \in \mathbb{R} \exists ! -a\in \mathbb{R}: a+ (-a)=0$&Inverso Aditivo\\\\ \label{A5}
+\end{tabular}
+\end{center}
+\section{Axiomas de multiplicación}
+\begin{center}
+\begin{tabular}{c r l}
+M1&$\forall a, b \in \mathbb{R} \rightarrow ab \in \mathbb{R}$&Clausura o cerradura\\ \label{M1}
+M2&$ab=ba$&Conmutatividad para la Multiplicación\\ \label{M2}
+M3&$a(bc)=(ab)c$&Asociatividad para la Multiplicación\\ \label{M3}
+M4&$\exists ! 1 : a\cdot 1=a \; \forall a \in \mathbb{R}$&Neutro Multiplicativo\\ \label{M4}
+M5&$\forall a \neq 0 \exists ! \in \mathbb{R}: a\cdot a^{-1}=1$&Inverso Multiplicativo\\\\ \label{M5}
+\end{tabular}
+\end{center}
+\section{Axioma de orden:}
+\begin{center}
+\begin{tabular}{c r l}
+O1&$\forall a, b : a < b \; ó \; b < a \; ó \; a=b$&Tricotomía\\ \label{O1}
+O2&$a < b \; y \; b < c \Rightarrow a<c$&Transitividad\\ \label{O2}
+O3&$a<b \Rightarrow a+c<b+c \;  \forall c \in \mathbb{R}$&Monotonía con la adición\\ \label{O3}
+O4&$a < b \; y \; 0<c \Rightarrow ac < bc$&Monotonía con la multiplicación positiva\\ \label{O4}
+\end{tabular}
+\end{center}
+
+\section{Otros axiomas}
+\begin{center}
+\begin{tabular}{c r l}
+D&$a(b+c)=ab+ac$&Distributividad\\ \label{D}
+L&Axioma del supremo&Se mencionará en otro capítulo\\
+\end{tabular}
+\end{center}
+
+%Teoremas
+
+%Terema 1.1.1
+\begin{teo}$\forall a \in \mathbb{R},\; a\cdot 0 = 0 = 0 \cdot a$\\ \label{teo 1.1.1}
+Demostración:
+\hspace{0.3cm}
+\begin{center}
+\begin{tabular}{r c l  l}
+$a\cdot 0$&=&$a\cdot 0 + 0$&\hyperref[A4]{neutro aditivo}\\
+&=&$a\cdot 0 + \left[ a + (-a)\right]$&\hyperref[A5]{inverso aditivo}\\
+&=&$\left( a\cdot 0 +  a \right) + (-a)$&\hyperref[A3]{asociatividad para la adición}\\
+&=&$\left( a\cdot 0 +  a \cdot 1 \right) + (-a)$&\hyperref[M4]{neutro multiplicativo}\\
+&=&$a(0+1)+(-a)$&\hyperref[D]{distributividad}\\
+&=&$a(1)+(-a)$&\hyperref[A4]{neutro aditivo}\\
+&=&$a+(-a)$&\hyperref[M4]{neutro multiplicativo}\\
+&=&$0$&\hyperref[M5]{inverso aditivo}\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+%Teorema 1.1.2
+\begin{teo} $-a=(-1)a, \; \forall a \in \mathbb{R}$\\ \label{teo 1.1.2}
+Demostración:\\
+Según el axioma de inverso aditivo, el inverso aditivo de a es único. De donde si demostramos que a+(-1)a=0, entonces (-1)a=-a. 
+\begin{center}
+\begin{tabular}{r c l l}
+$a+(-a)$&=&$a\cdot 1+(-a)$&\hyperref[M4]{neutro multiplicativo}\\
+&=&$a(1+(-1))$&\hyperref[D]{distributividad}\\
+&=&$a(0)$&\hyperref[M5]{inverso aditivo}\\
+&=&$0$&\hyperref[teo 1.1.1]{teorema 1.1.1}\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+%corolario 1.1
+\begin{col.}
+$a(-b)=-(ab)=(-a)b, \; Para \; cualquier \; a \; b \in \mathbb{R}$\\ \label{cor 1.1.1}
+Demostración:
+\begin{center}
+\begin{tabular}{r c l l}
+$a(-b)$&=&$a\left[(-1)b \right]$&\hyperref[teo 1.1.2]{Teorema 1.1.2}\\
+&=&$(-1)(ab)$&\hyperref[M3]{asociatividad} y \hyperref[M2]{conmutatividad para la multiplicación} \\
+&=&$-(ab)$&\hyperref[teo 1.1.2]{teorema 1.1.2}\\
+&=&$(-1)(ab)$&\hyperref[teo 1.1.2]{teorema 1.1.2}\\
+&=&$\left[(-1)a\right]b$&\hyperref[M3]{asociatividad para la multiplicación}\\
+&=&$(-a)b$&\hyperref[teo 1.1.2]{teorema 1.1.2}\\\\
+\end{tabular}
+\end{center}
+\end{col.}
+
+%Teorema 1.1.3
+\begin{teo}
+$-(-a)=a, \; \forall a \in \mathbb{R}$\\ \label{teo 1.1.3}
+Demostración:
+\begin{center}
+\begin{tabular}{c r c l l}
+1.&$a+(-a)$&=&$0$&\hyperref[M5]{inverso aditivo}\\
+2.&$(-a)+(-(-a))$&=&$0$&$\forall a,-a \in \mathbb{R}$\\
+&$0$&=&$0$& todo número es imagen de si mismo\\\\
+&$a+(-a)$&=&$(-a)+(-(-a))$&1. y 2. y axioma de sustitución\\
+&$a+(-a)$&=&$-(-a)+(-a)$&\hyperref[A2]{conmutatividad para la adición}\\
+&$a$&=&$-(-a)$&ley cancelativa para la adición\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+%Teorema 1.1.4
+\begin{teo}
+$(-a)(-b)=ab; \; \forall a,\; b \in \mathbb{R}$\\
+Demostración:
+\begin{center}
+\begin{tabular}{r c l l}
+$(-a)(-b)$&=&$-\left[ a (-b) \right]$&\hyperref[cor 1.1.1]{corolario 1.1.1}\\
+&=&$-(-(ab))$&\hyperref[cor 1.1.1]{corolario 1.1.1}\\
+&=&$ab$&\hyperref[teo 1.1.3]{teorema 1.1.3}\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+%definición 1.1
+\begin{def.}
+\begin{tabular}{r c l l}
+$a-b$&=&$a+(-b)$&$\forall \; a, \; b \in \mathbb{R}$\\\\ \label{def 1.1.1}
+\end{tabular}
+\end{def.}
+
+%Definición 1.2
+\begin{def.}
+\begin{tabular}{r c l l}
+$\displaystyle \frac{a}{b}$&=&$ab^{-1}$&$\forall \; a, \; b \in \mathbb{R}\; y \; b\neq 0$\\\\ \label{def 1.1.2}
+\end{tabular}
+\end{def.}
+
+Note que 0 no tiene inverso multiplicativo y , por tanto, la división por cero no está definida. La hipótesis de que cero tuviera inverso multiplicativo no es consistente con los otros axiomas.\\
+Si 0 tuviese un inverso multiplicativo, llamémosle a, entonces $0\cdot a = 1$ Esto está en contradicción con el teorema 1.1
+
+
+%Teorema 1.1.5 
+\begin{teo}
+$ -0 = 0$\\ \label{teo 1.1.5}
+Demostración:
+\begin{center}
+\begin{tabular}{r c l l}
+$-0$&=&$(-1)0$&\hyperref[teo 1.1.2]{teorema 1.1.2}\\
+&=&$0$&\hyperref[M2]{conmutatividad para la multiplicación} y \hyperref[teo 1.1.1]{teorema 1.1.1}\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+%Teorema 1.1.6
+\begin{teo}
+$-a-b=-(a+b)$\\ \label{teo 1.1.6}
+Demostración:
+\begin{center}
+\begin{tabular}{r c l l}
+$-a-b$&=&$(-1)a + (-1)b$&\hyperref[teo 1.1.2]{teorema 1.1.2}\\
+&=&$-1(a+b)$&\hyperref[D]{distributividad}\\
+&=&$-(a+b)$&\hyperref[M4]{neutro multiplicativo}\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+%Teorema 1.1.7
+\begin{teo}[Ley cancelativa para la adición]
+$ Si \; a+b=a+c \; entonces, \; b = c$\\ \label{1.1.7}
+Demostración:
+\begin{center}
+\begin{tabular}{r c l l}
+$b$&=&$b+0$&neutro aditivo\\
+&=&$b+\left[a+(-a)\right]$&Inverso aditivo\\
+&=&$(a+b)+(-a)$&\hyperref[A3]{asociatividad} y \hyperref[A2]{Conmutatividad para la adición}\\
+&=&$(a+c)+(-a)$&hipótesis\\
+&=&$c + \left[ a+(-a)  \right]$&\hyperref[A3]{asociatividad} y \hyperref[A2]{Conmutatividad para la adición}\\
+&=&$c+0$&\hyperref[A5]{inverso aditivo}\\
+&=&$c$&\hyperref[A4]{neutro aditivo}\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+%Teorema 1.1.8
+
+\begin{teo}
+\label{Teo 1.8}
+$Demostrar \; a-(b-c)=(a-b)+c$ \label{teo 1.1.8}
+\begin{center}
+\begin{tabular}{r c l l}
+$a-(b-c)$&=&$a+\left[-(b-c)\right]$&\hyperref[def 1.1.1]{definición 1.1.1}\\
+&=&$a+\lbrace(-\left[b+(-c)\right]\rbrace$&\hyperref[def 1.1.1]{definición 1.1.1}\\
+&=&$a- b-(-c) $&\hyperref[teo 1.1.6]{teorema 1.1.6}\\
+&=&$(a-b)-(-c)$&\hyperref[A3]{asociatividad para la adición}\\
+&=&$(a-b)+c$&\hyperref[teo 1.1.3]{teorema 1.1.3}\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+%Teorema 1.1.9
+\begin{teo}
+$Demstrar \; 1^{-1}=1$ \label{1.1.9}
+\begin{center}
+\begin{tabular}{r c l l}
+$1^{-1}$&=&$ 1^{-1} \cdot 1$&\hyperref[A4]{neutro Multiplicativo}\\\\
+&=&$\displaystyle \frac{1}{1}$&\hyperref[def 1.1.2]{definición 1.1.2}\\
+&=&$1$&operando\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+%Teorema 1.1.10
+\begin{teo}[Dominio de integridad] \label{teo 1.1.10}
+$$Demostrar \; que \; si \; ab=0 \; si \; sólo \; si \; a = 0 \; ó \; b = 0$$\\ \label{teo 1.1.10}
+Como o es incluyente debemos demostrar por casos:\\\\
+
+\begin{enumerate}[1.]
+
+\item $(\Leftarrow)$ \\ $x=0 \; \mbox{por \hyperref[teo 1.1.1]{teorema 1.1.1} ya queda demostrado}$
+
+\item $(\Rightarrow)$\\
+ $ab=0 \land a\neq 0 \Rightarrow b=0$
+\begin{center}
+\begin{tabular}{r c l l}
+$b$&=&$b\cdot 1$&\hyperref[M4]{neutro multiplicativo}\\
+&=&$b\cdot \left[ a (a^{-1}) \right]$&\hyperref[M5]{inverso multiplicativo}\\
+&=&$(a^{-1})(ab)$&\hyperref[M3]{asociatividad} y \hyperref[M2]{conmutatividad para la multiplicación}\\
+&=&$(a^{-1})\cdot 0$&hipótesis\\
+&=&$0$&\hyperref[teo 1.1.1]{teorema 1.1.1}\\
+\end{tabular}
+\end{center}
+\end{enumerate}
+\end{teo}
+
+%Teorema 1.1.11
+\begin{teo}
+$$Si \; a=b \; entonces \; ac = bc$$ \label{teo 1.1.11}
+Demostración:
+\begin{center}
+\begin{tabular}{r c l l}
+$ac$&=&$ac$&Reflexiva entre si\\
+$ac$&=&$bc$&hipótesis\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+%Teorema 1.1.12
+\begin{teo}
+$Demostrar \; que \; si \; ab \neq 0 \; entonces \; (ab)^{-1}=a^{-1}\cdot b^{-1}  $ \label{teo 1.1.12}
+\begin{center}
+\begin{tabular}{c r c l l}
+1&$aa^{-1}$&=&$1$&Inverso y $ab\neq 1$\\
+2&bb{-1}&=&$1$&Inverso y $ab\neq 1$\\
+&$\left(aa^{-1}\right)\left(bb^{-1}\right)$&=&$1$&multiplicación de 1 y 2\\
+&$\left(aa^{-1}\right)\left(bb^{-1}\right)(ab)^{-1}$&=&$1(ab)^{-1}$&\hyperref[teo 1.1.7]{teorema 1.1.7}\\
+&$\left(a^{-1}b^{-1}\right)(ab)(ab^{-1})$&=&$1(ab)^{-1}$&\hyperref[M3]{asociatividad} y \hyperref[M2]{conmutatividad para la multiplicación}\\
+&$\left(a^{-1}b^{-1}\right)1$&=&$1(ab)^{-1}$&\hyperref[M5]{inverso multiplicativo}\\
+&$\left(a^{-1}b^{-1}\right)$&=&$(ab)^{-1}$&\hyperref[M4]{neutro multiplicativo}\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+%Teorema 1.1.13
+\begin{teo}
+$Demostrar \; que \; si \; a \neq 0, \; entonces \; (a^{-1})^{-1}=a$ \label{teo 1.1.13}
+Demostración:
+\begin{center}
+\begin{tabular}{r c l l}
+$(a^{-1})^{-1}$&=&$$&\\
+&=&$$&\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+%Teorema 1.1.14
+\begin{teo}[Ley de cancelación para la multipl.]
+$Si \; ab=ac \; y \; a\neq 0, \; entonces \; b = c$\\ \label{1.1.14}
+Demostración:
+\begin{center}
+\begin{tabular}{r c l l}
+$a^{-1}ab$&=&$a^{-1}ac$&Como $a \neq 0$ y \hyperref[teo 1.1.7]{teorema 1.1.7}\\
+$1b$&=&$1c$&[M3]{asociatividad} e \hyperref[M5]{inverso multiplicativo}\\
+$b$&=&$c$&\hyperref[M4]{neutro multiplicativo} y $a \neq 0$\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+%Teorema 1.1.15 
+\begin{teo} 
+$Si \; a=b \; entonces \; a \pm c = b \pm c $ \label{teo 1.1.15}\\
+Demostración:
+\begin{center}
+\begin{tabular}{r c l l}
+$a\pm c$&$=$&$b\pm c$&hipótesis\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+
+%Teorema 1.1.16
+\begin{teo}
+$a^2=b^2 \; si \; sólo \;  si \; a = b \; o \; a=-b$ \label{teo 1.1.16} \\
+Demostración:
+\begin{center}
+\begin{tabular}{r c l l}
+$a^2=b^2$&$\Leftrightarrow$&$a^2-b^2=0$&\hyperref[Teo 1.1.8]{teorema 1.1.8}\\
+&$\Leftrightarrow$&$(a-b)(a+b)=0$&\hyperref[teo 1.1.20]{teorema 1.1.20}\\
+&$\Leftrightarrow$&$a-b=0\; \lor \; a+b=0$&\hyperref[teo 1.1.10]{teorema 1.1.10}\\
+&$\Leftrightarrow$&$a=b \: \lor \; a=-b$&\hyperref[teo 1.1.15]{teorema 1.1.15}\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+
+%Teorema 1.1.17
+\begin{teo}
+$\displaystyle \frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}$\\ \label{teo 1.1.17}
+Demostración: 
+\begin{center}
+\begin{tabular}{r c l l}
+$ab^{-1}\cdot cd^{-1}$&$=$&$ac\cdot (b^{-1}d^{-1})$&\hyperref[M2]{conmutatividad} y \hyperref[M3]{asociatividad para la multiplicación}\\
+&$=$&$cd\cdot (bd)^{-1}$&\hyperref[teo 1.1.12]{teorema 1.1.12}\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+
+%Teorema 1.1.18
+\begin{teo}
+$\displaystyle\frac{\displaystyle\frac{a}{b}}{\displaystyle\frac{c}{d}}=\displaystyle\frac{ad}{bc}$\\\\ \label{teo 1.1.18}
+
+Demostración:
+\begin{center}
+\begin{tabular}{r c l l}
+$\displaystyle\frac{\displaystyle\frac{a}{b}}{\displaystyle\frac{c}{d}}$&$=$&$\displaystyle\frac{ab^{-1}}{cd^{-1}}$&\hyperref[def 1.1.2]{definición 1.1.2}\\\\
+&$=$&$ab^{-1}\cdot (cd^{-1})^{-1}$&\hyperref[teo 1.1.13]{teorema 1.1.13}\\\\
+&$=$&$ab^{-1}\cdot c^{-1}(d^{-1})^{-1}$&\hyperref[teo 1.1.12]{teorema 1.1.12}\\\\
+&$=$&$ab^{-1}\cdot c^{-1}d$&\hyperref[teo 1.1.13]{teorema 1.1.13}\\\\
+&$=$&$ad\cdot b^{-1}c^{-1}$&\hyperref[M2]{conmutatividad} \
+y \hyperref[M3]{asocioatividad para la multiplicación}\\\\
+&$=$&$\displaystyle \frac{ad}{bc}$&\hyperref[def 1.1.2]{definición 1.1.2}\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+
+%Teorema 1.1.19
+\begin{teo}
+$(x+y)(x-y)=x^2 - y^2$\\ \label{teo 1.1.19}
+Demostración:
+\begin{center}
+\begin{tabular}{r c l l}
+$(x+y)(x-y)$&$=$&$x(x+y)-y(x+y)$&\hyperref[D]{distributividad}\\
+&$=$&$x^{2}+yx-xy - y^2$&\hyperref[D]{distributividad}\\
+&$=$&$x^2-y^2$&\hyperref[A5]{inverso aditivo} y \hyperref[A4]{neutro aditivo}\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+
+%Teorema 1.1.20
+\begin{teo}
+$(x+y)^2=x^2+2xy+y^2$\\ \label{teo 1.1.20}
+Demostración:
+\begin{center}
+\begin{tabular}{r c l l}
+$x^2+2xy+y^2$&$=$&$x^2+xy+xy+y^2$&ya que $a^2=aa$\\
+&$=$&$x(x+y)+y(x+y)$&\hyperref[D]{distributividad}\\
+&$=$&$(x+y)(x+y)$&\hyperref[D]{distributividad}\\
+&$=$&$(x+y)^2$&a bases iguales exponentes se suman\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+
+%Teorema 1.1.21
+\begin{teo}
+$\displaystyle\frac{a}{b}=\frac{c}{d}\; si \; sólo \; si \; ad=bc, \; bd\neq 0$\\ \label{teo 1.1.21}
+
+Demostración:
+\begin{center}
+\begin{tabular}{r c l l}
+$\displaystyle\frac{a}{b}=\frac{c}{d}$&$\Leftrightarrow$&$ab^{-1}=cd^{-1}$&\hyperref[def 1.1.2]{definición 1.1.2}\\
+&$\Leftrightarrow$&$bd(ab^{-1})=bd(cd^{-1})$&\hyperref[teo 1.1.11]{teorema 1.1.11}, \hyperref[M5]{inverso multiplicativo} y $bd\neq 0$\\
+&$\Leftrightarrow$&$ad(bb^{-1})=bc(dd^{-1})$&\hyperref[M2]{Conmutatividad} y \hyperref[M3]{asociatividad para la multiplicación}\\
+&$\Leftrightarrow$&$ad=bc$&\hyperref[M4]{nuetro} e \hyperref[M5]{inverso multiplicativo}\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+
+%Teorema 1.1.22
+\begin{teo}
+$\displaystyle\frac{a}{b} + \frac{c}{d}$\\ \label{1.1.22}
+
+Demostración:
+\begin{center}
+\begin{tabular}{r c l l}
+$\displaystyle\frac{a}{b} + \frac{c}{d}$&$=$&$ab^{-1}+cd^{-1}$&\hyperref[def 1.1]{def. 1.1}\\
+&$=$&$ab^{-1}dd^{-1}+cd^{-1}bb^{-1}$&\hyperref[A4]{neutro aditivo} e \hyperref[A5]{inverso multiplicativo}\\
+&$=$&$b^{-1}d^{-1}(ad+bc)$&\hyperref[D]{distributividad}\\
+&$=$&$bd^{-1}(ad+bc)$&\hyperref[teo 1.1.12]{teorema 1.1.12}\\
+&$=$&$\displaystyle\frac{ad+bc}{bd}$&\hyperref[def 1.1.2]{definición 1.1.2}\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+
+
+\chapter{Desigualdades}
+
+%Teorema 1.2.1
+\begin{teo}
+$Si \; a<b \; y \; c<d, \; entonces \; a+c<b+d$\\ \label{teo 1.2.1}
+Demostración:
+\begin{center}
+\begin{tabular}{c r c l l}
+1&$a<b$&$\Rightarrow$&$a+c<b+c$&\hyperref[O3]{monotonía para la adición}\\
+2&$c<d$&$\Rightarrow$&$b+c<b+d$&\hyperref[O3]{monotonía para la adición}\\
+&&$\Rightarrow$&$a+c<b+d$&Por 1, 2 y \hyperref[O2]{transitividad}\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+%Teorema 1.2.2
+\begin{teo}
+$Si \; a<b, \; entonces \; -a>-b$\\ \label{teo 1.2.2}
+Demostración:
+\begin{center}
+\begin{tabular}{r c l l}
+$a<b$&$\Rightarrow$&$a+(-a)+(-b)<b+(-a)+(-b)$&\hyperref[O3]{monotonía para la adición}\\
+&$\Rightarrow$&$-b<-a$&\hyperref[A2]{conmutatividad}, \hyperref[A4]{neutro} e \hyperref[A5]{inverso aditivo}\\
+&$\Rightarrow$&$-a>-b$&es equivalente\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+
+%teorema 1.2.3
+\begin{teo}
+$Si \; a>b \; entonces \; -a<-b$ \label{teo 1.2.3}
+\begin{center}
+\begin{tabular}{r c l l}
+$a>b$&$\Rightarrow$&$a+(-a)+(-b)>b+(-b)(-a)$&\hyperref[O3]{monotonía con la adición}\\
+&$\Rightarrow$&$-b > -a$&\hyperref[A4]{Neutro Aditivo} \hyperref[A5]{Inverso Aditivo}\\
+&$\Rightarrow$&$-a<-b$&Es equivalente a \;  $-b>-a$\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+
+%Teorema 1.2.4
+\begin{teo}
+$Si \; a<b \; y \; c<0, \; entonces \; ac>bc$\\ \label{teo 1.2.4}
+Demostración:
+\begin{center}
+\begin{tabular}{c r c l l}
+1&$c<0$&$\Rightarrow$&$-c>0$&\hyperref[teo 1.2.2]{teorema 1.2.2} y \hyperref[teo 1.1.5]{teorema 1.1.5}\\
+&$a<b$&$\Rightarrow$&$a(-c)<b(-c)$&\hyperref[O4]{Monotonía con la multiplicación positiva} y 1\\
+&&$\Rightarrow$&$-ac<-bc$&\hyperref[cor 1.1.1]{corolario 1.1.1}\\
+&&$\Rightarrow$&$-(-ac)>-(-bc)$&\hyperref[teo 1.2.2]{teorema 1.2.2}\\
+&&$\Rightarrow$&$ac>bc$&\hyperref[teo 1.1.3]{teorema 1.1.3}\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+%Teorema 1.2.5
+\begin{teo}
+$Si \; a \neq 0, \; entonces \; a^2>0$ \label{teo 1.2.5}\\
+Demostración
+\begin{center}
+$Si \; a>0 \; ó \; a<0 \; entonces \; a^2>0 $
+\end{center}
+\begin{itemize}
+\item para $a>0$
+\begin{center}
+\begin{tabular}{r c l l}
+$a>0$&$\Rightarrow$&$a\cdot a>0\cdot a $&\hyperref[O4]{Monotonía con la multiplicación positiva}\\
+&$\Rightarrow$&$a^2>0$&bases iguales exp se suman y \hyperref[teo 1.1.1]{teorema 1.1.1} \\
+\end{tabular}
+\end{center}
+\item para $a<0$
+\begin{center}
+\begin{tabular}{r c l l}
+$a<0$&$\Rightarrow$&$a\cdot a > a \cdot 0$&\hyperref[teo 1.2.4]{teorema 1.2.4}\\
+&$\Rightarrow$&$a^2>0$&bases iguales exponentes se suman y \hyperref[teo 1.1.1]{teorema 1.1.1} \\\\
+\end{tabular}
+\end{center}
+\end{itemize}
+\end{teo}
+
+
+%Teorema 1.2.6
+\begin{teo} 
+$Si \; 0 \leq a < b \; y \; 0 \leq c < d, \; entonces \; ac < bd$\\ \label{teo 1.2.6}
+Podemos representar de otra manera: $ Si \; a \geq 0, \; a<b, \; c \geq 0 \; y \; c < d \; entonces \; ac < bd$
+\begin{center}
+\begin{tabular}{c r c l l}
+1.&$a \geq 0 \; y \; a < b$&$\Rightarrow$&$b > 0$&Hipótesis\\
+2.&&$\Rightarrow$&$c < d$&por hipótesis\\
+3.&&$\Rightarrow$&$ bc < bd $&por 1., 2. y \hyperref[O4]{Monotonía con la multiplicación positiva}\\
+\end{tabular}
+\end{center}
+Consideremos dos casos:
+\begin{itemize}
+\item $c > 0$
+\begin{center}
+\begin{tabular}{r c l l}
+$c>0 \; y \; a < b $&$\Rightarrow$&$ac < bc$&\hyperref[O4]{Monotonía con la multiplicación positiva}\\
+&$\Rightarrow$&$ac<bd$&\hyperref[O2]{Transitividad} y 3\\
+\end{tabular}
+\end{center}
+\item $c = 0$
+\begin{center}
+\begin{tabular}{c r c l l}
+&$c = 0$&$\Rightarrow$&$a\cdot c = 0 \cdot a$&\hyperref[teo 1.1.11]{teorema 1.1.11}\\
+4.&&$\Rightarrow$&$a \cdot c = 0$&\hyperref[1.1.1]{teorema 1.1.1}\\\\
+&$c = 0$&$\Rightarrow$&$b\cdot c = 0 \cdot b$&\hyperref[teo 1.1.11]{teorema 1.1.11}\\
+5.&&$\Rightarrow$&$b \cdot c = 0$&\hyperref[teo 1.1.1]{teorema 1.1.1}\\\\
+&$a \cdot c$&$=$&$b \cdot c$&por 4. y 5.\\
+&$ac$&$<$&$bd$&por 3.\\\\
+\end{tabular}
+\end{center}
+\end{itemize}
+\end{teo}
+
+
+
+%teorema 1.2.7
+\begin{teo}[Ley de signos para la multiplicación]
+$Si \; a \; y \; b \; \mbox{tienen el mismo signo, entonces} \; ab>0 \; \mbox{Si a y b tienen diferente signo, entonces}\; ab < 0$\\ \label{teo 1.2.7}
+Demostración:\\
+Consideremos 4 casos:
+\begin{enumerate}[C1.-]
+\item $a > 0 \; y \; b > 0 \; entonces \; ab > 0$
+\begin{center}
+\begin{tabular}{c r c l l}
+&$a>0$&$\Rightarrow$&$-a<-0$&\hyperref[teo 1.2.3]{teorema 1.2.3 }\\
+1.&&$\Rightarrow$&$-a<0$&\hyperref[teo 1.1.5]{teorema 1.1.5}\\\\
+&$-a<0 \; y \; b>0$&$\Rightarrow$&$(-a)\cdot b<0 \cdot (-a) $&por 1., hipótesis y \hyperref[O4]{Monotonía con la multiplicación positiva}\\
+&&$\Rightarrow$&$-ab < 0$&\hyperref[teo 1.1.1]{teorema 1.1.1} y \hyperref[cor 1.1.1]{coroloario 1.1.1}\\
+&&$\Rightarrow$&$-(-ab)>-0$&\hyperref[teo 1.2.2]{teorema 1.2.2}\\
+&&$\Rightarrow$&$ab>0$&\hyperref[teo 1.1.3]{teorema 1.1.3} \hyperref[teo 1.1.5]{teorema 1.1.5}\\
+\end{tabular}
+\end{center}
+
+\item $Si \; a<0 \; y \; b<0 \; entonces \; ab>0$
+\begin{center}
+\begin{tabular}{r c l l}
+$a<0 \; y \; b<0$&$\Rightarrow$&$ab > 0 \cdot b$&hipótesis y \hyperref[teo 1.2.4]{teorema 1.2.4}\\
+&$\Rightarrow$&$ab>0$&\hyperref[teo 1.1.1]{teorema 1.1.1}\\
+\end{tabular}
+\end{center}
+
+\item $Si \; a>0 \; y \; b<0 \; entonces \; ab<0$ 
+\begin{center}
+\begin{tabular}{r c l l}
+$b<0 \; y \; a>0$&$\Rightarrow$&$ab<0\cdot a$&hipótesis y \hyperref[O4]{monotonía con la multiplicación positiva}\\
+&$\Rightarrow$&$ab<0$&\hyperref[teo 1.1.1]{teorema 1.1.1}\\
+\end{tabular}
+\end{center}
+
+\item $Si \; a<0 \; y \; b>0 \; entonces \; ab<0 $
+\begin{center}
+\begin{tabular}{r c l l}
+$a<0 \; y \; b>0$&$\Rightarrow$&$ab<0\cdot b$&hipótesis \hyperref[O4]{monotonía con la multiplicación positiva}\\
+&$\Rightarrow$&$ab<0$&\hyperref[teo 1.1.1]{teorema 1.1.1}\\
+\end{tabular}
+\end{center}
+\end{enumerate}
+\end{teo}
+
+
+%teorema 1.2.8
+\begin{teo}
+$a^{-1} \; \mbox{tiene el mismo signo de}\; a$\\ \label{teo 1.2.8}
+Dividiremos por casos:
+\begin{enumerate}
+\item $a > 0 \Rightarrow a^{-1} > 0$ Demostración por reducción al absurdo: $a > 0 \Rightarrow a^{-1} < 0$
+\begin{center}
+\begin{tabular}{r c l l}
+$a^{-1}<0$&$\Rightarrow$&$a^{-1}\cdot a < 0 \cdot a$&\hyperref[O4]{monotonía con la multiplicación positiva}\\
+&$\Rightarrow$&$1<0$&\hyperref[M5]{inverso multiplicativo} y \hyperref[teo 1.1.1]{teorema 1.1.1}\\
+Vemos que &$1<0$&es absurdo por&lo tanto $a > 0 \Rightarrow a^{-1} > 0$ es verdad \\\\
+\end{tabular}
+\end{center}
+\item $a < 0 \Rightarrow a^{-1} < 0$
+\begin{center}
+\begin{tabular}{r c l l}
+$a^{-1} < 0$&$\Rightarrow$&$a\cdot a^{-1} > 0\cdot a$&hipótesis y \hyperref[O4]{monotonía con la multiplicación positiva}\\
+&$\Rightarrow$&$1>0$&\hyperref[M5]{inverso multiplicativo} y \hyperref[teo 1.1.1]{teorema 1.1.1}\\
+Vemos que &$1>0$&es verdad&lo tanto $a < 0 \Rightarrow a^{-1} < 0$ es verdad \\\\
+\end{tabular}
+\end{center}
+\end{enumerate}
+\end{teo}
+
+%teorema 1.2.9
+\begin{teo}
+Si $a \; b$ tienen el mismo signo y $a<b$, entonces $a^{-1}>b^{-1}$ \\ \label{teo 1.2.9}
+Consideremos 2 casos:
+\begin{enumerate}[1.]
+\item $Si \; a>0, \; b>0 \; \; y \;  \; a<b \; entonces \; a^{-1}>b^{-1}$ 
+\begin{center}
+\begin{tabular}{c r c l l}
+1.&$a>0$&$\Rightarrow$&$a^{-1}>0$&hipótesis y \hyperref[teo 1.2.8]{teorema 1.2.8}\\
+2.&&$\Rightarrow$&$0<a^{-1}$&por 1. y equivalencia\\\\
+3.&$b>0$&$\Rightarrow$&$b^{-1}>0$&hipótesis y \hyperref[teo 1.2.8]{teorema 1.2.8}\\\\
+&$a$&$<$&$b$&hipótesis\\
+&$a^{-1}a$&$<$&$ba^{-1}$&por 1. y \hyperref[O4]{Monotonía con la multiplicación positiva}\\
+&$a^{-1}a$&$<$&$ba^{-1}$&\hyperref[M4]{nuetro multiplicativo}\\
+&$b^{-1}a^{-1}a$&$<$&$b^{-1}ba^{-1}$&por 3. y \hyperref[O4]{Monotonía con la multiplicación positiva}\\
+&$b^{-1}$&$<$&$a^{-1}$&\hyperref[M4]{neutro multiplicativo} y \hyperref[M5]{inverso multiplicativo}\\
+&$a^{-1}$&$>$&$b^{-1}$&equivalente\\
+\end{tabular}
+\end{center}
+\item $Si \; a<0, \; b<0 \; \; y \; \; a<b\; entonces \; a^{-1}>b^{-1}$
+\begin{center}
+\begin{tabular}{c r c l l}
+1.&$a<0$&$\Rightarrow$&$a^{-1}<0$&hipótesis y \hyperref[teo 1.2.8]{teorema 1.2.8}\\
+2.&$b<0$&$\Rightarrow$&$b^{-1}<0$&hipótesis y \hyperref[teo 1.2.8]{teorema 1.2.8}\\\\
+&$a^{-1}b^{-1}$&$>$&$0\cdot b^{-1}$&\hyperref[teo 1.2.4]{teorema 1.2.4}\\
+3.&$a^{-1}b^{-1}$&$>$&$0$&\hyperref[teo 1.1.1]{teorema 1.1.1}\\
+&$a^{-1}ab^{-1}$&$<$&$bb^{-1}a^{-1}$&por 3. y \hyperref[O4]{Monotonía con la multiplicación positiva}\\
+&$b^{-1}$&$<$&$a^{-1}$&\hyperref[M5]{inverso multiplicativo}\\
+&$a^{-1}$&$>$&$b^{-1}$&equivalente\\
+\end{tabular}
+\end{center}
+\end{enumerate}
+\end{teo}
+
+
+%teorema 1.2.10
+\begin{teo}
+$Si \; a\geq 0 \; y \; b\geq 0, \; entonces \; a^2 > b^2 \; si \; y \; sólo \; si \;  a>b $ \\ \label{teo 1.2.10}
+Demostración:\\
+Sabemos que $b\geq 0 $ es equivalente a $0\leq b$ (1)
+\begin{itemize}
+\item $(\Rightarrow)$
+$a^2>b^2 \Rightarrow a>b$
+\begin{center}
+\begin{tabular}{r c l l}
+$a^2>b^2$&$\Rightarrow$&$a^2-b^2>0$& equivalencia y relación de orden\\
+&$\Rightarrow$&$(a+b)(a-b)>0$&\hyperref[teo 1.1.19]{teorema 1.1.19}\\
+&$\Rightarrow$&$a+b>0 \; \; ó \; \; a-b>0$&\hyperref[teo 1.2.7]{Ley de signos para la multiplicación e hipótesis}\\
+&$\Rightarrow$&$a>b$&\textcolor{red}{equivalencia}\\
+&&$a>-b$&\textcolor{red}{equivalencia}\\
+\end{tabular}
+\end{center}
+\item $(\Leftarrow)$
+$a>b \Rightarrow a^2>b^2$
+\begin{center}
+\begin{tabular}{c r c l l}
+&$a>b$&$\Rightarrow$&$b<a$&equivalente\\
+&&$\Rightarrow$&$0\leq b \land b<a$&por (1) y ley lógica de conjunción\\
+&&$\Rightarrow$&$0\leq b < a$&por hipótesis y  axioma de orden\\
+&&$\Rightarrow$&$0\leq b < a \land 0\leq b < a $&por taulogía $p \equiv p \land p $\\
+&&$\Rightarrow$&$b\cdot b < a \cdot a$&\hyperref[teo 1.2.6]{teorema 1.2.6}\\
+&&$\Rightarrow$&$b^2<a^2$&bases iguales exponentes se suman\\
+&&$\Rightarrow$&$a^2>b^2$&equivalente\\
+\end{tabular}
+\end{center}
+\end{itemize}
+\end{teo}

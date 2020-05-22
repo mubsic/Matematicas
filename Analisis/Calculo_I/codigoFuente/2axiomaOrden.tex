@@ -1,0 +1,553 @@
+\chapter{Axiomas de orden}
+\begin{center}
+\begin{tcolorbox}
+\begin{axioma}
+Si $x$ e $y$ pertenecen a $\mathbb{R}^+$, lo mismo ocurre a $x+y$\;  y \; $x\cdot y$
+\end{axioma}
+\begin{axioma}
+Para todo real $x\neq 0$, ó $x\in \mathbb{R}^+$ ó $-x \in \mathbb{R}^+$
+\end{axioma}
+\begin{axioma}
+$0 \notin \mathbb{R}^+$
+\end{axioma}
+\end{tcolorbox}
+\end{center}
+
+
+\begin{tcolorbox}
+\begin{def.}Símbolos de desigualdad\\
+\begin{center}
+\begin{itemize}
+\item $x<y$ significa que $y-x$ es positivo.
+\item $y>x$ significa que $x<y$.
+\item $x\leq y $ significa que ó $x<y$ ó $x=y$.
+\item $y\geq x$ significa que $x\leq y$.
+\end{itemize}
+\end{center}
+\end{def.}
+\end{tcolorbox}
+\paragraph{Nota} \begin{center}
+\begin{itemize}
+\item Si $x<0$ se dice que $x$ es negativo.
+\item Si $x\geq 0$ se dice que $x$ es no negativo.\\
+\end{itemize}
+\end{center}
+\section[Teoremas]{Teoremas\footnote{Tom Apostol Vol. 1, pag. 25}}
+
+%teorema 2.1
+\begin{teo}[Propiedad de Tricotomía]
+Para $a$ y $b$ números reales cualesquiera se verifica se verifica una y sólo una de las tres relaciones $a<b$, $b<a$, $a=b$\\\\
+demostración.- \;
+Sea $x=b-a$. Si $x=0$, entonces $x=a-b=b-a$, por axioma 9, $0\notin \mathbb{R}^+$ es decir:
+$$a<b, \; \; b-a \in \mathbb{R}^+$$
+$$b<a, \; \;  a-b \in \mathbb{R}^+$$
+pero como $a-b=b-a=0$ entonces no ser $a<b$ ni $b<a$\\
+Si $x0\neq 0,$ el axioma 8 afirma que ó $x>0$ ó $ x<0$, pero no ambos, por consiguiente, ó es $a<b$ ó es $b<a$, pero no ambos. Pro tanto se verifica una y sólo una de las tres relaciones $a=b,$ $a<b,$ $b<a$.\\\\
+\end{teo}
+
+%teorema 2.2
+\begin{teo}[Propiedad Transitiva]
+Si $a<b$ y $b<c$, es $a<c$\\\\
+Demostración.- \;
+Si $a<b$ y $b<c$, entonces por definición $b-a>0$ y $c-b>0$. En virtud del axioma 7 $(b-a)+(c-b)>0$, es decir, $c-a>0,$ y por lo tanto $a<c$.\\\\
+\end{teo}
+
+%teorema 2.3
+\begin{teo}
+Si $a<b$ es $a+c<b+c$\\\\
+Demostración.- \;
+Sea $x=a+c$
+\end{teo}
+
+%teorema 2.4
+\begin{teo}
+Si $a<b$ y $c>0$ es $ac<bc$\\\\
+Demostración.- \;
+Si $a<b$ por definición $b-a>0$, dado que  $c>0$ y por el axioma 7 $(b-a)c>0$ y $bc-ac>0$, por lo tanto $ac<bc$\\\\
+\end{teo}
+
+%teorema 2.5
+\begin{teo}
+Si $a\neq0$ es $a^2>0$\\\\
+Demostremos por casos..- \;
+Si $a>0$, entonces por axioma 7  \; $a\cdot a >0$ \; y \; $a^2>0$. Si $a<0$, entonces por axioma 7  \; $(-a)(-a)>0$ \; y  \; $a^2>0$\\\\
+\end{teo}
+
+%teorema 2.6
+\begin{teo}
+1>0\\\\
+Demostración.- \;
+Por el anterior teorema, si $1>0$ ó $1<0$ entonces $1^2>0$, y $1^2=1$, por lo tanto que $1>0$\\\\
+\end{teo}
+
+%teorema 2.7
+\begin{teo}
+Si $a<b$ y $c<0$, es $ac>bc$\\\\
+Demostración.- \;
+Si $c<0$, por definición $-c>0$, en virtud del axioma 7 $-c(b-a)>0$, y $ac-cb>0$, por lo tanto $ab<ac=ac>bc$\\\\
+\end{teo}
+
+%teorema 2.8
+\begin{teo}
+Si $a<b$, es $-a>-b$. En particular si $a<0$, es $-a>0$\\\\
+Demostración.- \;
+Si $1>0$, por la existencia de negativos $-1<0$ y por teorema 2.7 tenemos que $-1a>-1b$ por lo tanto $-a>-b$ \\\\
+\end{teo}
+
+%teorema 2.9
+\begin{teo}
+Si $ab>0$ entonces $a$ y $b$ son o ambos positivos o ambos negativos\\\\
+Demostración.- \;
+Sea $a>0$ y $b>0$, por axioma 7 \;  $ab>0$, y sea $a<0$ y $b<0$, por definición $-a>0$ y $-b>0$, por lo tanto $(-a)(-b)>0$ y por teorema 1.12 \; $ab>0$.\\\\
+ 
+\end{teo}
+
+%teorema 2.10
+\begin{teo}
+Si $a<c$ y $b<d,$ entonces $a+b<c+d$\\\\
+Demostración.- \;
+Si $a<c$ \; y \; $b<d$ por definición $c-a>0$ \; y \; $d-b>0$, en virtud del axioma 6:
+$$(c-a)+(d-b)>0 \Rightarrow c-a+d-b>0 \Rightarrow (c+d)-(a+b)>0$$ 
+por lo tanto $a+b<c+d$.\\\\ 
+\end{teo}
+
+%teorema 2.11
+\begin{teo}
+Para $b\geq 0$ $a^2>b$ $\Rightarrow$ $a>\sqrt{b}$ ó $a<-\sqrt{b}$\\\\
+Demostración.- \;
+Por hipótesis $a^2>b$ y $a^2-b>0$, por ejercicio 1.10 \; $(a-\sqrt{b})(a+\sqrt{b})>0$, y por teorema 2.9 \; $a-\sqrt{b}>0$ \; y \; $a+\sqrt{b}<0$ \; ó \; $a-\sqrt{b}<0$ \; y \; $a+\sqrt{b}<0$, por lo tanto $a-\sqrt{b}<0$ \; ó \; $a<-\sqrt{b}$\\\\
+\end{teo}
+
+
+
+\section*{Ejercicios y Demostraciones} 
+\subsection[Ejercicios]{Ejercicios\footnote{Calculo infinitesimal Michael Spivak, pag 18}}
+\subsubsection*{Encontrar todos los números x para los que:}
+\begin{ej}
+%ejercicio 2.1
+$4-x<3-2x$
+\begin{center}
+\begin{tabular}{c r c l l}
+$\Rightarrow$&$4-x+2x$&$<$&$3-2x+2x$&teorema 2.3\\
+$\Rightarrow$&$x+4$&$<$&$3$&Axiomas\\
+$\Rightarrow$&$4+(-4)x$&$<$&$3+(-4)$&teorema 2.3\\
+$\Rightarrow$&$x$&$<$&$-1$&axiomas\\\\
+\end{tabular}
+\end{center}
+\end{ej}
+
+%ejercicio 2.2
+\begin{ej}
+$5-x^2<8$
+\begin{center}
+\begin{tabular}{crcll}
+$\Rightarrow$&$(-5)+5-x^2+(-8)$&$<$&$(-8)+8+(-5)$&teorema 2.3\\
+$\Rightarrow$&$-x^2-8$&$<$&$-5$&\\
+$\Rightarrow$&$-x^2-3$&$<$&$0$&\\
+$\Rightarrow$&$-(-x^2-3)$&$>$&$-0$&teorema 2.8 \\
+$\Rightarrow$&$x^2+3$&$>$&$0$&Ejercicio 1.5\\\\
+\end{tabular}
+\end{center}
+Sea $x \neq 0$ entonces por teorema 2.5 \; $x^2>0$ y por axioma 7 se cumple que $x^2+3$ siempre es positivo, y como $3>0$ entonces el valor de $x$ son todos los números reales.\\\\
+\end{ej}
+
+%ejercicio 2.3
+\begin{ej}
+$5-x^2<-2$
+\begin{center}
+\begin{tabular}{crcll}
+$\Rightarrow$&$(-5)+5-x^2$&$<$&$-2+(-5)$&\\
+$\Rightarrow$&$-x^2$&$<$&$-7$&\\
+$\Rightarrow$&$x^2$&$>$&$7$&teorema 2.8\\
+$\Rightarrow$&$x>\sqrt{7}$&$ó$&$x<-\sqrt{7}$&teorema 2.11\\\\
+\end{tabular}
+\end{center}
+\end{ej}
+
+%ejercicio 2.4
+\begin{ej}
+$(x-1)(x-3)>0$
+\begin{center}
+\begin{tabular}{crcll} 
+$\Rightarrow$&$x-1>0$&$y$&$x-3>0$&teorema 2.9\\
+&&$ó$&&\\
+&$x-1<0$&$y$&$x-3<0$&\\\\
+$\Rightarrow$&$x>1$&$y$&$x>3$&\\
+&&$ó$&&\\
+&$x<1$&$y$&$x<3$&\\\\
+$\Rightarrow$&$x>3$&$ó$&$x<1$&\\\\
+\end{tabular}
+\end{center}
+\end{ej}
+
+%ejercicio 2.5
+\begin{ej}
+$x^2-2x+2>0$\\\\
+Completando cuadrados obtenemos que $x^2-2x+1^2 -1^2 +2 > 0$, después $(x-1)^2+1^2>0$, luego $x^2>0$, y en virtud de teorema nos queda que la desigualdad dada satisface a todos los números reales.\\\\
+\end{ej}
+
+%ejercicio 2.6
+\begin{ej}
+$x^2+x+1>2$\\\\
+Aplicando el teorema 2.25 se tiene $x=\dfrac{-1 \pm \sqrt{2^2-4(-1)}}{2}$. luego por teorema 2.9 obtenemos $$\left( x>\dfrac{-1-\sqrt{5}}{2} \; \; \; y \; \; \; x>\dfrac{-1+\sqrt{5}}{2} \right) ó \left( x<\dfrac{-1-\sqrt{5}}{2}\; \; \; y \; \; \; x < \dfrac{-1+\sqrt{5}}{2} \right),$$ por lo tanto, $$x<\dfrac{-1-\sqrt{5}}{2}\; \cup \; x>\dfrac{-1+\sqrt{5}}{2} $$ \\\\
+\end{ej}
+
+%ejercicio 2.7
+\begin{ej}
+$x^2-x+10>16$
+\begin{center}
+\begin{tabular}{crcll}
+$\Rightarrow$&$x^2-x-6$&$>$&$0$&\\
+$\Rightarrow$&$(x-3)(x+2)$&$>$&$0$&teorema 2.9\\
+$\Rightarrow$&$x>3$&$y$&$x>-2$&\\
+&$$&$ó$&$$&\\
+&$x<3$&$y$&$x<-2$&\\
+&$x>3$&$ó$&$x<-2$&\\\\
+\end{tabular}
+\end{center}
+\end{ej}
+
+%ejercicio 2.8
+\begin{ej}
+$(x-\pi)(x+5)(x-3)>0$ por la propiedad asociativa $(x-\pi)\left[ (x+5)(x-3) \right]>0$
+\begin{center}
+\begin{tabular}{crcll}\\
+$\Rightarrow$&$x>\pi$&$\land$&$\left[(x>-5\land x>3) \lor (x<-5 \land x<3) \right]$&\\
+&&$\lor$&\\
+&$x< \pi $&$\lor$&$\left[ (x<-5 \land x>3) \lor (x>-5 \land x<3) \right]$&\\\\
+$\Rightarrow$&$x > \pi $&$\land$&$(x>3 \lor x<-5)$&\\
+&&$\lor$&&\\
+&$x<\pi$&$\land$&$-5<x-3$&\\\\
+$\Rightarrow$&$x<\pi$&$\lor$&$-5<x-3$&\\\\
+\end{tabular}
+\end{center}
+\end{ej}
+\vspace{1cm}
+
+%ejercicio 2.9
+\begin{ej}
+$(x-\sqrt[3]{2})(x-\sqrt{2})>0$
+\begin{center}
+\begin{tabular}{crcll}
+$\Rightarrow$&$x>\sqrt[3]{2}$&$y$&$x>\sqrt{2}$&\\
+&&$ó$&&\\
+&$x<\sqrt[3]{2}$&$y$&$x<\sqrt{2}$&\\\\
+$\Rightarrow$&$x>\sqrt{2}$&$ó$&$x<\sqrt[3]{2}$&\\\\
+\end{tabular}
+\end{center}
+\end{ej}
+
+%ejercicio 2.10
+\begin{ej}
+$2^x<8$\\\\
+Podemos reescribir como $2^2<8^x$ y por propiedad de logaritmos que se vera mas adelante se tiene que $x<3$\\\\
+\end{ej}
+
+%ejercicio 2.11
+\begin{ej}
+$x+3^x <4$\\\\
+\textcolor{green}{Por resolver xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+\end{ej}
+
+%ejercicio 2.12
+\begin{ej}
+$\displaystyle\frac{1}{x} + \frac{1}{1-x}>0$
+\begin{center}
+\begin{tabular}{crcll}
+$\Rightarrow$&$\displaystyle\frac{1}{x(1-x)}$&$>$&$0$&teorema 1.13\\\\
+$\Rightarrow$&$\displaystyle\frac{1\cdot \left[ x(1-x)\right]^2}{x(1-x)}$&$>$&$0\cdot \left[ x(1-x)\right] ^2$&\\\\
+$\Rightarrow$&$x(1-x)$&$>$&$0$&\\\\
+$\Rightarrow$&$x>0$&$y$&$x<1$&\\
+&&$ó$&&\\
+&$x<0$&$y$&$x>1$&\\\\
+$\Rightarrow$&$0\; \; <$&$x$&$<\; \; 1$&\\\\
+\end{tabular}
+\end{center}
+\end{ej}
+
+%ejercicio 2.13
+\begin{ej}
+$\displaystyle\frac{x-1}{x+1}>0$
+\begin{center}
+\begin{tabular}{crcll}
+$\Rightarrow$&$\displaystyle\frac{(x-1)(x+1)^2}{>}$&$>$&$0(x+1)^2$&\\\\
+$\rightarrow$&$(x-1)(x+1)$&$>$&$0$&\\\\
+$\Rightarrow$&$x>1$&$y$&$x>-1$&\\
+&&$ó$&&\\
+&$x<1$&$y$&$x<-1$&\\\\
+$\Rightarrow$&$x>1$&$ó$&$x<-1$&\\\\
+\end{tabular}
+\end{center}
+\end{ej}
+
+ 
+
+\subsection[Demostraciones]{Demostraciones \footnote{Cálculo infinitesimal, Michael Spivak, pag 18-19}} 
+%teorema 2.12
+\begin{teo}
+Si $a<b$, entonce $-b<-a$\\\\
+Demostración.- \;
+Sea $-1<0$, por teorema 2.7 \; $-1(a)>-1(b)$, luego por existencia de elementos neutros $-a>-b$ por lo tanto $-b<-a$\\\\
+\end{teo}
+
+%teorema 2.13
+\begin{teo}
+Si $a<b$ y $c>d$, entonces $a-c<b-d$\\\\
+Demostración.- \;
+Si $a<b = b-a>0$ \; y  \; $c>d=d<c=c-d>0$, por axioma 7 \; $(b-a)+(c-d)>0$, luego $(b-d)+(-a+c)>0$ y en virtud del teorema 1.19 y definición \; $(b-d)-(a-c)>0$, por lo tanto $a-c<b-d$\\\\
+\end{teo}
+
+%teorema 2.14
+\begin{teo}
+Si $a>1$ entonces $a^2>a$\\\\
+Demostración.- \;
+Sea $1<a$ y $a-1>0$, por axioma 7 $a(a-1)>0=a^2-a>0$, luego $a<a^2$ y $a^2>a$\\\\
+\end{teo}
+
+%teorema 2.15
+\begin{teo}
+Si $0<a<1$, entonces $a^2<a$\\\\
+Demostración.- \;
+La demostración es similar al teorema 2.14. Por definición $0<a$ y $a<1$ por lo tanto $1-a>0$ y $a(1-a)>0$,\; $a^2<a$.\\\\
+\end{teo}
+
+%teorema 2.16
+\begin{teo}
+Si $a\leq a < b$ \; y \; $0 \leq c < d$, entonces $ac<bd$\\\\
+Demostración.- \;
+Tenemos que $a\geq 0$, $c\geq 0$, $a<d$ y $a<b$, en virtud del  teorema 2.4 $ac\leq bc$ y $ac \leq ad$ ( cabe recalcar que por hipótesis podría dar el caso de $0 \leq 0$  por ello el símbolo $" \leq "$) por lo tanto $bc-ac \geq 0$ \; y \; $ad-ac \geq 0$. luego en virtud del teorema 2.10\; $ac-ac \leq ad+bc$ y $-ad-bc\leq -2ac$. \\ 
+Por otro lado sea $b-a>0$ \; y \; $d-c>0$ entonces por axioma 7 \; $(b-a)(d-c)>0$ \; y \; $db-ad-bc+ac>0$.\\
+Si $-ad-bc\leq -2ac$ entonces $db -2ac +ac>0$ \; así \; $ac < bd$.\\\\
+\end{teo}
+   
+%teorema 2.17
+\begin{teo}
+Si $0\leq a < b$, entonces $a^2<b^2.$\\\\
+Demostración.- \;
+Por el teorema anterior si $0\leq a < b$ entonces $a\cdot a < b\cdot b$\; y \; $a^2<b^2$\\\\
+\end{teo}
+
+%teorema 2.18
+\begin{teo}
+Si $a, \; b \geq 0$ y $a^2<b^2$, entonces $a<b$\\\\
+Demostración.- \;
+Si $b^2-a^2>0$, por teorema 1.25 \; $(b-a)(b+a)>0$, y por teorema 2.9 \; $( b-a>0 \; \land \; b+a>0 ) \; \lor \; ( b-a<0 \; \land \; b+a<0 ) $. Sea $a,\; b\geq 0$ que da $(b-a>0 \; \land \; b+a>0)$ por lo tanto $a<b$.\\\\
+\end{teo}   
+   
+%teorema 2.19
+\begin{teo}
+Demostrar que si $0 \leq x<y $ entonces $x^n<y^n$\\\\
+Demostración.- \;
+Si $0 \leq x < y$ por el teorema 2.17 \; $x\cdot x < y \cdot y $, si aplicamos el teorema una vez mas $x\cdot x \cdot x < y \cdot y \cdot y$, si aplicamos $n$ veces dicho teorema $x\cdot x \cdot x \cdot ... \cdot x < y \cdot y \cdot y \cdot ... \cdot y $ es decir $x^n<y^n$\\\\
+\end{teo}
+   
+%teorema 2.20
+\begin{teo}
+Demostrar que si $x<y$ y $n$ es impar, entonces $x^n<y^n$\\\\
+Demostración.- \; Si $0\leq x < y$ por teorema anterior. Después si $x<y\leq 0$, entonces $0\leq -y < -x$, así $(-y)^n<(-x)^n$; esto significa que $-y^n<-x^n$ ya que $n$ es impar, por lo tanto $x^n<y^n$. Finalmente, si $x<0 \leq y$, entonces $x^n<0 \leq y^n$ siempre que $n$ sea impar. Por lo tanto en todos los casos, si $x<y$, entonces $x^n<y^n$.\\\\
+
+\end{teo}   
+
+%teorema 2.21
+\begin{teo}
+Demostrar que si $x^n=  ^n$ y $n$ es impar, entonces $x=y$\\\\
+Demostración.- \;
+Sea $n=2k-1$ y $x^n=y^n$ entonces $x^{2k-1}-y^{2k-1}=0$ y por teorema 1.28 \; $(x^{2k-1}-y^{2k-1})(x^{(2k-1)-1}+x^{(2k-1)-2}y^{2k-1}+...+x^{2k-1}y^{(2k-1)-2}+y^{(2k-1)-1})=0$ Sea $x, \; y \neq 0$ entonces por la propiedad de existencia de reciproco o inverso\, $x-y=0$ por lo tanto $x=y$\\\\
+\end{teo}
+
+%teorema 2.22
+\begin{teo}
+Demostrar que si $x^n=y^n$ y $n$ es par, entonces $x=y$ ó $x=-y$\\\\
+Demostración.- \; Si $n$ es par, usando el teorema 2.19, en lugar del teorema 2.20 vemos que si $x,y\geq 0$ y $x^n=y^n$, entonces $x=y$. Además, si $x,y\leq 0$ y $x^n=y^n$, entonces $-x,-y\geq 0$ y $(-x)^n=(-y)^n$, entonces nuevamente $x=y$. La única posibilidad es que $x$ e $y$ sea positivo y el otro negativo. En este caso, $x$ e $-y$ son ambos positivos o negativos. Además $x^n=(-y)^n,$ dado que $n$ es par se sigue de los casos anteriores que $x=-y$.\\\\
+\end{teo}
+   
+%teorema 2.23
+\begin{teo}
+Demostrar que si $0<a<b$, entonces
+$$a<\sqrt{ab}<\displaystyle\frac{a+b}{2}<b$$\\\\
+Demostremos por casos:
+\begin{enumerate}[\bfseries 1.]
+\item $a<\sqrt{ab}$\\\\
+Si \; $4a<b$ entonces $a^2<ab$ y por raíz cuadrada dado que $a,\;b>0$ entonces $a<\sqrt{ab}$\\
+\item $\sqrt{ab}<\displaystyle\frac{a+b}{2}$\\\\
+En vista de que $a, \; b > 0$ y $a<b$ entonces $a-b>0$, \; $(a-b)^2>0$ por lo tanto, $a^2-2ab+b^2>0 \Rightarrow 2ab< a^2+b^2 \Rightarrow 2ab-2ab+2ab<a^2+b^2 \Rightarrow 4ab < a^2+2ab +b^2 \Rightarrow 4ab < (a+b^)2 \Rightarrow ab < \displaystyle \left( \frac{a+b}{2} \right) ^2 \Rightarrow \sqrt{ab}<\frac{a+b}{2} $ \\
+\item $\displaystyle\frac{a+b}{2}<b$\\\\
+Si $a<b$ entonces $a+b<2b$ por lo tanto $\displaystyle\frac{a+b}{2}<b$\\
+\end{enumerate}
+Y por la propiedad transitiva queda demostrado.\\\\
+\end{teo}   
+   
+%teorema 2.24
+\begin{teo}
+Demostrar que si $x$ e $y$ son $0$ los dos, entonces:\\
+\begin{itemize}
+\item $x^2+xy+y^2>0$\\\\
+Demostración.- \;Sea $(x-y)^2>0$ entonces $x^2+y^2>xy$. Por otro lado  si $x,y \neq 0$ por teorema 2.5 \; $x^2+y^2>0$, dado que $x^2+y^2>xy$ entonces se cumple $x^2+y^2+xy>0$.\\\\
+\item $x^4+x^3y+x^2y^2+xy^3+y^4$ \\\\
+Demostración.- \; Sea $(x^5-y^5)^2>0$, por teorema $\left[ (x-y)(x^4+x^3y+x^2y^2+xy^3+y^4) \right]^2>0$, así $(x-y)^2(x^4+x^3y+x^2y^2+xy^3+y^4)^2>0$, \; $(x^4+x^3y+x^2y^2+xy^3+y^4)^2>0$, por lo tanto $(x^4+x^3y+x^2y^2+xy^3+y^4)>0$ \\\\
+\end{itemize}
+\end{teo}
+
+%lema 2.1
+\begin{lema} Demostrar que:
+\begin{enumerate}[\bfseries a)]
+\item 
+\begin{itemize}
+\item $(x+y)^2=x^2+y^2$ solamente cuando $x=0$ ó $y=0$\\\\
+Demostración.- \; Sea $x=0$ \; y \; $x^2+xy+y^2$ por teorema $0\cdot y = 0$ entonces $x^2+y^2$. Se demuestra de la misma manera para $y=0$\\\\
+\item $(x+y)^3=x^3+y^3$ solamente cuando $x=0$ ó $y=0$ ó $x=-y$\\\\
+Demostración.- \; Es evidente para $x=0$ é $y=0$. Solo faltaría demostrar para $x=-y$. \\ Si $(x+y)^3=x^3+3x^2y+3xy^2+y^3$ entonces $(x+y)^3=x^3 +3(-y)^2 y+3(-y)y^2 +y^3=x^3+3y^3+3(-y)^3+y^3$, por lo tanto $x^3+y^3$.\\\\ 
+\end{itemize}
+\item Haciendo uso del hecho que $$x^2+2xy+y^2=(x+y)^2 \geq 0$$
+demostrar que el supuesto $4x^2 +6xy+4y^2<0$ lleva una contradicción.\\\\
+Demostración.- \; 
+\begin{center}
+\begin{tabular}{r c l}
+$4^2+8xy+4y^2$&$<$&$2xy$\\
+$4(x^2+2xy+y^2)$&$<$&$2xy$\\
+$x^2+2xy+y^2$&$<$&$xy/2$\\
+\end{tabular}
+\end{center}
+Dado que $2xy<xy/2$ es falso, concluimos que $4x^2 +6xy+4y^2<0$ también es falso y así llegamos a una contradicción.\\\\
+\item Utilizando la parte $(b)$ decir cuando es $(x+y)^4=x^4+y^4$\\\\
+Se tiene $(x+y)^2(x+y)^2$, por lo tanto se cumple que $x^4+y^4$, si $x=0$ ó $y=0$\\\\
+\item Hallar cuando es $(x+y)^5=x^5+y^5$. Ayuda: Partiendo del supuesto $(x+y)^5?x^5+y^5$ tiene que ser posible deducir la ecuación $x^3+2x^2y+y^3=0$, si $xy\neq 0$. Esto implica que $(x+y)^3=x^2y+xy^2=xu(x+y)$.\\
+El lector tendría que ser ahora capaz de intuir cuando $(x+y)^n=x^n+y^n$.\\\\
+Demostración.- \; Si $x^5+y^5=(x+y)^5=x^5+5x^4y+10x^3y^2+10x^2y^3+5xy^4+y^5$, entonces $0=5x^4y+10x^3y^2+10x^2y^3+5xy^4$ $0=5xy(x^3+2x^2+y+2xy^2+y^3)$. Así $x^3+2x^2+y+2xy^2+y^3=0$.\\
+restando esta ecuación de $(x+y)^3=x^3+2x^2y+2xy^2+y^3$ obtenemos, $(x+y)^3=x^2y+xy^2=xy(x+y)$. Así pues, ó bien $x+y=0$ ó $(x+y)^2=xy;$ la última condición implica que $x^2+xy+y^2=0$, con lo que $x=0$ ó $y=0$. por lo tanto $x=0$ ó $y=0$ ó $x=-y$.\\\\
+\end{enumerate}
+\end{lema}
+
+%ejercicio 2.14
+\begin{ej} Hallar:\\
+\begin{enumerate}[\bfseries a)]
+\item El valor mínimo de $2x^2-2x+4$\\\\
+Para poder hallar el valor mínimo debemos llevar la ecuación a su forma canónica es decir, 
+\begin{center}
+\begin{tabular}{r c l}
+$2x^2-3x+4$&=&$2\left( x^2-\dfrac{3}{2}x \right) +4$\\\\
+&=&$2\left[ \left( x-\dfrac{3}{4} \right)^2 -\left(\dfrac{3}{4} \right)^2 \right]+4$\\\\
+&=&$2\left( x-\dfrac{3}{4} \right)^2-2\left( \dfrac{3}{4} \right)^2+4$\\
+\end{tabular}
+\end{center}
+El mínimo valor posible es $\dfrac{23}{8}$, cuando $\left(x-\dfrac{3}{4}\right)^2=0$ ó $x=\dfrac{3}{4}$\\\\
+\item El valor mínimo de $x^2-3x+2y^2+4y+2$\\\\
+$$x^2-3x+2y^2+4y+2=\left( x- \dfrac{3}{2} \right)^2+2(y+1)^2-\dfrac{9}{4}$$
+así el valor mínimo es $-\dfrac{9}{4}$, cuando $x=\dfrac{3}{2}$ y $y=-1$\\\\
+\item Hallar el valor mínimo de $x^2+4xy+5y^2-4x-6y+7$\\
+\begin{center}
+\begin{tabular}{r c l}
+$x^2+4xy+5y^2-4x-6y+7$&=&$x^2+4(y-1)x+5y^2-6y+7$\\
+&=&$[x+2(y-1)]^2+5y^2-6y+7-4(y-1)^2$\\
+&=&$[x+2(y-19]^2+(y+1)^2+2$\\
+\end{tabular}
+\end{center}
+Así el valor mínimo es 2, cuando $y=-1$ y $x=-2(y-1)=4$\\\\
+\end{enumerate}
+\end{ej}
+
+%teorema 2.25
+\begin{teo} Demostrar:\\
+\begin{enumerate}[\bfseries a)]
+\item Supóngase que $b^2-4c\geq 0$. Demostrar que los números
+$$\dfrac{-b+\sqrt{b^2-4c}}{2}, \; \; \; \dfrac{-b- \sqrt{b^2-4c}}{2}$$
+satisfacen ambos la ecuación $x^2+bx+c	=0$\\\\
+Demostración.- \; Para probar que satisfaga a la ecuación dada, podemos empezar a completar al cuadrado de la siguiente manera: $x^2+bx+\left(\dfrac{b}{2}\right)^2=-c+\left(\dfrac{b}{2}\right)^2$, así $\left( x^2+\dfrac{b}{2} \right)^2=-c+\dfrac{b^2}{4}$. Por existencia de raíz cuadrada de los números reales no negativos $x+\dfrac{b}{2} = \pm \sqrt{\dfrac{b^2-4c}{4}}$, luego $x=\dfrac{-b \pm \sqrt{b^2-4c}}{2}$.\\\\ 
+\item Supóngase que $b^2-4c<0$. Demostrar que no existe ningún número $x$ que satisfaga $x^2+bx+c=0$; de hecho es $x^2+bx+c>0$ para todo $x$.\\\\
+Demostración.- \: Tenemos $$x^2+bx+c=\left( x+\dfrac{b}{2}\right)^2+c-\dfrac{b^2}{4}\geq c- \dfrac{b^2}{4}$$ pero por hipótesis $c-\dfrac{b^2}{4}>0$, así $x^2+bx+c>0$ para todo $x$. \\\\
+\item Utilizar este hecho para dar otra demostración de que si $x$ e $y$ no son ambos $0$, entonces $x^2+xy+y^2>0$\\\\
+Demostración.- Aplicando la parte $b$ con $y$ para $b$ e $y^2$ para $c$, tenemos $b^2-4c=y^2-4y^2<0$ para $x \neq 0$, entonces $x^2+xy+y^2>0$ para todo $x$.\\\\ 
+\item ¿Para qué número $\alpha$ se cumple que $x^2+\alpha xy + y^2>0$ siempre que $x$ e $y$ no sean ambos $0$?\\\\
+Demostración.- \; $\alpha$ debe satisfacer $(\alpha y)^2-4y^2<0,$ o $\alpha^2<4$, o $|\alpha|<2$\\\\
+\item Hállese el valor mínimo posible de $x^2+bx+c$ y de $ax^2+bx+c,$ para $a>0$\\\\
+Demostración.- \; Por ser $$x^2+bx+c=\left( x+\dfrac{b}{2} \right)^2+ c-\dfrac{b^2}{4}\geq c- \dfrac{b^2}{4},$$ y puesto que $x^2+bx+c$ tiene el valor $c- \dfrac{b^2}{4}$ cuando $x=-\dfrac{b}{2}$, el valor mínimo es $c-\dfrac{b^2}{4}$. Puesto que $$ax^2+bx+c=\left( x^2+\dfrac{b}{a}x+\dfrac{c}{a} \right),$$ el mínimo es $$a\left( \dfrac{c}{a} - \dfrac{b^2}{4a^2} \right) = \dfrac{b^2}{4a}$$\\\\
+\end{enumerate}
+\end{teo}
+
+%teorema 2.26
+\begin{teo}
+El hecho de que $a^2 \geq 0$ para todo número $a$, por elemental que pueda parecer, es sin embargo la idea fundamental en que se basan en último instancia la mayor parte de las desigualdades. La premerísima de todas las desigualdades es la desigualdad de Schwarz: $$x_1y_1 + x_2y_2 \leq \sqrt{x_1^2 +x_2^2}\sqrt{y_1^2+y_2^2}.$$ Las tres demostraciones de la desigualdad de Schwarz que se esbozan más abajo tienen solamente una cosa en común: el estar basadas en el hecho de ser $a^2\geq 0$ para todo $a$.
+\begin{enumerate}[\bfseries a)]
+\item Demostrar que si $x_1=\lambda y_1$ \; y \; y $x_2=\lambda y_2$ para algún número $\lambda$, entonces vale el signo igual en la desigualdad de Schwarz. Demuéstrese lo mismoen el supuesto $y_1=y_2=0$: supóngase ahora que $y_1$ e $y_2$ no son ambos $0$ y que no existe ningún número $\lambda$ tal que $x_1=\lambda y_1$ \; y \; $x_2=\lambda y_2.$ Entonces
+\begin{center}
+\begin{tabular}{r c l}
+$0$&$<$&$(\lambda y_1-x_1)^2+(\lambda y_2 -x_2)^2$\\\\
+&$=$&$\lambda^2(y_1^2+y_2^2)-2\lambda(x_1 y_1 + x_2 y_2)+(x_1^2 +x_2^2)$\\
+\end{tabular}
+\end{center}
+utilizando el teorema anterior, completar la demostración de la desigualdad de Schwarz.\\\\
+Demostración.- \; 
+\end{enumerate}
+\end{teo}
+
+
+\section[Más demostraciones]{Más demostraciones\footnote{Tom Apostol Vol 1, pag 26}}   
+%teorema 2.25
+\begin{teo}
+No existe ningún número real tal que $x^2+1=0$\\\\
+Demostración.- \; Sea $Y=x^2+1=0$ de acuerdo con la propiedad de tricotomía:
+\begin{itemize}
+\item Si $x>0$ entonces por teorema 2.5 \; $x^2>0$ y por axioma 7 \; $x^2+1>0$ esto es $Y > 0$ y no satisface $Y=0$ para $x>0$.
+\item Si $x=0$ entonces $x^2=0$ y $x^2+1=1$ esto es $Y=1$ pero no satisface a $Y=1$ para $x=0$.
+\item Si $x<0$ entonces $-x>0$ y $x^2+1>0$, esto es $Y=0$ pero tampoco satisface a $y=0$ para $x<0$.\\\\ 
+\end{itemize}
+\end{teo}   
+   
+%teorema 2.26
+\begin{teo}
+La suma de dos números negativos es un número negativo.\\\\
+Demostración.- \;   Si $a<0$ y $b<0$ entonces $-a>0$ y $-b>0$ por axioma 7 \; $(-a)+(-b)>0$ y en virtud del teorema 1.19 \; $-(a+b)>0$ es decir $a+b<0$\\
+\end{teo}   
+
+%teorema 2.27
+\begin{teo}
+Si $a>0$, también $1/a>0;$ Si $a<0$ entonces $1/a<0$\\\\
+Demostración.- \;
+\begin{itemize}
+\item Si $a>0$ entonces $(2a)^{-1}\cdot a > 0 \cdot (2a)^{-1}$ por lo tanto $1/a>0$
+\item Si $a<0$ entonces $-a>0$ y $(-2a)^{-1}\cdot (-a)>0\cdot (-2a)^{-1}$ por lo tanto $1/a>0$ y $-1/a<0$\\\\
+\end{itemize}  
+\end{teo}
+
+%teorema 2.28
+\begin{teo}
+Si $0<a<b,$ entonces, $0<b^{-1}<a^{-1}$\\\\
+Demostración.- \; Si $b>0$ entonces por el teorema anterior  $b^{-1}>0$ ó $0<b^{-1}$.\\
+Si $a>0$ entonces $a^{-1}>0$, dado que $a<b$ y por teorema 2.4 \; $a\cdot a^{-1}< a^{-1}b$ así $1<a^{-1}b$, luego $b{-1}<a^{-1}\cdot bb^{-1}$, por lo tanto $b^{-1}<a^{-1}$. Y por la propiedad transitiva queda demostrado que $0<b^{-1}<a^{-1}$.\\\\
+\end{teo}   
+
+%teorema 2.29
+\begin{teo}
+Si $a \leq b $ y $b \leq c$ es $a\leq c$\\\\
+Demostración.- \; Si $a<b$ ó $a=b$ y $b<c$ ó $b=c$ demostremos por casos: Si $a<b$ y $b<c$ por la propiedad transitiva $a<c$, después si $a<b$ y $b=c$ entonces $a<c$, luego si $a=b$ y $b<c$ entonces $a<c$,  por último si $a=b$ y $b=c$ entonce $a=c$, por lo tanto $a\leq c$\\\\
+\end{teo}
+
+%corolario 2.1
+\begin{col.}
+Si $c\leq b$ y $b \leq c$ entonces $c=b$\\\\
+Demostración .- \; Si $b-c>0$ y $c-b>0$ entonces $(b-c)+(c-b)>0$ y $0<0$ es Falso, entonces queda que $c=b$ (Usted puede comprobar para cada uno de los casos que se suscita parecido al teorema anterior.)\\\\
+\end{col.}
+
+%teorema 2.30
+\begin{teo}
+Si $a\leq b$ y $b \leq c$ y $a=c$ entonces $b=c$\\\\
+Demostración.- \; Si $a\leq b$\;  y \; $a=c$ entonces $c\leq b$. Sea $c\leq b$ \; y \; $b\leq c$ y por corolario 2.1 \; $b=c$.\\\\
+\end{teo}
+
+%teorema 2.31
+\begin{teo}
+Para números reales $a$ y $b$ cualquiera, se tiene $a^2+b^2\leq 0$. Si $ab\geq 0$, entonces es $a^2+b^2>0$.\\\\
+Demostración.- \; Si $ab>0$ por teorema 2.9 ($a>0$ y $b>0$ ) ó ($a<0$ y $b<0$) luego por teorema 2.5 $a^2>0$ y $b^2>0$ por lo tanto por axioma 7 y ley de tricotomía $a^2+b^2>0$.\\\\ 
+\end{teo}
+
+%Teorema 2.32
+\begin{teo}
+No existe ningún número real $a$ tal que $x\leq a$ para todo real $x$\\\\
+Demostración.- \; Supongamos que existe un número real $" a "$ tal que $y \leq a$. Sea $n\in \mathbb{R}$ \; y \; $x=y+n$ entonces por teorema 1.18 \; $y+n \leq a+n$ \; y \; $x\leq a+n$ esto contradice que existe un número real $a$ tal que $y\leq a$, por lo tanto no existe ningún número real tal que para todo x, $x\leq a$.\\\\
+\end{teo}
+
+%teorema 2.33
+\begin{teo}
+Si $x$ tiene la propiedad que $0\leq x < h$ para cada número real positivo $h$, entonces $x=0$\\\\
+Demostración .- \;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Por el teorema anterior ni $0<x$ ni $x<h$ satisfacen la proposición por lo tanto queda $x=0$\\\\
+\end{teo}
