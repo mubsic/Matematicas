@@ -246,7 +246,7 @@ Podemos reescribir como $2^2<8^x$ y por propiedad de logaritmos que se vera mas 
 %ejercicio 2.11
 \begin{ej}
 $x+3^x <4$\\\\
-\textcolor{green}{Por resolver xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+\textcolor{green}{Por resolver xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}	
 \end{ej}
 
 %ejercicio 2.12
@@ -460,7 +460,7 @@ Demostración.- Aplicando la parte $b$ con $y$ para $b$ e $y^2$ para $c$, tenemo
 \item ¿Para qué número $\alpha$ se cumple que $x^2+\alpha xy + y^2>0$ siempre que $x$ e $y$ no sean ambos $0$?\\\\
 Demostración.- \; $\alpha$ debe satisfacer $(\alpha y)^2-4y^2<0,$ o $\alpha^2<4$, o $|\alpha|<2$\\\\
 \item Hállese el valor mínimo posible de $x^2+bx+c$ y de $ax^2+bx+c,$ para $a>0$\\\\
-Demostración.- \; Por ser $$x^2+bx+c=\left( x+\dfrac{b}{2} \right)^2+ c-\dfrac{b^2}{4}\geq c- \dfrac{b^2}{4},$$ y puesto que $x^2+bx+c$ tiene el valor $c- \dfrac{b^2}{4}$ cuando $x=-\dfrac{b}{2}$, el valor mínimo es $c-\dfrac{b^2}{4}$. Puesto que $$ax^2+bx+c=\left( x^2+\dfrac{b}{a}x+\dfrac{c}{a} \right),$$ el mínimo es $$a\left( \dfrac{c}{a} - \dfrac{b^2}{4a^2} \right) = \dfrac{b^2}{4a}$$\\\\
+Demostración.- \; Por ser $$x^2+bx+c=\left( x+\dfrac{b}{2} \right)^2+ c-\dfrac{b^2}{4}\geq c- \dfrac{b^2}{4},$$ y puesto que $x^2+bx+c$ tiene el valor $c- \dfrac{b^2}{4}$ cuando $x=-\dfrac{b}{2}$, el valor mínimo es $c-\dfrac{b^2}{4}$.\\ Después $$ax^2+bx+c= a \left( x^2+\dfrac{b}{a}x+\dfrac{c}{a} \right),$$ el mínimo es $$a\left( \dfrac{c}{a} - \dfrac{b^2}{4a^2} \right) = c - \dfrac{b^2}{4a}$$\\\\
 \end{enumerate}
 \end{teo}
 
@@ -468,15 +468,31 @@ Demostración.- \; Por ser $$x^2+bx+c=\left( x+\dfrac{b}{2} \right)^2+ c-\dfrac{
 \begin{teo}
 El hecho de que $a^2 \geq 0$ para todo número $a$, por elemental que pueda parecer, es sin embargo la idea fundamental en que se basan en último instancia la mayor parte de las desigualdades. La premerísima de todas las desigualdades es la desigualdad de Schwarz: $$x_1y_1 + x_2y_2 \leq \sqrt{x_1^2 +x_2^2}\sqrt{y_1^2+y_2^2}.$$ Las tres demostraciones de la desigualdad de Schwarz que se esbozan más abajo tienen solamente una cosa en común: el estar basadas en el hecho de ser $a^2\geq 0$ para todo $a$.
 \begin{enumerate}[\bfseries a)]
-\item Demostrar que si $x_1=\lambda y_1$ \; y \; y $x_2=\lambda y_2$ para algún número $\lambda$, entonces vale el signo igual en la desigualdad de Schwarz. Demuéstrese lo mismoen el supuesto $y_1=y_2=0$: supóngase ahora que $y_1$ e $y_2$ no son ambos $0$ y que no existe ningún número $\lambda$ tal que $x_1=\lambda y_1$ \; y \; $x_2=\lambda y_2.$ Entonces
+\item Demostrar que si $x_1=\lambda y_1$ \; y \; y $x_2=\lambda y_2$ para algún número $\lambda$, entonces vale el signo igual en la desigualdad de Schwarz. Demuéstrese lo mismo en el supuesto $y_1=y_2=0$: supóngase ahora que $y_1$ e $y_2$ no son ambos $0$ y que no existe ningún número $\lambda$ tal que $x_1=\lambda y_1$ \; y \; $x_2=\lambda y_2.$ Entonces
 \begin{center}
 \begin{tabular}{r c l}
 $0$&$<$&$(\lambda y_1-x_1)^2+(\lambda y_2 -x_2)^2$\\\\
 &$=$&$\lambda^2(y_1^2+y_2^2)-2\lambda(x_1 y_1 + x_2 y_2)+(x_1^2 +x_2^2)$\\
 \end{tabular}
 \end{center}
-utilizando el teorema anterior, completar la demostración de la desigualdad de Schwarz.\\\\
-Demostración.- \; 
+Utilizando el teorema anterior, completar la demostración de la desigualdad de Schwarz.\\\\
+Demostración.- \; Primero, Si $x_1=\lambda y_1$ \; y \; $x_2=\lambda y_2.$, entonces remplazando en la desigualdad de Schwarz, $\lambda \cdot (y_1)^2 + \lambda \cdot (y_2)^2=\sqrt{(\lambda y_1)^2+(\lambda y_2)^2}\sqrt{y_1^2+y_2^2}$ luego por propiedades de raíz se cumple  $$\lambda(y_1^2+y_2^2) = \sqrt{\left[\lambda(y_1^2+y_2^2)\right]^2}$$
+Vemos que también se cumple la igualdad para $y_1=y_2=0$ .\\
+Por último Si un tal $\lambda$ no existe, entonces la ecuación carece de solución en $\lambda$, de modo que por el teorema 1.25 tenemos, $$\left[ \dfrac{2(x_1 y_1 + x_2 y_2)}{y_1^2 + y_2^2}  \right]^2 - \dfrac{4(x_1^2 +y_1^2)}{y_1^2 + y_2^2}<0$$ lo cual proporciona la desigualdad de Schwartz.\\\\
+\item Demostrar la desigualdad de Schwarz haciendo uso de $2xy\leq x^2+y^2$(¿Cómo se deduce esto?) con $$x=\dfrac{x_i}{\sqrt{x_1^2 + x_2^2}}, \; \; \; y = \dfrac{y_i}{\sqrt{y_1^2+y_2^2}}$$ primero para $i=1$ y después para $i=2$.\\\\
+Demostración.- \;  En vista de que $(x-y)^2\geq 0$, tenemos $2xy\leq x^2+y^2$. Realizando el respectivo remplazo tenemos:
+\begin{enumerate}[\bfseries 1)]
+\item $$2\dfrac{x_1}{\sqrt{x_1^2 + x_2^2}}\cdot \dfrac{y_1}{\sqrt{y_1^2+y_2^2}}\leq \dfrac{x_1^2}{\sqrt{x_1^2 + x_2^2}} + \dfrac{y_1^2}{\sqrt{y_1^2+y_2^2}}$$
+\item $$2\dfrac{x_2}{\sqrt{x_1^2 + x_2^2}}\cdot \dfrac{y_2}{\sqrt{y_1^2+y_2^2}}\leq \dfrac{x_2^2}{\sqrt{x_2^2 + x_2^2}} + \dfrac{y_1^2}{\sqrt{y_1^2+y_2^2}}$$
+\end{enumerate}
+Luego sumando $1)$ y $2)$ $$2\dfrac{x_1}{\sqrt{x_1^2 + x_2^2}}\cdot \dfrac{y_1}{\sqrt{y_1^2+y_2^2}}+2\dfrac{x_2}{\sqrt{x_1^2 + x_2^2}}\cdot \dfrac{y_2}{\sqrt{y_1^2+y_2^2}}\leq \dfrac{x_1^2}{\sqrt{x_1^2 + x_2^2}} + \dfrac{y_1^2}{\sqrt{y_1^2+y_2^2}}+\dfrac{x_2^2}{\sqrt{x_2^2 + x_2^2}} + \dfrac{y_1^2}{\sqrt{y_1^2+y_2^2}}$$ nos queda $$\dfrac{2(x_1y_1+x_2y_2)}{\sqrt{x_1^2+x_2^2}\sqrt{x_2^2+y_2^2}}\leq 2$$\\\\
+\item Demostrar la desigualdad de Schwarz demostrando primero que $$(x_1^2 + x_2^2)(y_1^2 + y_2^2)=(x_1 y_1 + x_2 y_2)^2 + (x_1 y_2 - x_2 y_1)^2$$
+Demostración.- \; Es fácil ver que la igualdad se cumple, $$(x_1^2 + x_2^2)(y_1^2 + y_2^2)=(x_1 y_1)^2 +2x_1 y_1 x_2 y_2 + (x_2 y_2 ) ^2 + (x_1 y_2)^2 -2x_1 y_1 x_2 y_2 + (x_2 y_1)^2=(x_1 y_1 + x_2 y_2)^2 + (x_1 y_2 - x_2 y_1)^2$$
+Ya que $(x_1 y_2 - x_2 y_1)^2\geq 0$ entonces, $$(x_1^2 + x_2^2)(y_1^2 + y_2^2)\geq (x_1 y_1 + x_2 y_2)^2$$\\\\
+\item Deducir de cada una de estas tres demostraciones que la igualdad se cumple solamente cuando $y_1 = y_2 = 0$ ó cuando existe un número $\lambda$ tal que $x_1=\lambda y_1$\; y \; $x_2= \lambda y_2$\\\\
+Demostración.- \; La parte $a)$ ya prueba el resultado deseado.\\
+En la parte $b)$ la igualdad se mantiene sólo si se cumple en $(1)$ y $(2)$. Sea $2xy=x^2+y^2$ sólo cuando $(x-y)^2=0$ es decir $x=y$ esto significa $$\dfrac{x_i}{\sqrt{x_1^2 + x_2^2}}= \dfrac{y_i}{\sqrt{y_1^2+y_2^2}} \; ; \; para \; x=1,2$$ para que podamos elegir $\lambda = \sqrt{x_1^2 + x_2^2} / \sqrt{y_1^2 + y_2^2}$.\\
+En la parte $(c)$, la igualdad se cumple solamente cuando $(x_1 y_2 - x_2 y_1)^2 \geq 0$. Una posibilidad es $y_1 = y_2 = 0$. Si $y\leq 0$, entonces $x_l = (x_1 y_1)y_1$ \; y también $x_2 = (x_1 / y_1)y_1$ análogamente, si $y_2\leq 0$, entonces $\lambda = x2/y2$.\\\\
 \end{enumerate}
 \end{teo}
 

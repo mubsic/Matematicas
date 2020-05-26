@@ -177,9 +177,9 @@ Ahora, supongamos que tenemos una línea de longitud 1 y una línea de longitud 
 %ejercicio 5.10
 \begin{ej}
 Sea $b$ un entero positivo. Demostrar por inducción la proposición siguiente: Para cada entero $n\geq 0$ existen enteros no negativos $q$ \; y \; $r$ tales que:
-$$n=qb+r, \; \; \; 0\leq r < b$$
-Dejado $b$ ser un entero positivo fijo. Si $n=0$ luego lo deja $q=r=0$, la afirmación es verdadera (desde $0=0b+0$).\\
-Ahora suponga que la afirmación es cierta para algunos $k \in \mathbb{N}$. Por hipótesis de inducción sabemos que existen enteros no negativos $q$ \; y \; $r$ tales que $$k=qb+r, \; \; \; 0\leq r < b,$$ Por lo tanto, sumando 1 a ambos lados tenemos, $$k+1=qb+(r+1).$$ Como $0\leq r < b$ lo sabemos $a\leq r \leq (b-1)$. Si $0\leq r < b-1,$ entonces $0\leq r+1<b,$ y la declaración aún se mantiene con la misma elección $q$ \; y \; $r+1$ en lugar de $r$.\\
+$$n=qb+r, \; \; \; 0\leq r < b$$ \\
+Demostración.- \; Sea $b$ ser un entero positivo fijo. Si $n=0$ , luego $q=r=0$, la afirmación es verdadera (ya que $0=0b+0$).\\
+Ahora suponga que la afirmación es cierta para algunos $k \in \mathbb{N}$. Por hipótesis de inducción sabemos que existen enteros no negativos $q$ \; y \; $r$ tales que $$k=qb+r, \; \; \; 0\leq r < b,$$ Por lo tanto, sumando 1 a ambos lados tenemos, $$k+1=qb+(r+1).$$ Pues $0\leq r < b$ entonces sabemos que $0\leq r \leq (b-1)$. Si $0\leq r < b-1,$ entonces $0\leq r+1<b,$ y la declaración aún se mantiene con la misma elección $q$ \; y \; $r+1$ en lugar de $r$.\\
 Por otro lado, si $r=b-1,$ entonces $r+1=b$ y tenemos, $$k+1=qb+b=(q+1)b+0$$
 Por lo tanto, la declaración se mantiene de nuevo, pero con $q+1$ en lugar de $q$ \; y con $r=0$ (que es válido ya que si $r=0$ tenemos $a\leq r < b$). Por ende, si el algoritmo de división es válido para $k$, entonces también es válido para $k+1.$ Entonces, es válido para todos $n \in \mathbb{N}$.\\\\
 \end{ej}

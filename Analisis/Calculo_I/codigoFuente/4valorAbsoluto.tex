@@ -307,7 +307,48 @@ Demostrar que $|a|=|-a|$\\\\
 Demostración.- \; Si $a\geq 0$, para $|a|^2$ entonces $a^2$, en virtud del teorema 2.5 $(-a)^2=|-a|^2$, así se demuestra que $|a|=|-a|$. Luego es evidente para $a \leq 0$\\\\
 \end{teo} 
 
-\section[Demostraciones]{Demostraciones \footnote{Calculus Vol 1, Tom Apostol, pag 53}}
+%teorema 4.13
+\begin{teo} \footnote{Calculo infinitesimal, Michael Spivak, pag 23-24}
+Demostrar que si $$|x - x_0|<\dfrac{\epsilon}{2} \hspace{0.5cm} y \hspace{0.5cm} |y - y_0|<\dfrac{e}{2}$$ entonces $$|(x+y)-(x_o + y_0)|<\epsilon,$$ $$|(x-y)-(x_o - y_0)|<\epsilon.$$
+Demostración.- \; primeramente si $|(x+y)-(x_o + y_0)|= |(x-x_0)+(y-y_0)|$, por desigualdad triangular e hipótesis, $$ |(x-x_0)+(y-y_0)|\leq |x - x_0| + |y - y_0| <\frac{\epsilon}{2} + \frac{\epsilon}{2} =\epsilon$$
+Demostramos de similar manera y por teorema 1.7, $$|(x-y)-(x_o - y_0)| = |(x - x_0)-(y - y_0)| \leq |x - x_0| + |y - y_0|< \frac{\epsilon}{2} + \frac{\epsilon}{2}=\epsilon$$\\
+\end{teo}
+
+%teomrea 4.14 
+\begin{teo}\footnote{Calculo infinitesimal, Michael Spivak, pag 23-24}
+Demostrar que si $$|x-x_0|< min \left( 1,\dfrac{\epsilon}{2(|y_0|+1)} \right) \hspace{0.5cm} y \hspace{0.5cm} |y-y_0|< \dfrac{\epsilon}{2(x_0+1)}$$ entonces $|xy - x_0 y_0 |< \epsilon.$\\\\
+La primera igualdad de la hipótesis significa precisamente que: $$|x-x_0|<1 \hspace{0.5cm} y \hspace{0.5cm} |x - x_0| \dfrac{\epsilon}{2(|y_0|+1)}$$\\\\
+Demostración.- \; puesto que $|x-x_0| < 1$ se tiene $$|x|-|x_0| \leq |x-x_0| < 1$$ de modo que $$|x| < 1 + |x_0|$$ Así pues 
+\begin{center}
+\begin{tabular}{r c l l}
+$|xy - x_0 y_0|$&=&$| xy -xy_0 + xy_0 -x_0 y_0 |$&\\\\
+&=&$|x(y - y_0) + y_0(x - x_0)|$&\\\\
+&$\leq$&$|x| \cdot |y - y_0| + |y_0| \cdot |x - x_0|$&\\\\
+&$<$&$(1+|x_0|) \cdot \dfrac{\epsilon}{2(|x_0|+1|)} +  |y_0| \cdot \dfrac{\epsilon}{2(|y_0|+1|)}$&ya que $ |y_0|\dfrac{\epsilon}{2(|y_0|+ 1|)} < |y_0| \dfrac{\epsilon}{2|y_0|}$ para $|y_0|\neq 0$\\\\
+&$\leq$&$\dfrac{\epsilon}{2} + \dfrac{\epsilon}{2}$& ó $|y_0|\dfrac{\epsilon}{2(|y_0|+ 1|)} = \dfrac{\epsilon}{2}$ si $|y_0|=0$ \\\\
+&$=$&$\epsilon$&\\\\
+\end{tabular}
+\end{center}
+\end{teo}
+
+%teorema 4.15
+\begin{teo}
+Demostrar que si $y_0 \neq 0$ y 
+$$|y - y_0|< min\left( \dfrac{|y_0|}{2}, \dfrac{\epsilon |y_0|^2}{2} \right),$$ 
+entonces $y \neq 0$ y $$\left| \dfrac{1}{y} - \dfrac{1}{|y_0|} \right|$$\\\\
+Demostración.- \; Se tiene $$|y_0| - |y| < |y - y_0| < \dfrac{y_0}{2},$$ de modo que $|y|<\dfrac{|y_0|}{2}$. En particular, $y \neq 0,$ y $$\dfrac{1}{|y|} < \dfrac{2}{y_0}.$$ Así pues $$\left| \dfrac{1}{y} - \dfrac{1}{y_0} \right| = \dfrac{|y_0 - y|}{|y| \cdot |y_0|} < \dfrac{2}{y_0} \cdot \dfrac{1}{|y_0|} \cdot \dfrac{\epsilon |y_o|^2}{2} = \epsilon$$\\\\
+\end{teo}
+
+%teorema 4.16
+\begin{teo}
+Sustituir los interrogantes del siguiente enunciado por expresiones que encierren $\epsilon, \; x_0 \; e \; y_0$ de tal manera que la conclusión sea válida:\\
+Si $y_0$ y $$|y - y_0|< ? \hspace{0.5cm} y \hspace{0.5cm} |x - x_0|< ?$$ entonces $y \neq 0$ y $$\left| \dfrac{x}{y} - \dfrac{x_0}{y_0} \right|< \epsilon$$ \\
+Sea $|x \dfrac{1}{y} - x_0 \dfrac{1}{y_0}|< \epsilon$ entonce $|x \cdot y^{-1} - x_o \cdot y_0^{-1}| < \epsilon$ por teorema 4.14 $$|x- x_0| < min \left( 1, \dfrac{\epsilon}{2(|y_0^{-1}|+1)} \right) \hspace{0.5cm} y \hspace{0.5cm} |y^{-1} - y_0^{-1}| < \dfrac{\epsilon}{2(|x_0|+1)}  $$ luego por teorema 4.15 $$|y - y_0| < min \left( \dfrac{\dfrac{\epsilon}{2 (|x_o|)+1} \cdot |y_0|^2}{2} \right) = \min \left( \dfrac{\epsilon \cdot |y_0|^2}{4(|x_o|+1)} \right)$$ \\
+\end{teo}
+
+
+
+\section[Demostraciones]{Demostraciones \footnote{Calculus Vol 1, Tom Apostol, pag 53-54}}
 \begin{teo}
 $|x|=0$ si sólo si $x=0$\\\\
 Demostración.- \; Si $|x|=0$, por definición $x=0$. Luego, si $x=0$, entonces por teorema $\sqrt{x^2}=\sqrt{0^2}=0$\\\\
@@ -322,3 +363,42 @@ Demostración.- \; Por teorema $|x-y|=\sqrt{(x-y)^2}=\sqrt{x^2-2xy+y^2}=\sqrt{y^
 $|x|^2=x^2$\\\\
 Demostración.- \; Si $|x|^2$, por teorema $\left( \sqrt{x^2} \right)^2$, por propiedad de potencia $x^2$\\\\
 \end{teo}
+
+
+\section[Ejercicios]{Ejercicios \footnote{Calculus Vol 1, Tom Apostol, pag 53-54}}
+% ejercicio 4.4 
+\begin{ej}
+Cada desigualdad $(a_i)$, de las escritas a continuación, equivale exactamente a una desigualdad $(b_j)$. Por ejemplo, $|x|<3$ si y sólo si $-3<x<3$ y por tanto $(a_1)$ es equivalente a $(b_2)$. Determinar todos los pares equivalentes.\\
+\begin{multicols}{2}
+\begin{tabular}{r c l}
+$|x|<3$&$\longrightarrow$&$-3<x<3$\\\\
+$|x-1|<3$&$\longrightarrow$&$-2<x<4$\\\\
+$|3-2x|<1$&$\longrightarrow$&$1<x<2$\\\\
+$|1+2x|\leq 1$&$\longrightarrow$&$-1\leq x \leq 0$\\\\
+$|x-1|>2$&$\longrightarrow$&$x>4 \; \lor \; x<-1$\\\\
+\end{tabular}
+\begin{tabular}{l c l}
+$|x+2| \geq 5$&$\longrightarrow$&$x\geq 3 \; \lor \; x\leq -7$\\\\
+$|5-x^{-1}|<1 $&$\longrightarrow$&$4<x<6$\\\\
+$|x-5|<|x+1|$&$\longrightarrow$&$x>2$\\\\
+$|x^2-2|\leq 1$&$\longrightarrow$&$-\sqrt{3} \leq x \leq -1 \; ó \; 1\leq x \leq \sqrt{3}$\\\\
+$x<x^2-12<4x$&$\longrightarrow$&$\dfrac{1}{6}<x<\dfrac{1}{4}$\\\\
+\end{tabular}
+\end{multicols}
+\end{ej}
+
+\begin{ej}
+Decidir si cada una de las siguientes afirmaciones es cierta o falsa. En cada caso razonar la decisión.
+\begin{enumerate}[\bfseries a)]
+\item $x<5$ implica $|x|<5$\\\\
+Es falso ya que $|-6|<5$ entonces $6>5$.\\\\
+\item $|x-5|<2$ implica $3<x<7$\\\\
+Es verdad ya que por teorema $-2 < x-5 < 2$ entonces $3<x<7$.\\\\
+\item $|1 + 3x| \leq 1$ implica $x > - \dfrac{2}{3}$ \\\\
+es verdad ya que $-1\leq 1 + 3x \leq 1$ entonces $-\dfrac{2}{3} \leq x \leq 0$.\\\\
+\item No existe número real $x$ para el que $|x-1|= |x-2|$\\\\
+Es falso ya que se cumple para $\dfrac{3}{2}$.\\\\
+\item Para todo $x>0$ existe un $y>0$ tal que $|2x + y|=5$\\\\
+Es falso ya que si tomas $x=3$ será $y<0$\\\\
+\end{enumerate}
+\end{ej}
