@@ -16,6 +16,7 @@ $$(c \cdot g)(x)=c \cdot g(x)$$\\
 \end{def.}
 \end{tcolorbox}
 
+%teorema 1
 \begin{teo}
 $(f+g)+h=f+(g+h)$\\\\
 Demostración.- \; \textbf{La demostración es característica de casi todas las demostraciones que prueban que dos funciones son iguales: se debe hacer ver que las dos funciones tienen el mismo dominio y el mismo valor para cualquier número del dominio.} Observese que al interpretar la definición de cada lado se obtiene:
@@ -31,9 +32,21 @@ $\left[ f+(g+h) \right](x)$&=&$f(x)+(g+h)(x)$\\
 Es esta demostración no se ha mencionado la igualdad de los dos dominios porque esta igualdad parece obvia desde el momento en que empezamos a escribir estas ecuaciones: el dominio de $(f+g)+h$ y el de $f+(g+h)$ es evidentemente dominio $f$ $\cap$ dominio $g$ $\cap$ dominio $h$. nosotros escribimos, naturalmente $f+g+h$ por $(f+g)+h=f+(g+h)$\\\\
 \end{teo}
 
+%teorema 2
 \begin{teo}
 Es igual fácil demostrar que $(f\cdot g)\cdot g=f\cdot (g \cdot h)$ y ésta función se designa por $f \cdot g \cdot h$. Las ecuaciones $f+g=g+f$ \; y \; $f\cdot g=g \cdot f$ no deben presentar ninguna dificultad.\\\\
 \end{teo}
+
+%teorema 3
+\begin{teo}\footnote{Calculus Vol 1, Tom Apostol, pag. 66}
+Dos funciones $f$ y $g$ so iguales si y sólo si
+\begin{enumerate}[\bfseries a)]
+\item $f$ y $g$ tienen el mismo dominio, y 
+\item $f(x)=g(x)$ para todo $x$ del dominio de $f$.
+\end{enumerate}
+Demostración.- \; Sea $f$ una función tal que $\forall x \in D_f, \; \exists y \; / \; y=f(x)$ es decir $\left( x, f(x) \right)$ y $g$ una función tal que $\forall z \in D_g, \; \exists y \; / \; y=g(z)$ es decir $\left( z, g(z) \right)$, por definición 1.6 dos pares ordenados $\left( x, f(x) \right) = \left( z, g(z) \right)$ si y sólo si $x = z$ \; y \; $f(x)=g(z)$ \\\\    
+\end{teo}
+
 
 \begin{tcolorbox}
 \begin{def.}[Composición de función]
@@ -60,14 +73,309 @@ Es costumbre escribir $y=f(x)$ en lugar de $(x,y)\in f$, por lo tanto, $$\forall
 \end{tcolorbox}
 \begin{tcolorbox}
 \begin{def.} \footnote{Definición de Michael Spivak}
-Una \textbf{función} es una colección de pares de números con la siguiente propiedad: Si $(a,b)$ \; y \; $a,c$ pertenecen ambos a la colección, entonces $b=c$; en otras palabras, la colección no debe contener dos pares distintos con el mismo primer elemento.\\
+Una \textbf{función} es una colección de pares de números con la siguiente propiedad: Si $(a,b)$ \; y \; $(a,c)$ pertenecen ambos a la colección, entonces $b=c$; en otras palabras, la colección no debe contener dos pares distintos con el mismo primer elemento.\\
 \end{def.}
 
 \begin{def.} \footnote{Definición de Michael Spivak}
-Si $f$ es una función, el \textbf{dominio} de $f$ es el conjunto de todos los $a$ para los que existe algún $b$ tal que $(a,b)$ está en $f$. Si $a$ está en el dominio de $f$, se sigue de la definición de función que existe, en efecto, un número $b$ único tal que $(a,b)$ está en $f$. Este $b$ único se designa por $f(a)$.\\
-
-
-
-  
+Si $f$ es una función, el \textbf{dominio} de $f$ es el conjunto de todos los $a$ para los que existe algún $b$ tal que $(a,b)$ está en $f$. Si $a$ está en el dominio de $f$, se sigue de la definición de función que existe, en efecto, un número $b$ único tal que $(a,b)$ está en $f$. Este $b$ único se designa por $f(a)$.\\  
 \end{def.}
 \end{tcolorbox}
+
+\section{Teoremas y ejercicios}
+\subsection[Ejercicios]{Ejercicios \footnote{Calculo infinitesimal, Micheal Spivak, Pag. 61 al 68}}
+%ejercicio 1
+\begin{ej}Sea $f(x)=\dfrac{1}{1+x},$ Interpretar lo siguiente:
+\begin{enumerate}[\bfseries i)]
+\item $f\left( f(x) \right)$\\\\
+Vemos que el dominio de    $\dfrac{1}{1+x}$ son todos los reales excepto $-1$ ya que cualquier número dividido entre $0$ es indeterminado.\\
+Por otro lado el dominio de $f\left( f(x) \right)$ es $f \left( \dfrac{1}{1 - x} \right) = \dfrac{1}{1 + \dfrac{1}{1+x}} = \dfrac{1+x}{2+x}, \; \; \; x \neq -2$\\\\
+Así por definición de dominio $$D_{f \circ g} = \lbrace x \;  / \; x \neq -1 \; \land \; x \neq -2  \rbrace.$$\\
+
+\item $f \left( \dfrac{1}{x} \right)$\\\\
+El dominio de $f$ esta dada por $ (x\neq 0, \; -1)$ ya que $\dfrac{1}{0}$ es indeterminado. Como también $\dfrac{1}{1 + \dfrac{1}{x}} = \dfrac{x}{x+1}$\\\\ 
+
+\item $f(cx)$\\\\
+$f(cx)=\dfrac{1}{1+cx}$ por lo tanto $\dfrac{1}{c\left( \dfrac{1}{c}+x \right)}$ \; si \; $x\neq \dfrac{1}{c}, \; 0$\\\\
+
+\item $f(x+y)$\\\\
+$f(x+y)=\dfrac{1}{1+(x+y)}$ para $x+y \neq -1$\\\\
+
+\item $f(x)+ f(y)$\\\\
+$f(x)+ f(y) = \dfrac{1}{1+x} + \dfrac{1}{1+y} = \dfrac{x+y+2}{(1+x)(1+y)}$ para $x\neq -1$, $y\neq -1$\\\\
+
+\item ¿Para que números $c$ existe un número $x$ tal que  $f(cx)=f(x)$?\\\\
+Existe para todo $c$ ya que $f(c \cdot 0) = f(0)$ entonces $f(0)=1$\\\\
+
+\item ¿Para que números $c$ se cumple que $f(cx)=f(x)$ para dos números distintos $x$?\\\\
+Solamente para $c=1.$ Ya que $f(cx)=f(x)$ implica $x=cx$ y esto debe cumplirse por lo menos para un $x\neq 0$\\\\ 
+\end{enumerate}
+\end{ej}
+
+%ejercicio 2
+\begin{ej}
+Sea $g(x)=x^2$ y sea 
+\begin{equation}
+h(x) = \left\lbrace
+\begin{array}{rr}
+0, & x \; racional\\
+1, & x \; irracional
+\end{array}
+\right.
+\end{equation}
+\begin{enumerate}[\bfseries i)]
+\item ¿Para cuáles $y$ es $h(y)\leq y$?\\\\
+Vemos que $h(y)$ sólo puede ser $1$ ó $0$. Para que se cumpla la condición $h(y)\leq y$, \; debe ser $y\geq 0$ é $y$ racional ya que si $y$ es irracional, no se cumple la condición, debido a que si $y$ es irracional  entonces es $1$. También se cumpliría si $y\geq 1$ sea para $y$ racional o irracional.\\\\
+
+\item ¿Para cuáles $y$ es $h(y) \leq g(y)$?\\\\
+Se cumple para $y$ racional entre $-1,1$ inclusive y para todo $y$ tal que $|y| > 1$\\\\
+
+\item ¿Qué es $g(h(z)) - h(z)$?\\\\
+Sabemos que 
+\begin{equation}
+h(z) = \left\lbrace
+\begin{array}{rl}
+0, & z \; racional\\
+1, & z \; irracional\\
+\end{array}
+\right.
+\end{equation}
+Ahora tenemos que $g(0) = 0^2 = 0$ \; y \; $g(1)=1^2=1$ por lo tanto 
+\begin{equation}
+g(h(z)) = \left\lbrace
+\begin{array}{rl}
+0^2, & z \; racional\\
+1^2, & z \; irracional\\
+\end{array}
+\right.
+\end{equation}
+Y restando a $h(z)$ nos queda $0$.\\\\
+\item ¿ Para cuáles $w$ es $g(w) \leq w$?\\\\
+Sabemos que un número cualquiera elevado al cuadrado siempre dará un número positivo entonces el rango del dominio para que se cumple la condición $g(w) \leq w$ es $-1\geq w \geq 1$\\\\ 
+
+\item ¿Para cuales cuáles $\epsilon$ es $g(g(\epsilon)) = g(\epsilon)$?\\\\
+Solamente se cumple para $-1, \; 0 \; 1$\\\\
+\end{enumerate}
+\end{ej}
+
+%ejercicio 3
+\begin{ej}
+Encontrar el dominio de las funciones definidas por las siguientes fórmulas:
+\begin{enumerate}[\bfseries i)]
+\item $f(x)=\sqrt{1-x^2}$\\\\
+Por la propiedad de raíz cuadrada, se tiene  $1-x^2 \geq 0$ entonces $x^2 \leq 1$ por lo tanto el dominio son todos los $x$ tal que $|x| \leq 1$\\\\
+
+\item $f(x)=\sqrt{1-\sqrt{1-x^2}}$\\\\
+Se observa claramente que el dominio es $-1\leq x \leq 1$\\\\
+
+\item $f(x)=\dfrac{1}{x-1} + \dfrac{1}{x-2}$\\\\
+Operando un poco tenemos $$f(x)=\dfrac{2x-3}{(x-1)(x-2)},$$ sabemos que el denominador no puede ser $0$ por lo tanto el $D_{f} = \lbrace x\; / \; x \neq 1, \; x\neq  2 \rbrace$\\\\ 
+
+\item $f(x)=\sqrt{1-x^2}+\sqrt{x^2-1}$\\\\
+Claramente notamos que el dominio de $f$ es $[-1,1]$ ya que si se tomara un número mayor a este daría un número imaginario.\\\\
+
+\item $f(x) = \sqrt{1-x} + \sqrt{x-2}$\\\\
+Notamos que no cumple para ningún $x$ ya que si $0\leq x \leq 1$ entonces no se cumple para $\sqrt{x-2} $ y si $x\geq 2$ no se cumple para $\sqrt{1-x}$\\\\ 
+\end{enumerate}
+\end{ej}
+
+%ejercicio 4
+\begin{ej}
+Sea $S(x)=x^2,$ $P(x)=2^x ,$ $s(x)=sen x$. Determinar los siguientes valores. En cada caso la solución debe ser un número.
+\begin{enumerate}[\bfseries 1)]
+\item $(S \circ P)(y)$\\\\
+Demostración.- \; Por definición $S(P(y))$ por lo tanto $S(2^y) = (2^y)^2 = 2^{2y}$ para todo $x$ existe en los números reales\\\\
+
+\item $(S \circ s)(y)$ \\\\
+Demostración.- \; $(S \circ s)(y) = S(s(y)) = S(\sin y) = \sin^2 y$\\\\
+
+\item $(S \circ P \circ s)(t) + (s \circ P)(t)$\\\\
+Demostración.- \; $(S \circ P \circ s)(t) + (s \circ P)(t) = S(P(s(t))) + s(P(t)) = S(P(\sin t)) + s(2^x) = S(2^{\sin t}) + \sin 2^{t} = \left( 2^{sin t} \right)^2 + \sin 2^{t} = 2^{2 \sin t}+ \sin 2^t$\\\\
+
+\item $s(t^3)$\\\\
+Demostración.- \; $s(t^3) = \sin t^3$\\\\ 
+\end{enumerate}
+\end{ej}
+
+%ejercicio 5
+\begin{ej}
+Expresar cada una de las siguientes funciones en términos de $S, \; P, \; s$ usando solamente $+, \; \cdot \; y \; \circ$ en cada caso la solución debe ser una función.\\\\
+\begin{enumerate}[\bfseries i)]
+\item $f(x) = 2^{\sin x} = (P \circ s)(x)$\\\\
+\item $f(x)=\sin 2^x = (s \circ S)(x)$\\\\
+\item $f(x) = \sin x^2 = (s \circ S)(x)$\\\\
+\item $f(x) = \sin^2 x = (S \circ s)(x)$\\\\
+\item $f(t) = 2^{2t} = (S \circ P)(t)$\\\\
+\item $f(u) = \sin(2^u + 2^{u^{2}}) = s \circ ( P + P \circ S )$\\\\
+\item $f(a) = 2^{\sin^2 a} + \sin(a^2) + 2^{\sin(a^2 + \sin a)} = P \circ S \circ s + P \circ s \circ S + P \circ s \circ (S + s)$\\\\
+\end{enumerate}
+\end{ej}
+
+%ejercicio 6
+\begin{ej} Las funciones polinómicas, por ser sencillas y al mismo tiempo flexibles, ocipan un lugar destacado en el estudio de las funciones. Los dos problemas siguientes ponen de manifiesto su flexibilidad y dan una orientación para deducir sus propiedades elementales más importantes.
+\begin{enumerate}[\bfseries a)]
+\item Si $x_1, ..., x_n$ son números distintos, encontrar una función polinómica, $f_i$ de grado $n-1$ que tome el valor $1$ en $x_i$ \, y \; 0 en $x_j$ para $j \neq i$.Indicación: El produto de todo los $(x-x_j)$ para $j\neq i$ es $0$ en $x_j$ si $j\neq i$. (Este producto es designado generalmente por)
+\begin{center}
+\[
+\prod_{\overset{j=1}{j \neq i}}^{n} (x-x_j) 
+\]
+\end{center}
+donde el símbolo $\Pi$ (pi mayúscula) desempeña para productos el mismo papel que $\sum$ para sumas).\\\\
+Solución.- \; Lo que Spivak afirma es que entre los números $x_1, ..., x_n$ hay un sólo número $x_i$ en el que la función $f_i$ tome el valor $1$ y que todas los demás números $(x_j \; con \; j\neq i)$ son ceros en $f_i$.\\
+Una forma de pensar sobre esta pregunta es considerar una solución fija $n$ y elegir un conjunto de distintas $x_1, x_2, ..., x_n$. Por ejemplo supongamos que elegimos $n=3$ $x_1=1$, $x_2=2$, $x_3 = 3.$ Entonces supongamos que queremos encontrar un polinomio $f_i(x_1)=f_1(1)=1,$ pero $f_1(x_2)=f_1(2)=f_1(3)=0.$ Es decir, $F_1$ es un cuadrático que tiene ceros en $x=2$ \; y\; $x=3$, pero es igual a $1$ en $x=1.$ Naturalmente, esto sugiere mirar un polinomio de la forma $$a(x-2)(x-3),$$ para que la igualdad sea igual a $1$ por alguna constante $a.$ Pero, ¿Qué es esta constante? Bueno, si nos conectamos con $x=1$, debemos tener $$f_1(1)=1=a(x-2)(x-3)=2a,$$ por lo tanto $a=1/2$ y la solución deseada es $$f_1(x)=\dfrac{1}{2}(x-2)(x-3).$$ Del mismo modo, si tratamos de encontrar un polinomio $f_2(x)$ tal que $f_2(2)=1$ con raíces en $x=1,3$ tendríamos que resolver la ecuación $1=a(2-1)(2-3),$ lo que da $a=-1$ por lo tanto $f_2(x)=-(x-1)(x-3)$\\
+Ahora veamos el caso general. El polinomio $f_i(x)$ satisface $f_i(x_i)$ \; y \; $f_i(x_j)=0$ para todo $j \neq i$, entonces debe tomar la forma 
+\[
+f_i(x)=a \prod_{j \neq i} (x-x_j) 
+\]
+Para alguna constante $a$. Para encontrar esta constante, aplicamos $x=x_1$: 
+\[
+f_i(x_i)=1=a\prod_{j \neq i} (x_i-x_j), 
+\]
+por lo tanto:
+\[
+a= \dfrac{1}{\displaystyle\prod_{j \neq i} (x_i-x_j)} 
+\]  
+Así queda
+\[
+f_i(x)= \prod_{j \neq i} \dfrac{(x-x_j)}{(x_i-x_j)}  
+\]
+\\\\
+\item Encontrar ahora una función polinómica de grado $n-1$ tal que $f(x_i)=a_i$, donde $a_i,...,a_n$ son números dados. (Utilícese las funciones $f_i$ de la parte $(a)$. La fórmula que se obtenga es la llamada formula de interpolación de Lagrange).\\\\
+Entonces \[ f(x) = \sum_{j=1} a_i f_i(x) \]
+por lo tanto  \[ f(x) = \sum_{j=1} a_i \prod_{j \neq i} \dfrac{(x-x_j)}{(x_i-x_j)} \]
+\\\\
+\end{enumerate}
+\end{ej}
+
+\subsection[Demostraciones]{Demostraciones \footnote{Calculo infinitesimal, Michael Spivak, pag. 63-68}}
+%teorema (7)a
+\begin{teo}
+Demostrar que para cualquier función polinómica $f$ y cualquier número $a$ existe una función polinómica $g$ \; y un número $b$ tales que $f(x)=(x-a) \; g(x)+b$ para todo $x$. \\\\
+Si el grado de $f$ es 1, entones $f$ es de la forma: $$f(x)=cx+d=(x-a)c + (d+ac)$$
+de modo que podemos poner $g(x)=c$ \; y \;$b=d+ac$. Supóngase que el resultado es válido para polinomios de grado $\leq k.$ Si $f$ tiene grado $k+1$, entonces $f$ tiene la forma: $$f(x) = a_{k+1} (x-a) = (x-a) \; g(x) + b,$$ ó  $$f(x) = (x-a)[g(x) + a_{k+1}] + b,$$ con lo que tenemos la forma requerida.
+{\color{green} Completar demostración xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+\end{teo}
+
+%teorema (7)b
+\begin{teo}
+Demostrar que si $f(a)=0$, entonces $f(x)=(x-a)\, g(x)$ para alguna función polinómica $g$. (La recíproca es evidente)\\\\
+Demostración.- \; Por el teorema anterior, $f(x)=(x-a)\; g(x) + b.$ Luego $$0=f(a)=(a-a) \; g(a) + b = b,$$
+de modo que $f(x) = (x-a) \; g(x)$\\\\
+\end{teo}
+
+%teorema (7)c
+\begin{teo}
+Demostrar que si $f$ es una función polinómica de grado $n$ entonces $f$ tiene a lo sumo $n$ raíces, es decir, existen a lo sumo $n$ números $a$ tales que $f(a)=0$\\\\
+Demostración.- \; Supongámos que $f$ tiene $n$ raíces $a_1,...,a_n$. Entonces según el anterior teorema $f(x) = (x-a)\; g_1(x)$ donde el grado de $g_1(x)$ es $n-1.$ Pero $$0=f(a_2) = (a_2 - a_1) \; g_1(a_2)$$
+de modo que $g_1(a_2) = 0$, ya que $a_2 \neq a_1.$ Luego podemos escribir $$f(x)=(x-a_1)(x-a_2)g_2(x)$$ donde el grado de $g_2$ es $n-2.$ Prosigue de esta manera, obtenemos que $$f(x)=(x-a_1)(x-a_2) \cdot ... \cdot (x-a_n)c$$ para algún número $c\neq 0.$ Está claro que $f(a) \neq 0$ si $a\neq a_1,..., a_n.$ Así pues, $f$ puede tener a lo sumo $n$ raíces.\\\\
+\end{teo}
+
+%teorema (7)d
+\begin{teo}
+Demostrar que para todo $n$ existe una función polinómica de grado $n$ con raíces. Si $n$ es par, encontrar una función polinómica de grado $n$ sin raíces y sin $n$ es impar, encontrar una con una sola raíz.\\\\
+Demostración.- \; Si $f(x) = (x-1)(x-2) \cdot ... \cdot (x-n),$ entonces $f$ tiene $n$ raíces. Si $n$ es par, entonces $f(x) = x^n + 1$ no tiene raíces. Si $n$ es impar, entonces $f(x)=x^n$ tiene una raíz única, que es $0.$\\\\ 
+\end{teo}
+
+
+
+\subsection[Ejercicios]{Ejercicios \footnote{Calculus Vol 1, Tom Apostol, pag 69-70}}
+%ejercicio 1
+\begin{ej}
+Sea $f(x)=x+1$ para todo real $x$. Calcular:
+\begin{itemize}
+\item $f(2) = 2+1 = 3$\\\\
+\item $f(-2) = -2 +1 = -1$\\\\
+\item $-f(2) = -(2+1)=-3$\\\\
+\item $f \left( \dfrac{1}{2} \right) = \dfrac{1}{2} + 1 = \dfrac{3}{2}$\\\\
+\item $\dfrac{1}{f(2)}= \dfrac{1}{3}$\\\\
+\item $f(a+b) = a+b+1$\\\\
+\item $f(a)+f(b)= (a+1) + (b+1) = a+b+2$\\\\
+\item $f(a) \cdot f(b) = (a+1)(b+1) = ab + a + b + 1$\\\\
+\end{itemize}
+\end{ej}
+
+%ejercico 2
+\begin{ej}
+Sean $f(x)= 1+x$ \; y \; $g(x)=1-x$ para todo real $x$. calcular:
+\begin{itemize}
+\item $f(2)+g(2) = (1+2) + (1-2) = 2$\\\\
+\item $f(2)-g(2) = (1+2) - (1-2) = 3$\\\\
+\item $f(2)\cdot g(2) = (1+2) \cdot (1-2) = 3 \cdot (-1) = -3$\\\\
+\item $\dfrac{f(2)}{g(2)}= \dfrac{1+2}{1-2} = \dfrac{3}{-1} = -3$\\\\
+\item $f\left[ g(2)\right] = f(1-2) = f(-1) = 1+(-1)= 0$\\\\
+\item $g\left[ f(2)\right] = f(1+2) = g(3) = 1 - 3 = -2$\\\\
+\item $f(a) + g(-a) = (1+a) + (1 - a) = 2$\\\\
+\item $f(t)\cdot g(-t) = (1+t) \cdot (1+t) = 1 + t + t + t^2 = t^2 +2t + 1 = (t+1)^2$\\\\
+\end{itemize}
+\end{ej}
+
+%ejercicio 3
+\begin{ej}
+Sea $f(x)=|x-3|+|x-1|$ para todo real $x$. Calcular:\\
+\begin{itemize}
+\item $f(0) = |0-3|+|0-1| = 3 + 1 = 4$
+\item $f(1) = |1-3|+|1-1| = 2$
+\item $f(2) = |2-3|+|2-1| = -1 + 1 = 0$
+\item $f(3) = |3-3|+|3-1| = 2$
+\item $f(-1) = |-1-3|+|-1-1| = 4 + 2 = 6$
+\item $f(-2) = |-2-3|+|-2-1| = 5 + 3 = 8$\\
+\end{itemize}
+Determinar todos los valores de $t$ para los que $f(t+2)=f(t)$\\
+\begin{center}
+\begin{tabular}{r c l}
+$|t+2-3| + |t+2-1|$&=&$|t-3| + |t-1|$\\
+$|t-1|+|t+1|$&=&$|t-3|+|t-1|$\\
+$|t+1|$&=&$t-3$\\
+\end{tabular}
+\end{center}
+Pro lo tanto  $t=1$\\\\
+\end{ej}
+
+%ejercicio 4
+\begin{ej}
+Sea $f(x)=x^2$  para todo real $x$. Calcular cada una de las fórmulas siguientes. En cada caso precisar los conjuntos de números erales $x, \; y \; t,$ etc., para los que la fórmula dada es válida.
+\begin{enumerate}[\bfseries a)]
+\item $f(-x)=f(x)$ \\\\
+Demostración.- \; Se tiene $f(-x) = (-x)^2 = x^2 = f(x) \; \forall x \in \mathbb{R}$\\\\
+
+\item $f(y)-f(x)=(y-x)(y+x)$\\\\
+Demostración.- \; $f(y)-f(x)= y^2 - x^2 = (x-y)(x+y), \; \forall x, \; y \in \mathbb{R}$\\\\
+
+\item $f(x+h) + f(x) = 2xh + h^2$\\\\
+Demostración.- \; $f(x+h) + f(x) = (x+h)^2 -x^2 = x^2 + 2xh +h^2 - x^2 = 2xh + h^2, \; \forall x \in \mathbb{R}$\\\\
+
+\item $f(2y) = 4f(y)$\\\\
+Demostración.- \; $f(2y) = (2y)^2 = 4y^2 = 4 f(y), \; \forall y \in \mathbb{R}$\\\\
+
+\item $f(t^2)=f(t)^2$\\\\
+Demostración.- \; $f(t^2) = (t^2)^2 = f(t)^2$\\\\
+
+\item $\sqrt{f(a)} = |a|$\\\\
+Demostración.- \; $\sqrt{f(a)} = \sqrt{a^2} = |a|$\\\\
+\end{enumerate}
+\end{ej}
+
+%ejercicio 5
+\begin{ej}
+Sea $g(x) = \sqrt{4-x^2}$ para $|x| \leq 2$. Comprobar cada una de las fórmulas siguientes e indicar para qué valores de $x, \; y, s$ y $t$ son válidas.
+\begin{enumerate}[\bfseries a)]
+\item $g(-x) = g(x)$\\\\
+Se tiene $g(-x)=\sqrt{2-(-x)^2} = \sqrt{2-(x)^2} = g(x), \; \; para \; |x| \leq 2$\\\\
+
+\item $g(2y) = 2\sqrt{1-y^2}$\\\\
+$g(2y)=\sqrt{4-(2y)^2}= \sqrt{4(1-y^2)} = 2 \sqrt{1-y^2}, \; \; para \; |y|\leq 1$ Se obtiene $|y| \leq 1$  de $\sqrt{1-y^2}$ es decir $1-y^2 \geq 0$ entonces $\sqrt{y^2} \leq \sqrt{1}$ \; y \; $|y|\leq 1$\\\\
+
+\item $g\left( \dfrac{1}{t} \right) = \dfrac{\sqrt{4t^2}-1}{|t|}$\\\\
+$g\left( \dfrac{1}{t} \right) = \sqrt{4 - \left( \dfrac{1}{t} \right)^2} = \sqrt{\dfrac{4t^2 - 1}{t^2}} =\dfrac{\sqrt{4t^2 - 1}}{|t|}, \; \; para \; |t| \geq \dfrac{1}{2}$\\\\
+Para hallar los valores correspondientes debemos analizar $\sqrt{4t^2 - 1}$\\\\
+\item $g(a-2) = \sqrt{4a-a^2}$\\\\
+$g(a-2) = \sqrt{4 - x^2} = \sqrt{4 - (a-2)^2} = \sqrt{4a - a^2}, \; \; para \; 0\leq a \leq 4$\\\\
+
+\item $g \left( \dfrac{s}{2} \right) = \dfrac{1}{2} \sqrt{16 - s^2}$\\\\
+$s\left( \dfrac{s}{2} \right) = \sqrt{4 - \left( \dfrac{s}{2} \right)^2} = \dfrac{\sqrt{16 - s^2}}{2}, \; \; para \; |s| \leq 4$\\\\
+
+\item $\dfrac{1}{2 +g(x)} = \dfrac{2-g(x)}{x^2}$\\\\ 
+$\dfrac{1}{2 +g(x)} = \dfrac{1}{2+ \sqrt{4-x^2}} \cdot \dfrac{2 - \sqrt{4-x^2}}{2 - \sqrt{4-x^2}} = \dfrac{2 - g(x)}{x^2}\; para \; \; 0 < |x| \leq 2 $\\\\ 
+Evaluemos $\sqrt{4-x^2}$. Sea $4-x^2 \geq 0$ entonce $\sqrt{x^2} \leq 2$. Por otro lado tenemos que la función no puede ser $0$ por $\dfrac{1}{x^2}$, por lo tanto debe ser $x^2\leq 0$.\\\\ 
+\end{enumerate}
+\end{ej}
+
