@@ -3,7 +3,5 @@
 *.out
 *.gz
 *.toc
-*.i.gnuplot
-*.i.table
-*.tkzfonct.gnuplot
-*.tkzfonct.table
+*.gnuplot
+*.table
