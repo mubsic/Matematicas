@@ -1,38 +1,24 @@
 \usepackage[text=17cm,left=2.5cm,right=2.5cm, headsep=20pt, top=2.5cm, bottom = 2cm,letterpaper,showframe = false]{geometry} %configuración página
 \usepackage{latexsym,amsmath,amssymb,amsfonts} %(símbolos de la AMS).7
 \parindent = 0cm  %sangria
-\usepackage{lmodern} % tipos de letras
 \usepackage[T1]{fontenc} %acentos en español
 \usepackage[spanish]{babel} %español capitulos y secciones
 \usepackage{graphicx} %gráficos y figuras.
-\pagestyle{empty}%elimina numeración de página
 
-%-----------------------------------------%
+%---------------FORMATO de letra--------------------%
 
+\usepackage{lmodern} % tipos de letras
 \usepackage{titlesec} %formato de títulos
 \usepackage[backref=page]{hyperref} %hipervinculos
 \usepackage{multicol} %columnas
-\usepackage{wrapfig} %Figuras al lado de texto
-\usepackage{tikz}\usetikzlibrary{shapes.misc}
-\usepackage{tikz,tkz-tab} % diseño de cajas
-\usetikzlibrary{matrix,arrows, positioning,shadows,shadings,backgrounds,
-calc, shapes, tikzmark}
 \usepackage{tcolorbox, empheq} %cajas
+\usepackage{enumerate} %indice enumerado
+\usepackage{marginnote}%notas en el margen
 \tcbuselibrary{skins,breakable,listings,theorems}
-\usepackage{xparse} % cajas y entornos para teoremas etc
-\usepackage{pstricks} %cambiar color de letra
 \usepackage[Bjornstrup]{fncychap}%diseño de portada de capitulos
-\usepackage{rotating}
-\usepackage{enumerate}
-\usepackage{booktabs}
-\usepackage{synttree} 
-\usepackage{chngcntr}
-\usepackage{venndiagram}
 \usepackage[all]{xy}%flechas
 \counterwithout{footnote}{chapter}
 \usepackage{xcolor}
-\usetikzlibrary{datavisualization.formats.functions}
-\usepackage{marginnote}%notas en el margen
 
 %------------------------------------------
 
@@ -45,6 +31,10 @@ calc, shapes, tikzmark}
 \newtheorem{ej}{\textbf{Ejercicio}}[chapter]
 \newtheorem{prop}{\textbf{Propiedades}}[chapter]
 \newtheorem{lema}{\textbf{Lema}}[chapter]
+
+%--------------------GRÀFICOS--------------------------
+
+\usepackage{tkz-fct}
 
 %---------------------------------
 
@@ -72,4 +62,3 @@ calc, shapes, tikzmark}
 {2ex}
 {\filleft}
 
-\setcounter{secnumdepth}{0}

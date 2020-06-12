@@ -379,3 +379,36 @@ Evaluemos $\sqrt{4-x^2}$. Sea $4-x^2 \geq 0$ entonce $\sqrt{x^2} \leq 2$. Por ot
 \end{enumerate}
 \end{ej}
 
+%ejercicio 6
+\begin{ej}
+Sea $f$ la función definida como sigue: $f(x)=1$ para $0 \leq x \leq 1;$ $f(x)=2$ para $1 < x \leq 2$. La función no está definida si $x<0$ ó si $x >2.$
+\begin{enumerate}[\bfseries a)]
+\item Trazar la gráfica de $f$ 
+
+\begin{center}
+\begin{tikzpicture}[scale=1]
+% abscisa y ordenada
+\tkzInit[xmax= 3,xmin=0,ymax=3,ymin=0]
+\tiny\tkzLabelXY[opacity=0.7,step=1, orig=false]
+% label x, f(x)
+\tkzDrawX[label=x,right=0.3]
+\tkzDrawY[label=f(x),below = -0.6]
+%dominio y función
+\tkzFct[line width=1,domain = 0:1]{1} 
+\tkzText[above,opacity=0.7](0.5,1){\tiny $f(x)=1$}
+\tkzFct[line width=1,domain = 1:2]{2} 
+\tkzText[above,opacity=0.7](1.5,2){\tiny $f(x)=2$}
+% intervalos
+\tkzSetUpPoint[shape=circle, size = 4, color=black, fill=black]
+\tkzDefPointByFct[draw,with = a](0)
+\tkzDefPointByFct[draw,with = a](1)
+\tkzDefPointByFct[draw,with = b](2)
+\tkzSetUpPoint[shape=circle, size = 4, color=black, fill=white]
+\tkzDefPointByFct[draw,with = b](1)
+\end{tikzpicture}
+\end{center}
+
+\item Poner $h(x) = f(2x).$ Describir el dominio de $g$ y dibujar su gráfica.
+
+\end{enumerate}
+\end{ej}
