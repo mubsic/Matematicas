@@ -246,7 +246,30 @@ por lo tanto  \[ f(x) = \sum_{j=1} a_i \prod_{j \neq i} \dfrac{(x-x_j)}{(x_i-x_j
 
 %ejercicio 8 pag 64
 ¿Para qué números a, b, c y d la función $f(x) = \dfrac{ax+b}{cx+b}$ satisface $f(f(x))=x$ para todo $x$? (¿Para qué números dicha ecuación tiene sentido?)\\\\
+Si para todo $x$, $$x = f(f(x)) = \dfrac{a \left( \dfrac{ax+b}{cx+d} \right) +b}{c \left( \dfrac{ax+b}{cx+d} \right)+d}$$
+entonces $\dfrac{a^2 x +ab +bcx +bd}{acx +cb +cdx +d^2} - x = 0$, para luego $(ac+cd)x^2 + (d^2 - a^2)x -ab -db = 0$ para todo $x$, de modo que:
+\begin{center}
+\begin{tabular}{r c l}
+$ac+cd$&$=$&$0$\\
+$ab+bd$&$=$&$0$\\
+$d^2 -a^2$&$=$&$0$\\
+\end{tabular}
+\end{center}
+Así por propiedades de raíz $a=d$ ó $a =-d$. Una posibilidad es que $a=d=0$ el cual se tiene $f(x) = \dfrac{b}{cx}$, donde nos queda que $f(f(x)) = \dfrac{b}{\dfrac{cb}{cx}} = x$, para todo $x\neq 0$. Si $a=d=\neq 0$, entonces $b=c=0$ con lo que también se tiene $f(x)=x$. Y la tercera posibilidad es que $a+d = 0$, de modo que $f(x)= \dfrac{ax+b}{cx-a},$ la cual satisface $f(f(x))=x$ para todo $x\neq \dfrac{a}{c}$. Estrictamente hablando, podemos añadir la condición $f(x)\neq \dfrac{a}{c}$ para $x\neq \dfrac{a}{c}$, lo que significa que $$\dfrac{ax+b}{cx-a} \neq \frac{a}{c}$$ ó $a^2+bc\neq 0$\\\\
 
+%ejercicio 10 pag 64
+\begin{ej} 
+\begin{enumerate}[\bfseries a)]
+\item ¿Para qué funciones $f$ existe una función $g$ tal que $f=g^2$?
+
+\item ¿Para qué función $f$ existe una función $g$ tal que $f=\dfrac{1}{g}$?
+
+\item ¿Para qué funciones $b$ \; y \; $c$ podemos encontrar una función $x$ tal que $$(x(t))^2 + b(t)x(t) + c(t) =0$$ para todos los números $t$?
+
+\item ¿Qué condiciones deben satisfacer las funciones $a$ \, y \; $b$ si ha de existir ua función $x$ tal que $$a(t)x(t)+ b(t) = 0$$ para todos los números $t$? ¿Cuántas funciones $x$ de éstas existirán?
+
+\end{enumerate}
+\end{ej}
 
 
 
@@ -294,17 +317,27 @@ C_A(x) = \left\lbrace
 Encuentre expresiones para $C_{A\ cap B},$   $C_{A\cup B}$ \; y \; $C_{R-A}$, en términos de $C_A$ \; y \; $C_B$ (El símbolo $A \cap B$ se ha definido en este capítulo, pero los otros dos pueden ser nuevos para el lector. Pueden definirse de la siguiente manera:
 $$A \cap B = \lbrace x: \; x \; \mbox{pertenece a} \; A \, o \; \mbox{pertenece a} \; B \rbrace$$
 $$R - B = \lbrace x: \: x \; \mbox{pertenece a} \; R \; pero \; x \; \mbox{no pertenece a} \; A \rbrace$$
+\begin{center}
+\begin{tabular}{r c l}
+$C_{A \cap B}$&$=$&$C_A \cdot C_B$\\
+$C_{A \cup B}$&$=$&$1 - C_A$\\
+$C_{A \cup B}$&$=$&$C_A + C_B - C_A \cdot C_B$\\\\
+\end{tabular}
+\end{center}
 
 \item Suponga que $f$ es una función tal que $f(x) = 0$ ó $1$ para todo $x$. Demuestre que existe un
 conjunto $A$ tal que $f = C_A$\\\\
-Demostración.- \; 
+Demostración.- \;  Sea $x \in A$, por definición $C_A = 1$ entonces $f(x)=C_A$, por lo tanto existe un elemento en el conjunto $A$ tal que $f=C_A$\\\\
 
 \item  Demuestre que $f = f^2$ si y sólo si f$ = C_A$ para algún conjunto $A$\\\\
-Demostración.- \; 
+Demostración.- \; Sea $x\in A$ por definición de la parte $a)$ se tiene $C_A(x)=1$ el cual satisface $f(x)=C_A(x)$, esto por hipótesis.\\\\
+
+\item Demostrar que $f=f^2$ si y sólo si $f=C_A$ para algún conjunto $A$\\\\
+Demostración.- \; Sea $x \in A$ por $b)$ $f=C_A$ si solo si $f=f^2$ ya que $1=1^2$\\\\
 \end{enumerate}
 \end{teo}
- 
 
+ 
 
 
 
@@ -530,3 +563,23 @@ Las gráficas de los dos polinomios cuadráticos $f(x) = x^2-2$ \; y \; $g(x)=2x
 \end{tikzpicture}
 \end{center}
 \end{ej}
+
+
+
+\subsection[Demostraciones]{Demostraciones \footnote{Calculus Vol 1, Tom Apostol, pag 69-70}}
+
+%teorema problema 9 pag 70
+\begin{teo}
+Este ejercicio desarrolla ciertas propiedades fundamentales de los polinomios. Sea $f(x)=\displaystyle\sum_{k=0}^{n} c_k x^k$ un polinomio de grado $n$. Demostrar cada uno de los siguientes apartados:
+\begin{enumerate}[\bfseries a)]
+\item Si $n \geq 1$ \; y \; $f(0)=0,$ $f(x)=xg(x)$, siendo $g$ un polinomio de grado $n-1.$\\\\
+Para entender lo que nos quiere decir Apostol pongamos un ejemplo. Supongamos que tenemos un polinomio donde $f(x)=2x^2+3x-x$ entonces notamos que $f(x)=x(2x+3-1)$ donde $g(x)=2x+3-1$, esto quiere decir que si $0 = f(0)=c_0 \Rightarrow c_1 x + c_2 x^2 + ... + c_n x^n = x(c_1 + c_2 x + ... + c_n x^{n-1})$ 
+Así que debemos demostrar que $f(x)$ es un polinomio arbitrario de grado $n \geq 1$ tal que $f(0)=0$, entonces debe haber un polinomio de grado $n-1, \; g(x)$, tal que $f(x)=xg(x)$\\\\
+Demostración.- \; Sabemos que $$f(0) = c_n \cdot 0^n + c_{n-1} \cdot 0^{n-1} + ... + c_1 \cdot 0 + c_0 =c_0$$, como $f(0)=0$ se concluye que $c_0=0$. Así tenemos $$f(x)=\displaystyle\sum_{k=1}^{n} c_k x^k.$$ Ahora crearemos una función $g(x).$ Dada la función $f(x)$ como la anterior, definamos, $$f(x)=\displaystyle\sum_{k=0}^{n} c_k x^{k-1} = \sum_{k=1}^{n} c_k x^{k-1}$$ 
+Ahora crearé una función $g(x)$. Dada una función $f(x)$ como la anterior, definamos  $$g(x) = \displaystyle\sum-{k=1}^{n} c_k x^{k-1}$$
+donde $c_k$ son los mismos que los dados por la función $f(x)$. Primero notemos que el grado de $g(x)$ es $n-1$. Finalmente, tenemos que $$ xg(x) = x \displaystyle\sum_{k=1}^{n} c_k x^{k-1} = \sum_{k=1}^{n} c_k x^k = f(x).$$ \\\\
+
+\item Para cada real $a$, la función $p$ dada por $p(x)=f(x+a)$ es un polinomio de grado $n.$\\\\
+Demostración.- \; 
+\end{enumerate}
+\end{teo}
