@@ -258,15 +258,35 @@ $d^2 -a^2$&$=$&$0$\\
 Así por propiedades de raíz $a=d$ ó $a =-d$. Una posibilidad es que $a=d=0$ el cual se tiene $f(x) = \dfrac{b}{cx}$, donde nos queda que $f(f(x)) = \dfrac{b}{\dfrac{cb}{cx}} = x$, para todo $x\neq 0$. Si $a=d=\neq 0$, entonces $b=c=0$ con lo que también se tiene $f(x)=x$. Y la tercera posibilidad es que $a+d = 0$, de modo que $f(x)= \dfrac{ax+b}{cx-a},$ la cual satisface $f(f(x))=x$ para todo $x\neq \dfrac{a}{c}$. Estrictamente hablando, podemos añadir la condición $f(x)\neq \dfrac{a}{c}$ para $x\neq \dfrac{a}{c}$, lo que significa que $$\dfrac{ax+b}{cx-a} \neq \frac{a}{c}$$ ó $a^2+bc\neq 0$\\\\
 
 %ejercicio 10 pag 64
-\begin{ej} 
+\begin{ej} Resolver: 
 \begin{enumerate}[\bfseries a)]
-\item ¿Para qué funciones $f$ existe una función $g$ tal que $f=g^2$?
+\item ¿Para qué funciones $f$ existe una función $g$ tal que $f=g^2$?\\\\
+Debido a que algún número elevado al cuadrado siempre será no negativo podemos afirmar que las funciones $f$ satisfacen a todo $x$ tal que $f(x)\geq 0$\\\\
 
 \item ¿Para qué función $f$ existe una función $g$ tal que $f=\dfrac{1}{g}$?
+Dado a que un número divido entre cero es indeterminado se ve claramente que satisfacen a todo $x$ tal que $f(x)\neq 0$\\\\
 
-\item ¿Para qué funciones $b$ \; y \; $c$ podemos encontrar una función $x$ tal que $$(x(t))^2 + b(t)x(t) + c(t) =0$$ para todos los números $t$?
+\item ¿Para qué funciones $b$ \; y \; $c$ podemos encontrar una función $x$ tal que $$(x(t))^2 + b(t)x(t) + c(t) =0$$ para todos los números $t$?\\\\
+Por teorema se observa que para las funciones $b$ \; y \; $c$ que satisfacen $(b(t))^2 - 4c(t) \geq 0$ para todo $t$\\\\ 
 
-\item ¿Qué condiciones deben satisfacer las funciones $a$ \, y \; $b$ si ha de existir ua función $x$ tal que $$a(t)x(t)+ b(t) = 0$$ para todos los números $t$? ¿Cuántas funciones $x$ de éstas existirán?
+\item ¿Qué condiciones deben satisfacer las funciones $a$ \, y \; $b$ si ha de existir ua función $x$ tal que $$a(t)x(t)+ b(t) = 0$$ para todos los números $t$? ¿Cuántas funciones $x$ de éstas existirán?\\\\
+Es facil notar que $b(t)$ tiene que ser igual a $0$ siempre que $a(t) = 0$. Si $a(t) \neq 0$ para todo $t$, entonces existe una función única con esta condición, que es $x(t) = a(t)/b(t)$. Si $a(t)=0$ para algún $t$, entonces puede elegirse arbitrariamente $x(t)$, de modo que existen infinitas funciones que satisfacen la condición.\\\\
+
+%ejercicio 11 pag 64 y 65
+\begin{ej} Supóngase:
+\begin{enumerate}[\bfseries a)]
+\item Supóngase que $H$ es una función é \; $y$ \; un número tal que $H(H(y)) = y$ ¿Cuál es el valor de $H(H(H(...(H(y)...)$ 80 veces?\\\\
+
+\item  La misma pregunta sustituyendo 80 por 81\\\\
+
+\item La misma pregunta si $H(H(y))=H(y)$\\\\
+
+\item Encuéntrese una función $H$ tal que $H(H(x))=H(x)$ para todos los números $x$ \; y tal que $H(1)=36,$ $H(2)=\dfrac{\pi}{3}$, $H(13)=47,$ $H(36)=36$, $H(\pi / 3)=\pi / 3$, $H(47)=47$\\\\
+
+\item Encontrar una función $H$ tal que $H(H(x))=H(x)$ para todo $x$ \; y tal que $H(1)=7$, $H(17)=18$\\\\
+\end{enumerate}
+\end{ej}
+
 
 \end{enumerate}
 \end{ej}
@@ -575,8 +595,8 @@ Este ejercicio desarrolla ciertas propiedades fundamentales de los polinomios. S
 \item Si $n \geq 1$ \; y \; $f(0)=0,$ $f(x)=xg(x)$, siendo $g$ un polinomio de grado $n-1.$\\\\
 Para entender lo que nos quiere decir Apostol pongamos un ejemplo. Supongamos que tenemos un polinomio donde $f(x)=2x^2+3x-x$ entonces notamos que $f(x)=x(2x+3-1)$ donde $g(x)=2x+3-1$, esto quiere decir que si $0 = f(0)=c_0 \Rightarrow c_1 x + c_2 x^2 + ... + c_n x^n = x(c_1 + c_2 x + ... + c_n x^{n-1})$ 
 Así que debemos demostrar que $f(x)$ es un polinomio arbitrario de grado $n \geq 1$ tal que $f(0)=0$, entonces debe haber un polinomio de grado $n-1, \; g(x)$, tal que $f(x)=xg(x)$\\\\
-Demostración.- \; Sabemos que $$f(0) = c_n \cdot 0^n + c_{n-1} \cdot 0^{n-1} + ... + c_1 \cdot 0 + c_0 =c_0$$, como $f(0)=0$ se concluye que $c_0=0$. Así tenemos $$f(x)=\displaystyle\sum_{k=1}^{n} c_k x^k.$$ Ahora crearemos una función $g(x).$ Dada la función $f(x)$ como la anterior, definamos, $$f(x)=\displaystyle\sum_{k=0}^{n} c_k x^{k-1} = \sum_{k=1}^{n} c_k x^{k-1}$$ 
-Ahora crearé una función $g(x)$. Dada una función $f(x)$ como la anterior, definamos  $$g(x) = \displaystyle\sum-{k=1}^{n} c_k x^{k-1}$$
+Demostración.- \; Sabemos que $$f(0) = c_n \cdot 0^n + c_{n-1} \cdot 0^{n-1} + ... + c_1 \cdot 0 + c_0 =c_0,$$ como $f(0)=0$ se concluye que $c_0=0$. Así tenemos $$f(x)=\displaystyle\sum_{k=1}^{n} c_k x^k.$$ Ahora crearemos una función $g(x).$ Dada la función $f(x)$ como la anterior, definamos, $$f(x)=\displaystyle\sum_{k=0}^{n} c_k x^{k-1} = \sum_{k=1}^{n} c_k x^{k-1}$$ 
+Ahora crearé una función $g(x)$. Dada una función $f(x)$ como la anterior, definamos  $$g(x) = \displaystyle\sum_{k=1}^{n} c_k x^{k-1}$$
 donde $c_k$ son los mismos que los dados por la función $f(x)$. Primero notemos que el grado de $g(x)$ es $n-1$. Finalmente, tenemos que $$ xg(x) = x \displaystyle\sum_{k=1}^{n} c_k x^{k-1} = \sum_{k=1}^{n} c_k x^k = f(x).$$ \\\\
 
 \item Para cada real $a$, la función $p$ dada por $p(x)=f(x+a)$ es un polinomio de grado $n.$\\\\
