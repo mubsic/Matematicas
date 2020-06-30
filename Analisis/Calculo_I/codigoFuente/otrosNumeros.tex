@@ -1,4 +1,4 @@
-\chapter{Distintas clases de números}
+e\chapter{Distintas clases de números}
 \section{El principio de la inducción matemática}
 %teorema 
 \begin{teo}[Principio de inducción matemática]
@@ -264,9 +264,9 @@ Si $0 \leq k \leq n,$ se define el coeficiente binomial $ {n \choose k} $ por $$
 Demostración.- \; \\
 \begin{center}
 \begin{tabular}{r c l}
-$ {n \choose k}  +  {n \choose k} $&$=$&$\dfrac{n!}{(k-1)(n-k+1)}+ \dfrac{n!}{k!(n-k)!}$\\
-&$=$&$\dfrac{kn!}{k!(n+1-k)!} + \dfrac{(n+1-k)n!}{k!(n+1-k)!}$\\
-&$=$&$\dfrac{(n+1)n!}{k!(n+1-k)!}$\\
+$ {n \choose k-1}  +  {n \choose k} $&$=$&$\dfrac{n!}{(k-1)(n-k+1)!}+ \dfrac{n!}{k!(n-k)!}$\\\\
+&$=$&$\dfrac{kn!}{k!(n+1-k)!} + \dfrac{(n+1-k)n!}{k!(n+1-k)!}$\\\\
+&$=$&$\dfrac{(n+1)n!}{k!(n+1-k)!}$\\\\
 &$=$&$ {n+1 \choose k} $\\\\
 \end{tabular}
 \end{center}
@@ -274,8 +274,8 @@ $ {n \choose k}  +  {n \choose k} $&$=$&$\dfrac{n!}{(k-1)(n-k+1)}+ \dfrac{n!}{k!
 Demostración.- \; Se ve claramente que ${1 \choose 1}$ es un número natural. Supóngase que ${n \choose p}$ es un número natural para todo $p \leq n$. Al ser: $${ n+1 \choose p } = {n \choose p-1} + {n \choose p} \; para \; p \leq n,$$ se sigue que ${n+1 \choose p}$ es un número natural para todo $p \leq n,$ mientras que ${n+1 \choose n+1}$ es también un número natural. Así pues, ${n+1 \choose p}$ es un número natural para todo $p \leq n+1$\\\\
 
 \item Dése otra demostración de que ${n \choose k}$ es un número natural, demostrando que ${n \choose k}$ es el número de conjuntos de exactamente $k$ enteros elegidos cada uno entre $1,...,n$.\\\\
-Demostración.- \; Existen $n(n— 1) \cdot ... \cdot (n — k + 1)$ k-tuplas de enteros distintos elegidos entre $1, ..., n$, ya que el primero puede ser elegido de n maneras, el segundo de $n — 1$ maneras, etc. Ahora bien, cada conjunto formado exactamente por $k$ enteros distintos, da lugar a $k!$ k-tuplas, de
-modo que el número de conjuntos será $n(n — 1) \cdot ... \cdot (n — k + l)/k! = {n\choose k}$\\\\ 
+Demostración.- \; Existen $n(n -1) \cdot ... \cdot (n - k + 1)$ k-tuplas de enteros distintos elegidos entre $1, ..., n$, ya que el primero puede ser elegido de n maneras, el segundo de $n - 1$ maneras, etc. Ahora bien, cada conjunto formado exactamente por $k$ enteros distintos, da lugar a $k!$ k-tuplas, de
+modo que el número de conjuntos será $n(n — 1) \cdot ... \cdot (n - k + l)/k! = {n\choose k}$\\\\ 
 
 \item Demostrar el teorema del binomio: Si $a$ \; y \; $b$ son números cualesquiera, entonces
 $(a+b)^n = a^n + {n \choose 1} a^{n-1} b + {n \choose 2} a^{n-2} b^2 + ... + {n \choose n-1} a b^{n-1} + b^n = \displaystyle \sum_{j=0}^n {n \choose j} a^{n-j} b^j.$\\\\
@@ -286,8 +286,8 @@ Entonces
 $(a+b)^{n+1}$&=&$(a+b)(a+b)^n$&\\\\
 &=&$(a+b) \displaystyle \sum_{j=0}^n {n \choose j} a^{n-j} b^j$&\\\\
 &=&$\displaystyle \sum_{j=0}^n {n \choose j} a^{n+1-j} b^j + \sum_{j=0}^{n} {n \choose j} a^{n-j} b^{j+1}$&\\\\
-&=&$\displaystyle \sum_{j=0}^n {n \choose j} a^{n+1-j} b^j + \sum_{j=0}^{n+1} {n \choose j-1} a^{n+1-j} b^{j}$&sustituimos $j$ por $j-1$ en la 2da suma\\\\
-&=&$\displaystyle \sum_{j=0}^{n+1} {n+1 \choose j} a^{n+1-j} b^j$&\\\\
+&=&$\displaystyle \sum_{j=0}^n {n \choose j} a^{n+1-j} b^j + \sum_{j=0}^{n+1} {n \choose j-1} a^{n+1-j} b^{j}$&sustituimos $j$ por $j-1$ en la $2^{da}$ suma\\\\
+&=&$\displaystyle \sum_{j=0}^{n+1} {n+1 \choose j} a^{n+1-j} b^j$& por la parte $b)$\\\\
 \end{tabular}
 \end{center}
 Según la parte $a)$, con lo que el teorema del binomio es válido para $n+1.$\\\\
@@ -295,7 +295,17 @@ Según la parte $a)$, con lo que el teorema del binomio es válido para $n+1.$\\
 \item Demostrar que 
 \begin{enumerate}[\bfseries i)]
 \item $\displaystyle\sum_{j=0}^{n} {n \choose j} = {n \choose 0} + ... + {n \choose n} = 2^n$\\\\
-Demostración.- \; 
+Demostración.- \; Por el teorema del binomio $2^n=(1+1)^n = \displaystyle\sum_{j=0}^n {n \choose j}(1^j)(1^{n-j})=\sum_{j=0}^n {n \choose j}$\\\\
+
+\item $\displaystyle\sum_{j=0}^n (-1)^j {n \choose j} = {n \choose 0}- {n \choose 1}+...\pm {n \choose n} =0$\\\\
+Demostración.- \;  De igual manera por el teorema del binomio $0=(1+(-1))^n = \displaystyle\sum_{j=0}^n(-1)^j {n \choose j}$\\\\ 
+
+\item $\displaystyle\sum_{l \; impar} {n \choose l} = {n \choose 1} + {n \choose 3}+ ... = 2^{n-1}$\\\\
+Demostración.- \;  
+
+\item $\displaystyle\sum_{l \; par} {n \choose l} = {n \choose 0} + {n \choose 2} + ... + = 2^{n-1}$\\\\
+Demostración.- \;
 \end{enumerate}
+
 \end{enumerate}
 \end{ej}

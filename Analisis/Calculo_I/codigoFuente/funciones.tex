@@ -275,22 +275,83 @@ Es facil notar que $b(t)$ tiene que ser igual a $0$ siempre que $a(t) = 0$. Si $
 %ejercicio 11 pag 64 y 65
 \begin{ej} Supóngase:
 \begin{enumerate}[\bfseries a)]
-\item Supóngase que $H$ es una función é \; $y$ \; un número tal que $H(H(y)) = y$ ¿Cuál es el valor de $H(H(H(...(H(y)...)$ 80 veces?\\\\
-
+\item Supóngase que $H$ es una función é \; $y$ \; un número tal que $H(H(y)) = y$ ¿Cuál es el valor de $H(H(H(...(H(y)...)$ $80$ veces?\\\\
+Si aplicamos la hipótesis, tendremos que aplicar $78$ veces la función, luego $76$ y así, hasta llegar a $2$, donde la función sera $H(H(y))$, y una vez más por hipótesis tenemos como resultado $y$.\\\\
 \item  La misma pregunta sustituyendo 80 por 81\\\\
+Sea $H(H(y))$ la $78ava$ vez de la función, entonces la $81ava$ vez será $H(H(H(y))$, por lo tanto queda como resultado $H(y)$.\\\\ 
 
 \item La misma pregunta si $H(H(y))=H(y)$\\\\
+Análogamente a la parte $a)$ si la $80ava$ vez es $y$ entonces por hipótesis nos queda $H(y)$.\\\\ 
 
 \item Encuéntrese una función $H$ tal que $H(H(x))=H(x)$ para todos los números $x$ \; y tal que $H(1)=36,$ $H(2)=\dfrac{\pi}{3}$, $H(13)=47,$ $H(36)=36$, $H(\pi / 3)=\pi / 3$, $H(47)=47$\\\\
+Dar a $H(l)$, $H(2)$, $H(13)$, $H(36)$, $H(\pi /3)$, y $H(47)$ los valores especificados y hágase $H(x) = 0$ para $x \neq 1, 2, 13, 36, \pi /3, 47.$ Al ser, en particular, $H(0) = 0$, la condición $H(H(x)) = H(x)$ se cumple para todo $x$.\\\\
 
 \item Encontrar una función $H$ tal que $H(H(x))=H(x)$ para todo $x$ \; y tal que $H(1)=7$, $H(17)=18$\\\\
+Hágase $H(1) = 7$, $H(7) = 7$, $H(17) = 18$, $H(18) = 18$, y $H(x) = 0$ para $x \neq l , 7, 17, 18$.\\\\
+\end{enumerate}
+\end{ej}
 \end{enumerate}
 \end{ej}
 
+%ejercicio 12 
+\begin{ej}
+Una función $f$ es par si $f(x)=f(-x)$ e impar si $f(x)=-f(-x)$. Por ejemplo, $f$ es par si $f(x)=x^2$ ó $f(x)=|x|$ ó $f(x)=cos\; x$, mientas que $f$ es impar si $f(x)=x$ ó $f(x)= sen \; x.$.
+\begin{multicols}{2}
+\begin{center}
+\begin{tikzpicture}[scale=0.5, draw opacity = .6]
+% abscisa y ordenada
+\tkzInit[xmax= 7,xmin=-6,ymax=10,ymin=-2]
+\tiny\tkzLabelXY[opacity=0.6,step=1, orig=false]
+% label x, f(x)
+\tkzDrawX[opacity= .6,label=x,right=0.3]
+\tkzDrawY[opacity= .6,label=f(x),below = -0.6]
+%dominio y función
+\tkzFct[opacity=1,domain = -7:8]{\x**2} 
+\tkzText[above,opacity=0.6](3,10){\tiny $f(x)=x^2$}
+\tkzFct[opacity=1,domain = -6:6]{abs(\x)} 
+\tkzText[above,opacity=0.6](6,6){\tiny $f(x)=|x|$}
+\tkzFct[opacity=1,domain = -6:6]{cos(\x)} 
+\tkzText[above,opacity=0.6](6,1){\tiny $f(x)=cos \; x$}
+\end{tikzpicture}\\
+$f$ es par
+\end{center}
 
+\begin{center}
+\begin{tikzpicture}[scale=0.5, draw opacity = .6]
+% abscisa y ordenada
+\tkzInit[xmax= 7,xmin=-6,ymax=7,ymin=-5]
+\tiny\tkzLabelXY[opacity=0.6,step=1, orig=false]
+% label x, f(x)
+\tkzDrawX[opacity= .6,label=x,right=0.3]
+\tkzDrawY[opacity= .6,label=f(x),below = -0.6]
+%dominio y función
+\tkzFct[opacity=1,domain = -6:6]{\x} 
+\tkzText[above,opacity=0.6](6,6){\tiny $f(x)=x$}
+\tkzFct[opacity=1,domain = -6:6]{sin(\x)} 
+\tkzText[above,opacity=0.6](6,1){\tiny $f(x)=sen \; x$}
+\end{tikzpicture}\\
+$f$ es impar
+\end{center}
+\end{multicols}
+
+\begin{enumerate}[\bfseries a)]
+\item Determine si $f+g$ es par, impar o ninguna de las dos, en los cuatro casos obtenidos eligiendo $f$ par o impar, y $g$ par o impar. (Las respuestas se pueden disponer de manera conveniente en una tabla $2x2$.)\\\\
+Sea $f(x)=x^2$ y $g(x)=|x|$ entonces $f(-x)+g(-x)=(-x)^2 + |-x| = x^2 + |x| = f(x) + g(x)$ por lo tanto par y par es par.\\
+Sea $f(x) = x$ y $g(x)=x$ entonces $-f(-x) + (-g(-x)) = -(-x) + [-x(-x)] = x + x = f(x) + g(x)$, por lo tanto impar e impar es impar.\\
+Los otros dos últimos se prueba fácilmente y se llega a la conclusión de que ni uno ni lo otro.
+\begin{center}
+\begin{tabular}{c|cc}
+&\textbf{Par}&\textbf{Par}\\
+\hline\\
+\textbf{Par}&Par&Ninguno\\\\
+\textbf{Par}&Ninguno&Par\\
+\end{tabular}
+\end{center}
+\item La misma cuestión para $f \cdot g.$
+\item La misma cuestión para $f \circ g.$
+\item Demuestre que cada función $f$ puede escribirse como $f(x)=g(|x|),$ para infinitas funciones $g$.
 \end{enumerate}
 \end{ej}
-
 
 
 \subsection[Demostraciones]{Demostraciones \footnote{Calculo infinitesimal, Michael Spivak, pag. 63-68}}
@@ -600,6 +661,19 @@ Ahora crearé una función $g(x)$. Dada una función $f(x)$ como la anterior, de
 donde $c_k$ son los mismos que los dados por la función $f(x)$. Primero notemos que el grado de $g(x)$ es $n-1$. Finalmente, tenemos que $$ xg(x) = x \displaystyle\sum_{k=1}^{n} c_k x^{k-1} = \sum_{k=1}^{n} c_k x^k = f(x).$$ \\\\
 
 \item Para cada real $a$, la función $p$ dada por $p(x)=f(x+a)$ es un polinomio de grado $n.$\\\\
-Demostración.- \; 
+Demostración.- \; Usando el teorema del binomio,
+\begin{center}
+\begin{tabular}{r c l}
+$f(x+a)$&=&$ \displaystyle\sum_{k=0}^{n} (x+a)^k c_k$\\\\
+&=&$c_o + (x+a)c_1 + (x+a)^2 c_2 + ...+(x+a)^n c_n$\\\\
+&=&$ c_o + c_1 \left( \displaystyle\sum_{j=0}^{1} {1 \choose j} a^j x^{1-j} \right) + c_2 \left( \displaystyle\sum_{j=0}^2 {2 \choose j} a^j x^{2-j} \right) 
++ ... + c_n \left( \displaystyle\sum_{j=0}^{n} {n \choose j} a^j x^{n-j} \right)$\\\\
+&=&$(c_o + ac_1 + a^2 c_2 + ... + a^n c_n) + x(c_1 + 2ac_2 + ... + na^{n-1} c_n)$\\\\
+&=&$\displaystyle\sum_{k=0}^n \left( x^k \left( \displaystyle\sum_{j=k} {j \choose j-k} c_j a{j-k}\right) \right)$\\
+\end{tabular}
+\end{center}
+En la linea final reescribimos los coeficientes como sumas para verlos de manera más concisa. De cualquier manera, dado que todos los $c_i$ son constantes, tenemos $\displaystyle\sum_{j=k}^n {j \choose j-k} c_j a^{j-k}$ es alguna constante para cada $k,$ de $d_k$ y tenemos, $$p(x) = \displaystyle\sum_{k=0}^n d_k x^k$$\\\\
+
+\item Si $n \geq 1$ \; y \; $f(a)=0$ para un cierto valor real $a$, entonces $f(x) = (x-a) \, h(x),$ siendo $h$ un polinomio de grado $n-1$. (considérese $p(x)=f(x+a).$)\\\\
 \end{enumerate}
 \end{teo}
