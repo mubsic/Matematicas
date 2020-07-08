@@ -195,7 +195,52 @@ Esta prueba supone que la afirmación es cierta n = 3, es decir, supone que si h
 \end{ej}
 
 
-\section[Teoremas]{Teoremas\footnote{Calculus, Tom Apostol, pag. 45-46}}
+
+\subsection[Teoremas]{Teoremas \footnote{Calculus, Tom Apostol, pag. 54-58}}
+
+% 4.10 problema 1 pag 54
+\begin{ej}
+Calcúlese los valores de los siguientes coeficientes binomiales:
+\begin{enumerate}[\bfseries a)]
+\item ${5 \choose 3}$
+$${5 \choose 3} = \dfrac{5!}{3! (5-3)!} = \dfrac{5!}{3! 2!} = \dfrac{20}{2} = 10$$ \\
+
+\item ${7 \choose 0}$
+$${7 \choose 0} = \dfrac{7!}{0!(7-0)!} = \dfrac{7!}{7!} = 1$$ \\
+
+\item ${7 \choose 1}$
+$${7 \choose 1} = \dfrac{7!}{1!(7-1)!} = \dfrac{7!}{6!} = 7$$ \\
+
+\item ${7 \choose 2}$
+$${7 \choose 2} = \dfrac{7!}{2!(7-2)!} = \dfrac{7!}{2!5!} = \dfrac{42}{2} = 21$$ \\
+
+\item ${17 \choose 14}$
+$${17 \choose 14} = \dfrac{17!}{14!(17-14)!} = \dfrac{17!}{14!3!} = \dfrac{17 \cdot 16 \cdot 15}{3!} = \\dfrac{4080}{6} = 680$$\\
+
+\item ${0\choose 0}$
+$${0\choose 0}=\dfrac{0!}{0!(0-0)!}=\dfrac{0!}{0!0!} = 1$$\\\\
+\end{enumerate}
+\end{ej}
+	
+% 4.10 problema 2 pag 54
+\begin{teo}Demostrar:
+\begin{enumerate}[\bfseries a)]
+\item Demostrar que: ${k \choose n} = {n \choose n-k}$\\\\
+Demostración .- \; 
+
+\item Sabiendo que ${n \choose 10} = {n \choose 7}$ calcular $n$\\\\
+Demostración.- \; 
+
+\item Sabiendo que ${14 \choose k} = {14 \choose k-4}$ calcular $k$\\\\
+Demostración.- \; 
+
+\item ¿Existe un $k$ tal que ${12 \choose k} = {12 \choose k-3 }$\\\\
+Demostración.- \;
+\end{enumerate}
+
+\end{teo}
+
+\subsection[Teoremas]{Teoremas\footnote{Calculus, Tom Apostol, pag. 45-46}}
 
 %teorema 5.2
 \begin{teo}[principio de buena ordenación]
@@ -204,7 +249,7 @@ Demostración.- \; Sea $T$ una colección no vacía de enteros positivos. Querem
 Supongamos que no fuera así. Demostraremos que esto nos conduce a una contradicción. El entero $1$ no puede pertenecer a $T$ (de otro modo él sería el menor número de $T$). Designemos con $S$ la colección de todos los enteros positivos $n$ tales que $n<t$ para todo $t$ de $T$. Por tanto $1$ pertenece a $S$ porque $1 < t$ para todo $t$ de $T$. Seguidamente, sea $k$ un entero positivo de $S$. Entonces $k < t$ para todo $t$ de $T$. Demostraremos que $k + 1$ también es de $S$. Si no fuera así, entonces para un cierto $t$, de $T$ tendríamos $t_1 \leq k+1$. Puesto que $T$ no posee número mínimo, hay un entero $t_2$ en $T$ tal que $t_2 < t_1$ Y por tanto $t_2 < k + 1$. Pero esto significa que $t_2 \leq k$, en contradicción con el hecho de que $k < t$ para todo $t$ de $T$. Por tanto $k + 1$ pertenece a $S$. Según el principio de inducción, $S$ contiene todos los enteros positivos. Puesto que $T$ es no vacío, existe un entero positivo $t$ en $T$. Pero este $t$ debe ser también de $S$ (ya que $S$ contiene todos los enteros positivos). De la definición de $S$ resulta que $t < t$, lo cual es absurdo. Por consiguiente, la hipótesis de que $T$ no posee un número mínimo nos lleva a una contradicción. Resulta pues que $T$ debe tener un número mínimo, y a su vez esto prueba que el principio de buena ordenación es una consecuencia del de inducción.\\\\
 \end{teo}
 
-\section[Ejercicios]{Ejercicios\footnote{Cálculo infinitesimal, Michael Spivak,Pag. 35 al 45}}
+\subsection[Ejercicios]{Ejercicios\footnote{Cálculo infinitesimal, Michael Spivak,Pag. 35 al 45}}
 %ejercicio 
 \begin{ej}
 Demostrar por inducción la siguiente fórmula: $1^2+...+n^2=\dfrac{n(n+1)(2n+1)}{6}$\\\\
@@ -246,8 +291,10 @@ $1^2 + 3^2 + 5^2 + ... + (2n-1)^2$&$=$&$\left[ 1^2 +2^2 +...+(2n)^2 \right] - \l
 \end{enumerate}
 \end{ej}
 
-%ejercicio 5.14
-\begin{ej}
+\subsection[Teoremas]{Teoremas\footnote{Cálculo infinitesimal, Michael Spivak,Pag. 35 al 45}}
+
+%problema 3 pag 35
+\begin{teo}
 Si $0 \leq k \leq n,$ se define el coeficiente binomial $ {n \choose k} $ por $${n \choose k} = \dfrac{n!}{k!(n-k)!}=\dfrac{n(n-1)...(n - k + 1)}{k!}, \; si \; k \neq 0, \; n$$ $${n \choose 0} = {n \choose n} = 1.$$ Esto se convierte en un caso particular de la priera fórula si se define $0! = 1.$
 \begin{enumerate}[\bfseries a)]
 \item Demostrar que $${n +1 \choose k} = {n \choose k - 1} + {n \choose k}$$ Esta relación de lugar a la siguiente configuración, conocida por triángulo de Pascal: Todo número que no esté sobre uno de los lados es la suma de los dos números que tiene encima: El coeficiente binomial ${n \choose k}$ es el número k-ésimo de la fila $(n+1)$.
@@ -301,11 +348,23 @@ Demostración.- \; Por el teorema del binomio $2^n=(1+1)^n = \displaystyle\sum_{
 Demostración.- \;  De igual manera por el teorema del binomio $0=(1+(-1))^n = \displaystyle\sum_{j=0}^n(-1)^j {n \choose j}$\\\\ 
 
 \item $\displaystyle\sum_{l \; impar} {n \choose l} = {n \choose 1} + {n \choose 3}+ ... = 2^{n-1}$\\\\
-Demostración.- \;  
+Demostración.- \;  {\color{green}Terminar demostración xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
 
-\item $\displaystyle\sum_{l \; par} {n \choose l} = {n \choose 0} + {n \choose 2} + ... + = 2^{n-1}$\\\\
-Demostración.- \;
+\item $\displaystyle\sum_{l \; par} {n \choose l} = {n \choose 0} + {n \choose 2} + ...  = 2^{n-1}$\\\\
+Demostración.- \; {\color{green}Terminar demostración xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+\end{enumerate}
+\end{enumerate}
+\end{teo}
+
+
+%problema 3.4 pag 37
+\begin{teo}Demostrar:
+\begin{enumerate}[\bfseries a)]
+\item Demostrar que $$\displaystyle\sum_{k=0}^{l} {n \choose k} {m \choose l-k} = {n+m \choose l}$$\\\\
+Demostración.- \; 
+
+\item demostrar que $$\displaystyle\sum_{k=0}^{n} {n \choose k}^2 = {2n \choose n}$$\\\\
+Demostración.- \; 
 \end{enumerate}
 
-\end{enumerate}
-\end{ej}
+\end{teo}

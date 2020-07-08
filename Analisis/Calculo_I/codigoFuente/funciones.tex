@@ -347,11 +347,35 @@ Los otros dos últimos se prueba fácilmente y se llega a la conclusión de que 
 \textbf{Par}&Ninguno&Par\\
 \end{tabular}
 \end{center}
-\item La misma cuestión para $f \cdot g.$
+\item La misma cuestión para $f \cdot g.$\\\\
+Sea $f(x)=x^2$ \; y \; $g(x)=|x|$, entonces $f(-x) \cdot g(-x) = x^2 \cdot |x| = f(x) \cdot g(x)$, por lo tanto se cumple para par y par.\\
+Sea $f(x)=x$ \; y \; $g(x)=x$, entonces $-f(-x) \cdot -g(-x) = -(-x) \cdot -(-x) = x \cdot x = f(x) \cdot g(x)$, por lo tanto impar impar da impar\\
+Sea $f(x)=x^2$ \; y \; $g(x)=x$, podemos crear otra función llamada $h$ que contiene a $x^2 \cdot x$ por lo tanto $h(x)=x^3 = -(-x)^2$ y así demostramos que par e impar es impar.\\
+De igual forma al anterior se puede probar que impar y par es impar.
+\begin{center}
+\begin{tabular}{c|cc}
+&\textbf{Par}&\textbf{Par}\\
+\hline\\
+\textbf{Par}&Par&Impar\\\\
+\textbf{Par}&Impar&Par\\\\
+\end{tabular}
+\end{center}
 \item La misma cuestión para $f \circ g.$
-\item Demuestre que cada función $f$ puede escribirse como $f(x)=g(|x|),$ para infinitas funciones $g$.
+Sea $f(x)=x$ \; y \; $g(x)=x$, luego $h(x)=(f \circ g)(x)$ entonces $h(x) = x$ luego $-f(-x) = x$, por lo tanto impar e impar da impar.\\
+De similar manera se puede encontrar para los demás problemas y queda:
+\begin{center}
+\begin{tabular}{c|cc}
+&\textbf{Par}&\textbf{Par}\\
+\hline\\
+\textbf{Par}&Par&Par\\\\
+\textbf{Par}&Par&Impar\\\\
+\end{tabular}
+\end{center}
+\item Demuestre que cada función par $f$ puede escribirse como $f(x)=g(|x|),$ para infinitas funciones $g$.\\\\ 
+Demostración.- \; Sea $f(x)=f(x)$ sabemos que $f$ es par si $f(x)=f(-x)$, y por definición de valor absoluto se tiene $f$ es igual a $f|x|$, por lo tanto $f(x)=g(|x|)$\\\\
 \end{enumerate}
 \end{ej}
+
 
 
 \subsection[Demostraciones]{Demostraciones \footnote{Calculo infinitesimal, Michael Spivak, pag. 63-68}}
@@ -418,7 +442,15 @@ Demostración.- \; Sea $x \in A$ por $b)$ $f=C_A$ si solo si $f=f^2$ ya que $1=1
 \end{enumerate}
 \end{teo}
 
- 
+%teorema problema 13 pag 65
+\begin{teo} Demostrar:
+\begin{enumerate}[\bfseries a)]
+\item Demostrar que cualquier función $f$ con dominio $\mathbb{R}$ puede ser puesta en la forma $f=R+O$, con $R$ par y $O$ impar.\\\\
+Demostración.- \; 
+\item Demuéstrese que esta manera de expresar $f$ es única. (Si se intenta resolver primero la parte $b)$ despejando $E$ \; y \; $O$, se encontrará probablemente la solución de la parte $a)$).\\\\
+Demostración.- \; 
+\end{enumerate}
+\end{teo} 
 
 
 
@@ -647,7 +679,7 @@ Las gráficas de los dos polinomios cuadráticos $f(x) = x^2-2$ \; y \; $g(x)=2x
 
 
 
-\subsection[Demostraciones]{Demostraciones \footnote{Calculus Vol 1, Tom Apostol, pag 69-70}}
+\subsection[Teoremas]{Teoremas \footnote{Calculus Vol 1, Tom Apostol, pag 69-70}}
 
 %teorema problema 9 pag 70
 \begin{teo}
@@ -675,5 +707,31 @@ $f(x+a)$&=&$ \displaystyle\sum_{k=0}^{n} (x+a)^k c_k$\\\\
 En la linea final reescribimos los coeficientes como sumas para verlos de manera más concisa. De cualquier manera, dado que todos los $c_i$ son constantes, tenemos $\displaystyle\sum_{j=k}^n {j \choose j-k} c_j a^{j-k}$ es alguna constante para cada $k,$ de $d_k$ y tenemos, $$p(x) = \displaystyle\sum_{k=0}^n d_k x^k$$\\\\
 
 \item Si $n \geq 1$ \; y \; $f(a)=0$ para un cierto valor real $a$, entonces $f(x) = (x-a) \, h(x),$ siendo $h$ un polinomio de grado $n-1$. (considérese $p(x)=f(x+a).$)\\\\
+Demostración.- \; Por la parte $b)$ se sabe que $f(x)$ es un polinomio de grado $n$, entonces $p(x)=f(x+a)$ también es un polinomio del mismo grado. Ahora si $f(a)=0$ entonces por hipótesis $p(0)=f(a)=0$. Luego por la parte $a)$, tenemos $$p(x)=x \cdot g(x)$$ donde $g(x)$ es un polinomio de grado $n-1$. Así,
+$$p(x-a)=f(x)= f(x) = (x-a) \cdot g(x-a)$$ ya que $p(x)=f(x+a)$. Pero, si $g(x)$ es un polinomio de grado $n-1$, entonces por la parte $b)$ nuevamente, también lo es $h(x)=g(x+(-a)) = g(x-a)$. Por lo tanto, $$f(x)=(x-a) \cdot h(x)$$ para $h$ un grado $n-1$ polinomial, según lo solicitado.\\\\\
+
+\item Si $f(x)=0$ para $n+1$ valores reales de $x$ distintos, todos los coeficientes $c_k$ son cero y $f(x)=0$ para todo real de $x$\\\\
+Demostración.- \;  La prueba se realizara por inducción. Sea $n=1$, entonces $f(x)=c_o + c_1 x$. Dado que la hipótesis es que existen $n+1$ distintos  $x$ de tal manera que $f(x)=0$, sabemos que existen $a_1$, $a_2$ $\in \mathbb{R}$ tal que $$f(a_1)=f(a_2)=0, \; \; \; a_1 \neq a_2,$$ Así, 
+\begin{center}
+\begin{tabular}{r c l c r c l l}
+$c_0 + c_1 a_1$&$=$&$0$&$\Rightarrow$&$c_1 a_1 - c_1 a_2$&$=$&$0$&\\
+&&&$\Rightarrow$&$c_1(a_1 - a_2)$&$=$&$0$&\\
+&&&$\Rightarrow$&$c_1$&$=$&$0$& ya que $a_1 \neq a_2$\\
+&&&$\Rightarrow$&$c_0$&$=$&$0$&ya que $c_0 + c_1 a_1 = 0$\\
+\end{tabular}
+\end{center}
+Por lo tanto, la afirmación es verdadera. Suponga que es cierto para algunos $n=k \in \mathbb{Z}^{+}$. Luego Sea $f(x)$ un polinomio de grado $k+1$ con $k+2$ distintos de $0$, $a_1,...,a_{k+2}.$ ya que $f(a_{k+2}) = 0$, usando la parte $c)$, tenemos, $$f(x)=(x- a_{k+2})h(x)$$
+donde $h(x)$ es un polinomio de grado $k$. Sabemos que hay $k+1$ valores distintos $a_1,... a_{k+1}$ tal que  $h(a_i) = 0.$ Dado que $f(a_i)=0$ para $1< i < k+2y$ y $(x- a_{k+2}) \neq 0$ para $x=a_i$ con $1 < i < k+1$ ya que todos los $a_1$ son distintos), por lo tanto, según la hipótesis de inducción, cada coeficiente de $h$ es $0$ y $h(x)=0$ para todo $x \in \mathbb{R}.$ Así,
+\begin{center}
+\begin{tabular}{r c r c l}
+$f(x)$&$=$&$(x - a_{k+2})h(x)$&$=$&$(x- a_{k+2}) \cdot \displaystyle\sum_{j=0}^k c_j x^j$\\\\
+&&&$=$&$\displaystyle\sum_{j=0}^k (x - a_{k+2})c_j x^j$\\\\
+&&&$=$&$c_k x^{k+1} + (c_{k-1} - a_k + 2c_k)x^k + ... + (c_1 -a_{k+2} c_0)x + a_{k+2} c_0$\\
+\end{tabular}
+\end{center}
+Pero dado que todos los coeficientes de $h(x)$ son cero y $f(x) = 0$ para todo $x \in \mathbb{R}$. Por lo tanto, la afirmación es verdadera para el caso $k+1$ y para todo $n \in \mathbb{Z}^+$\\\\
+
+\item Sea $g(x) = \displaystyle\sum_{k=0}^m b_k x^k$ un polinomio de grado $m$, siendo $m \geq n.$ Si $g(x)=f(x),$ para $m+1$ valores reales de $x$ distintos, entonces $m=n$, $b_k =c_k$ para cada valor de $k$, y $g(x)=f(x)$ para todo real $x$\\\\
+Demostración.- \;
 \end{enumerate}
 \end{teo}
