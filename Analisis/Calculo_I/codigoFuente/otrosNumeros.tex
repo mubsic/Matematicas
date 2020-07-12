@@ -324,7 +324,7 @@ Demostración.- \; Se ve claramente que ${1 \choose 1}$ es un número natural. S
 Demostración.- \; Existen $n(n -1) \cdot ... \cdot (n - k + 1)$ k-tuplas de enteros distintos elegidos entre $1, ..., n$, ya que el primero puede ser elegido de n maneras, el segundo de $n - 1$ maneras, etc. Ahora bien, cada conjunto formado exactamente por $k$ enteros distintos, da lugar a $k!$ k-tuplas, de
 modo que el número de conjuntos será $n(n — 1) \cdot ... \cdot (n - k + l)/k! = {n\choose k}$\\\\ 
 
-\item Demostrar el teorema del binomio: Si $a$ \; y \; $b$ son números cualesquiera, entonces
+\item Demostrar el \textbf{TEOREMA DEL BINOMIO}: Si $a$ \; y \; $b$ son números cualesquiera, entonces
 $(a+b)^n = a^n + {n \choose 1} a^{n-1} b + {n \choose 2} a^{n-2} b^2 + ... + {n \choose n-1} a b^{n-1} + b^n = \displaystyle \sum_{j=0}^n {n \choose j} a^{n-j} b^j.$\\\\
 El teorema del binomio resulta claro para $n=1.$ Supónganse que $$(a+b)^n = \displaystyle \sum_{j=0}^n {n \choose j} a^{n-j} b^j.$$
 Entonces 
@@ -361,7 +361,22 @@ Demostración.- \; {\color{green}Terminar demostración xxxxxxxxxxxxxxxxxxxxxxxx
 \begin{teo}Demostrar:
 \begin{enumerate}[\bfseries a)]
 \item Demostrar que $$\displaystyle\sum_{k=0}^{l} {n \choose k} {m \choose l-k} = {n+m \choose l}$$\\\\
-Demostración.- \; 
+Demostración.- \; Aclaremos la proposición primeramente con un ejemplo.\\
+Tenemos $n$ hombres y $m$ mujeres, y queremos formar un conjunto de combinaciones $l$ de personas de la forma $n+m$. Claramente hay ${n+m \choose l}$ caminos para formar dichas combinaciones.\\
+Contemos el número de combinaciones de otra manera. Tenemos $0$ hombres y $l$ mujeres. Tal combinación se pueden formar en ${n \choose 0 } {m \choose l}$ caminos, o también:
+\begin{itemize}
+\item Podemos tener $1$ hombre y $l-1$ mujeres. Tal combinación se puede formar como ${n \choose l}{m \choose l-1}$ maneras.
+\item Ó podemos tener $2$ hombre y $l-2$ mujeres. Tal combinación se puede formar como ${n \choose 2}{m \choose l-2}$ maneras.
+\end{itemize}
+Así las combinaciones totales serian $$\displaystyle\sum_{k=0}^l {n \choose k}{m \choose l -k}$$
+Pero ya vimos que el número de combinaciones es ${n+m \choose l}$ siempre y cuando se cumpla la condición ${a \choose b} = 0$ si $b>a$\\
+Ahora si pasemos a demostrar. Sea por producto de Cauchy de dos series infinitas:
+$$\left( \displaystyle\sum_{k=0}^{\infty} a_k x^k \right) \left( \displaystyle\sum_{k=0}^{\infty} b_k x^k \right) = \sum_{k=0}^{\infty} \left( \displaystyle\sum_{j=0}^{k} a_j x^j b_{k-j} x^{k-j}\right) = \sum_{k=0}^{\infty} \left( \displaystyle\sum_{j=0}^{k} a_j b_{k-j} \right) x^k$$ entonces $(1+x)^m = \displaystyle\sum_{k=0}^{\infty} {m \choose k}x^k$ y $(1+x)^n \displaystyle\sum_{k=0}^{\infty} {m \choose k}x^k$ entonces queda:
+$$(1+x)^{m+n} = \sum_{k=0}^{\infty} {m+n \choose k} x^k$$
+Se extiende los índices en las sumas a $\infty$  ya que $k>n$, ${n \choose k} = 0 $. Luego 
+$$(1+x)^m (1+x)^n = \displaystyle\sum_{k=0}^{\infty} \left( \sum_{j=0}^k {m \choose j} {n \choose k-j} \right) x^k$$ Así 
+$${m+n \choose k} = \displaystyle\sum_{j=0}^k {j \choose m}{n \choose k-j}$$\\\\
+
 
 \item demostrar que $$\displaystyle\sum_{k=0}^{n} {n \choose k}^2 = {2n \choose n}$$\\\\
 Demostración.- \; 
