@@ -1,1 +1,49 @@
 \chapter{Integrales}
+\begin{tcolorbox}
+\begin{def.}[Definición axiomática de área]
+Supongamos que existe una clase $M$ de conjuntos del plano medibles y una función de conjunto $a$, cuyo dominio es $M$, con las propiedades siguientes:
+\begin{enumerate}[\bfseries 1.]
+\item Propiedad de no negatividad. Para cada conjunto $S$ de $M$, se tiene $a(S) \geq 0.$\\
+Establece simplemente que el área de un conjunto plano medible es un número positivo o nulo.\\\\
+
+\item Propiedad aditiva. Si $S$ \; y \; $M$, pertenecen a $M$, también pertenecen a $M,$ $S \cup T$ y $S \cap T,$ y se tiene $$a(S \cup T) = a(S) + a(T) - a(S \cap T)$$\\
+En otras palabras nos dice que cuando un conjunto está formado por dos regiones (que pueden ser sin parte común), el área de la reunión es la suma de las áreas de las dos partes menos el área de su intersección.\\\\
+
+\item Propiedad de la diferencia. Si $S$ y $T$ pertenecen a $M$ siendo $S \subset T,$ entonces $T - S$ está en $M$, y tiene $a(T-S) = a(T) - a(S)$.\\
+Si restamos un conjunto medible $S$ de un conjunto medible $T$ mayor, la propiedad o axioma establece que la parte restante, $T-S$, es medible y su área se obtiene por sustracción, $a(T-S) = a(T) - a(S).$ En particular, este axioma implica que el conjunto vacío es medible y tiene área nula. Puesto que $a(T-S) \geq 0,$ el axioma también implica la propiedad de monotonía:
+$$a(S) \leq a(T), \; \mbox{para conjuntos} \; S \; y \; T \; de \; M \; \mbox{tales que} \; S \subset T$$ dicho de otro modo, un conjunto que es parte de otro no puede tener área mayor.\\\\
+\item Elección de escala. Todo rectángulo $R$ pertenece a $M$. Si los lados de $R$ tienen longitudes $h$ \; y \; $k,$ entonces $a(R)=hk.$\\
+Es decir asigna áreas iguales a los conjuntos que tienen el mismo tamaño y la misma forma. \\\\
+\end{enumerate}
+\end{def.}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+\begin{enumerate}[\bfseries 5.]
+\item Invariancia por congruencia. Si un conjunto $S$ pertenece a $M$ y $T$ es congruente a $S$, también T pertenece a $M$ y tenemos $a(S) = a(T).$\\
+Asigna áreano nula a ciertos rectángulos y por eso excluye aquel caso trivial. \\\\
+
+\item Propiedad de exhaución. Sea $Q$ un conjunto que puede encerrarse entre dos regiones $S$ y $T,$ de modo que $$ S \subset Q \subset T.$$  
+Si existe uno y sólo un número $c$ que satisface las desigualdades. $$a(S) \leq c \leq a(T)$$
+para todas las regiones escalonadas $S$ y $T$ que satisfagan a $S \subset Q \subset T,$ entonces $Q$ es medible y $a(Q)=c.$\\
+nos permite extender la clase de conjuntos medibles de las regiones escalonadas a regiones más generales.\\\\
+\end{enumerate}
+\end{tcolorbox}
+
+\section[Ejercicios y demostraciones]{Demostraciones y ejercicios \footnote{Tom Apostol, Calculus vol 1, pag 73-74}}
+\subsection{Teoremas}
+
+% ejercicio 1.7 problema 1 pag 73
+\begin{teo}
+Demostrar que cada uno de los siguientes conjuntos es medible y tiene área nula:
+\begin{enumerate}[\bfseries a)]
+\item Un conjunto que consta de un solo punto.\\\\
+Demostración.- \;
+
+\item El conjunto de un número finito de puntos.\\\\
+Demostración.- \; 
+
+\item La reunión de una colección finita de segmentos de recta de un plano. \\\\
+Demostración.- \; 
+\end{enumerate}
+\end{teo}

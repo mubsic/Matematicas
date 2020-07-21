@@ -1,4 +1,4 @@
-e\chapter{Distintas clases de números}
+\chapter{Distintas clases de números}
 \section{El principio de la inducción matemática}
 %teorema 
 \begin{teo}[Principio de inducción matemática]
@@ -291,6 +291,37 @@ $1^2 + 3^2 + 5^2 + ... + (2n-1)^2$&$=$&$\left[ 1^2 +2^2 +...+(2n)^2 \right] - \l
 \end{enumerate}
 \end{ej}
 
+% problema 6 pag 37
+\begin{ej}
+La fórmula para $1^2 + 2^2 + ... + n^2$ se puede obtener como sigue: Empezamos con la fórmula $$(k+1)^3 - k^3 = 3k^2 + 3k +1$$
+particularmente esta fórmula para $k=1,...,n$ \; y sumando, obtenemos \begin{center}
+\begin{tabular}{r c l}
+$2^3 - 1^3$&=&$3\cdot +1$\\
+$3^3 + 2^3$&=&$2^2 + 3\cdot 2 +1 $\\
+$.$&=&\\
+$.$&=&\\
+$.$&=&\\
+$(n+1)^3 - n^3$&=&$n^2 + 3 \cdot n + 1$\\
+\hline
+$(n+1)^3 - 1$&=&$3 \left[ 1^2 + ... + n^2 \right] + 3 \left[ 1 + .... + n \right] + n$\\
+\end{tabular}
+\end{center}
+De este modo podemos obtener $\displaystyle\sum_{k=1}^n k^2$ una vez conocido $\displaystyle\sum_{k=1}^n k $ (lo cual puede obtenerse mediante un procedimiento análogo). Aplíquese este método para obtener.
+\begin{enumerate}[\bfseries i)]
+\item $1^3 + ... n^3$\\\\
+Sea $(k+1)^4 - k^4 = 4k^3 + 6k^2 +4k + 1, \; \; para \; k=1,...,n $ por hipótesis tenemos $(n+1)^4 - 1 = 4 \displaystyle\sum_{k=1}^n k^2 + 6 \sum_{k=1}^n k^2 + 4 \sum_{k=1}^n k + n,$ de modo que $$\displaystyle\sum_{k=1}^n k^3 = \dfrac{ (n+1)^4 -1 - 6 \dfrac{n(n+1)(2n+1)}{6} - 4 \dfrac{n(n+1)}{2} - n}{4} = \dfrac{n^4}{4} + \dfrac{n^3}{2} + \dfrac{n^2}{4}$$\\\\
+
+\item $1^4 + ... + n^4$\\\\
+Similar al anterior ejercicio partimos de $(k+1)^5 - k^5 = 5k^4 + 10k^3 + 10k^2 + 5k + 1 \; \; \; k=1,...,n$ para obtener $(k+1)^5 - k^5 = 5 \left( \displaystyle\sum_{k=1}^n k^4 \right) + 10 \left( \sum_{k=1}^n k^3 \right) + 10 \left( \sum_{k=1}^n k^2 \right) + 5 \left( \sum_{k=1}^n k \right) + n,$ así $$\displaystyle\sum_{k=1}^n k^4 = \dfrac{(n+1)^5 - 1 - 10\left( \dfrac{n^4}{4} + \dfrac{n^3}{2} + \dfrac{n^2}{4} - 10 \dfrac{n(n+1)(n+2)}{6} - 5 \dfrac{n(n+1)(n+2)}{2} -n \right)}{5} = $$ $$\dfrac{n^5}{5} + \dfrac{n^4}{2} + \dfrac{n^3}{3} - \dfrac{n}{30}$$\\\\
+
+\item $\dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + ... + \dfrac{1}{n(n+1)}$\\\\ 
+A partir de $$\dfrac{1}{k} - \dfrac{1}{k+1} = \dfrac{1}{k(k+1)}, \; \; \; k=1,...,n$$ obtenemos $$1-\dfrac{1}{n+1} = \displaystyle\sum_{k=1}^n \dfrac{1}{k(k+1)}$$ {\color{green} completarlo xxxxxxxxxxxxxxxxxx}\\\\
+
+\item $\dfrac{3}{1^2 \cdot 2^2} + \dfrac{5}{2^2 \cdot 3^2} + ... + \dfrac{2n +1}{n^2 (n+1)^2}$\\\\
+De $$\dfrac{1}{k^2} - \dfrac{1}{(k+1)^2} = \dfrac{2k+1}{k^2(k+1)^2}, \; \; \; k=1,...,n$$ obtenemos $$1-\dfrac{1}{(n+1)^2} = \displaystyle\sum_{k=1}^n \dfrac{2k+1}{k^2(k+1)^2}$$ {\color{green} completarlo xxxxxxxxxxxxxxxxxx} \\\\
+\end{enumerate}
+\end{ej}
+
 \subsection[Teoremas]{Teoremas\footnote{Cálculo infinitesimal, Michael Spivak,Pag. 35 al 45}}
 
 %problema 3 pag 35
@@ -379,7 +410,48 @@ $${m+n \choose k} = \displaystyle\sum_{j=0}^k {j \choose m}{n \choose k-j}$$\\\\
 
 
 \item demostrar que $$\displaystyle\sum_{k=0}^{n} {n \choose k}^2 = {2n \choose n}$$\\\\
-Demostración.- \; 
+Demostración.- \; Sea $m$, $l=n$ en la parte $a)$ y notar que ${n \choose k} = {n \choose n-k}.$ \\\\ {\color{green}completar demostración xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
 \end{enumerate}
-
 \end{teo}
+
+%problema 5 a) pag 37
+\begin{teo}Demostrar:
+\begin{enumerate}[\bfseries a)]
+\item Demostrar por inducción sobre $n$ que $$1 + r +r^2 + ... + r^n = \dfrac{1 - r^{n+1}}{1-r}$$ si $r\neq 1$ (Si es $r=1$, el cálculo de la suma no presenta problema alguno).\\\\
+Demostración.- \; Sea $n=1$ entonces $$1+r = \dfrac{1- r^2}{1-r}$$ el cual vemos que se cumple.\\
+Luego
+\begin{center}
+\begin{tabular}{r c l}
+$1+r+r^2 + ... + r^n + r^{n+1}$&$=$&$\dfrac{1- r^{r+1}}{1-r} + r^{r+1}$\\\\
+&$=$&$\dfrac{1 - r^{n+1} + r^{n+1} (1-r)}{1-r}$\\\\
+&$=$&$\dfrac{1 - r^{n+1}}{1-r}$\\\\
+\end{tabular}
+\end{center} 
+
+\item Deducir este resultado poniendo $S=1+r+...+r^n$, multiplicando esta ecuación por $r$ y despejando $S$ entre las dos ecuaciones.\\\\
+Tenemos $r\cdot S = r + .... + r^n + r^{n+1}$ luego $S - rS = S(1-r) = 1-r^{n+1}$ por lo tanto $S = \dfrac{1-r^{n+1}}{1-r}$\\\\
+\end{enumerate}
+\end{teo}
+
+%capítulo 2, problema 7, pag 38
+\begin{teo}
+Utilizar el método del problema 6 para demostrar que $\displaystyle\sum_{k=1}^n k^p$ puede escribirse siempre en la forma $$\dfrac{n^{p+1}}{p+1} + An^p + Bn^{p-1} + Cn^{p-2} + ...$$
+Las diez primeras de estas expresiones son
+\begin{center}
+\begin{tabular}{r c l}
+$\displaystyle\sum_{k=1}^n k$&=&$\dfrac{1}{2}n^2 + \dfrac{1}{2}n$\\\\
+$\displaystyle\sum_{k=1}^n k^2$&=&$\dfrac{1}{3} n^3 + \dfrac{1}{2}n^2 + \dfrac{1}{6}n$\\\\
+$\displaystyle\sum_{k=1}^n k^3$&=&$\dfrac{1}{4}n^4 + \dfrac{1}{2} n^3 + \dfrac{1}{4} n^2$\\\\
+$\displaystyle\sum_{k=1}^n k^4$&=&$\dfrac{1}{5} n^6 + \dfrac{1}{2} n^4 + \dfrac{1}{3} n^3 - \dfrac{1}{30}n$\\\\
+$\displaystyle\sum_{k=1}^n k^5$&=&$\dfrac{1}{6}n^6 + \dfrac{1}{2} n^5 + \dfrac{5}{12}n^4 - \dfrac{1}{12}n^2$\\\\
+$\displaystyle\sum_{k=1}^n k^6$&=&$\dfrac{1}{7}n^7 + \dfrac{1}{2}n^6 + \dfrac{1}{2}n^5 - \dfrac{1}{6}n^3 + \dfrac{1}{42}n$\\\\
+$\displaystyle\sum_{k=1}^n k^7$&=&$\dfrac{1}{8}n^8 + \dfrac{1}{2}n^7 + \dfrac{7}{12}n^6 - \dfrac{7}{24}n^4 + \dfrac{1}{12}n^2$\\\\
+$\displaystyle\sum_{k=1}^n k^8$&=&$\dfrac{1}{9}n^9 + \dfrac{1}{2}n^8 + \dfrac{2}{3}n^7 - \dfrac{7}{15}n^5 + \dfrac{2}{9}n^3 - \dfrac{1}{30}n$\\\\
+$\displaystyle\sum_{k=1}^n k^9$&=&$\dfrac{1}{10}n^{10} + \dfrac{1}{2} n^9 + \dfrac{3}{4}n^8 - \dfrac{7}{10}n^6 + \dfrac{1}{2}n^4 - \dfrac{3}{20} n^2$\\\\
+$\displaystyle\sum_{k=1}^n k^10$&=&$\dfrac{1}{11}n^{11} + \dfrac{1}{2}n^{10} + \dfrac{5}{6}n^9 - 1n^7 + 1n5 - \dfrac{1}{2}n^3 + \dfrac{5}{66}n$\\\\
+\end{tabular}
+\end{center}
+Obsérvese que los coeficientes de la segunda columna son siempre $\dfrac{1}{2}$ y que después de la tercera columna las potencias de $n$ de coeficiente no nulo van decreciendo de dos en dos hasta llegar a $n^2$ o a $n$. Los coeficientes de todas las columnas, salvo las dos primeras, parecen bastante fortuitos, pero en realidad obedecen a cierta regla; encontrarla puede considerarse como una prueba de superperspicacia. Para descifrar todo el asunto, véase el problema 26-17)\\\\
+Demostración.- \; 
+\end{teo} 
+

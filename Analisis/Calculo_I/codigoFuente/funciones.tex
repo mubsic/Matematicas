@@ -376,7 +376,12 @@ Demostración.- \; Sea $f(x)=f(x)$ sabemos que $f$ es par si $f(x)=f(-x)$, y por
 \end{enumerate}
 \end{ej}
 
-
+%problema 14 pag 65
+\begin{ej}
+Si $f$ es una función cualquiera, definir una nueva función $|f|$ mediante $|f|(x)=|f(x)|$. Si $f$ \; y \; $g$ son funciones, definir dos nuevas funciones, $max(f,g)$ y $min(f,g)$, mediante $$max(f,g)(x)=max(f(x),g(x)),$$ $$min(f,g)(x)=min(f(x),g(x))$$
+Encontrar una expresión para $max(f,g)$ y $min(f,g)$ en términos de $|\; |$.\\\\
+Por definición de $max$ y $min$ visto anteriormente en el primer capítulo se tiene: $$max(f,g) = \dfrac{f+g + |f-g|}{2} \; \; \; y \; \; \; min(f,g) \dfrac{f+g - |f-g|}{2}$$ 
+\end{ej} 
 
 \subsection[Demostraciones]{Demostraciones \footnote{Calculo infinitesimal, Michael Spivak, pag. 63-68}}
 %teorema (7)a
@@ -445,13 +450,42 @@ Demostración.- \; Sea $x \in A$ por $b)$ $f=C_A$ si solo si $f=f^2$ ya que $1=1
 %teorema problema 13 pag 65
 \begin{teo} Demostrar:
 \begin{enumerate}[\bfseries a)]
-\item Demostrar que cualquier función $f$ con dominio $\mathbb{R}$ puede ser puesta en la forma $f=R+O$, con $R$ par y $O$ impar.\\\\
-Demostración.- \; 
+\item Demostrar que cualquier función $f$ con dominio $\mathbb{R}$ puede ser puesta en la forma $f=E+O$, con $E$ par y $O$ impar.\\\\
+Demostración.- \;  Despejamos $E$ y $O$ de la parte $b)$ así nos que da, $$E(x)=\dfrac{f(x) + f(-x)}{2}, \; \; \; \dfrac{f(x)-f(-x)}{2}.$$\\\\
 \item Demuéstrese que esta manera de expresar $f$ es única. (Si se intenta resolver primero la parte $b)$ despejando $E$ \; y \; $O$, se encontrará probablemente la solución de la parte $a)$).\\\\
-Demostración.- \; 
+Demostración.- \; Si $f=E+O$, siendo $E$ par y $O$ impar, entonces $f(x)=E(x)+O(x),$ $f(-x)=E(x) - O(x)$. Por lo tanto es única para $f$\\\\
 \end{enumerate}
 \end{teo} 
 
+%problema 3.15 pag 65
+\begin{teo} Demostrar.
+\begin{enumerate}[\bfseries a)]
+\item Demostrar que $f=max(f,0)+min(f,0)$. Esta manera particular de escribir $f$ es bastante usada; las funciones $max(f,0)$ y $min(f,0)$ se llaman respectivamente \textbf{parte positiva} y \textbf{parte negativa} de $f$.\\\\
+Demostración .- \; Sea $f=max(f,0)+min(f,0)$, ya que $f(x) = max(f(x),0)+ min(f(x),0)$ para todo $x$, al satisfacer la ecuación $c = max(c,0)+ min(c,0)$ para cualquier valor de $c$.\\\\
+\item Una función $f$ se dice que es \textbf{no negativa} si $f(x)\geq 0$ para todo $x$. Demostrar que para cualquier función $f$ puede ponerse $f=g-h$ de infinitas maneras con $g$ \; y \; $h$ no negativas. (La manera corrientes es $g=max(f,0)$4 \; y \; $h=-min(f,0)$). Indicación: Cualquier número puede ciertamente expresarse de infinitas maneras como diferencia de dos números no negativos.\\\\
+Demostración.- \; Para cada $x$, elíjase números $g(x)$, $h(x) \geq 0$ con $f(x) = g(x) - h(x).$ Puesto que cada uno de los pares formados por $g(x)$ \; y \; $h(x)$, puede ser elegido de infinitas maneras, existirán infinitos pares de funciones $g$ \; y \; $h$ que realizarán la descomposición pedida de $f.$\\\\
+\end{enumerate}
+\end{teo}
+
+% Capitulo 3 problema 16 pag 66
+\begin{teo}
+Supongase que $f$ satisface $f(x+y) = f(x) + f(y)$ para todo $x$ \; e \; $y$.
+\begin{enumerate}[\bfseries a)]
+\item Demostrar que $f(x_1 +...+ x_n) = f(x_1) + ... + f(x_n).$\\\\
+Demostración.- \; Vemos fácilmente que el resultado se cumple para $n=1$. Si $f(x_1 + ... + x_n) = f(x_1)+...+f(x_n)$ para todo $x_1,...,-x_n.$ Luego,
+\begin{center}
+\begin{tabular}{r c l}
+$f(x_1 + ... + x_{n+1})$&=&$f\left( [x_1 + ... + x_n] + x_{x+1} \right)$\\
+&=&$f(x_1 + ... + x_n) + f(x_{n+1})$\\
+&=&$f(x_1) +...+ f(x_n) + f(x_{x+1})$\\\\
+\end{tabular}
+\end{center}
+
+\item Demostrar que existe algún número $c$ tal que $f(x) = cx$ para todos los números racionales $x$ (en este punto no intentamos decir nada acerca de $f(x)$ cuando $x$ es irracional). Indicación: Piensese primero en cómo debe ser $c.$ Demostrar luego que $f(x) = cx,$ primero cuando $x$ es un entero, después cuando $x$ es el recíproco de un entero, y finalmente para todo racional $x$.\\\\
+Demostración.- \; 
+
+\end{enumerate}
+\end{teo}
 
 
 \subsection[Ejercicios]{Ejercicios \footnote{Calculus Vol 1, Tom Apostol, pag 69-70}}
@@ -677,6 +711,44 @@ Las gráficas de los dos polinomios cuadráticos $f(x) = x^2-2$ \; y \; $g(x)=2x
 \end{center}
 \end{ej}
 
+% 1.5 problema  10 pag 70
+\begin{ej}
+En cada caso, hallar todos los polinomios $p$ de grado $\leq 2$ que satisfacen las condiciones dadas.\\\\
+Sabemos que para un polinomio de grado $\leq 2$ es:
+$$p(x) = ax^2 + bx + c$$ 
+para todo $a,b,c \in \mathbb{R}$.\\\\
+\begin{enumerate}[\bfseries a)]
+\item $p(x) = p(1-x)$\\\\
+Sea $f(x) = p(x) -1$, entonces $f$ es de grado como máximo $2$ por la parte $d)$ del problema $9$ tenemos que  todos los coeficientes de $f$ son $0$ \; y \; $f(x)=0$ para todo $x \in \mathbb{R}$, así,
+$$p(x)-1 = 0 \; \; \Rightarrow \; \; p(x)=1 \; \; \forall x \in \mathbb{R}$$\\\\ 
+\item $p(x) = p(1+x)$\\\\
+Tenemos $p(0)=1 \Rightarrow c=1$ luego, $p(1)=1 \Rightarrow a+b=0 \Rightarrow b=-a$ y finalmente, con $c=1$ \; y \; $b=-a$, tenemos: $p(2)=2 \Rightarrow 4a-2a=1 \Rightarrow a=\dfrac{1}{2}, \; b=-\dfrac{1}{2}$. por lo tanto $$p(x)=\dfrac{1}{2}x^2 - \dfrac{1}{2}x + 1 = \dfrac{1}{2}x(x-1) + 1$$\\\\
+\item $p(x) = p(0) = p(1) =1$\\\\
+Una vez mas, desde $p(0)=1$ tenemos: $a+b=0 \Rightarrow b=-a$ así, $p(x) = ax^2 - ax + 1 = ax(x-1) + 1$\\\\
+\item $p(0) = p(1)$\\\\
+Simplemente sustituyendo estos valores que tenemos, $p(0)=p(1) \Rightarrow c=a+b+c \Rightarrow b=-a$ entonces, $$p(x) = ax^2 -ax + c = ax(x-1) + c$$\\\\
+\end{enumerate}
+\end{ej}
+
+%1.5 problema 11 pag 70
+\begin{ej}
+En cada caso, hallar todos los polinomios $p$ de grado $\leq 2$ que para todo real $x$ satisfacen las condiciones que se dan.
+Como $p$ es un polinomio de grado por lo mucho $2$, podemos escribir
+$$p(x) = ax^2 + bx + c, \; \; \; para \; a,b,c \in \mathbb{R}$$
+\begin{enumerate}[\bfseries a)]
+\item $p(x) = p(1-x)$\\\\
+Sustituyendo se tiene $p(x) = p(1-x) = ax^2 + bx + c = a(1-x)^2 + b(1-x) + c \Rightarrow a - 2ax + ax^2 + b - bx + c$ por lo tanto $$ax^2 + (-2a-b)x + (a+b+c)$$
+Así para $a=a$, $b = -2a - b \Rightarrow a=-b$, $c=a+b+c$ entonces $$p(x) = -bx^2 + bx + c = bx(1-x)+c$$\\\\
+\item $p(x) = p(x) = p(1+x)$\\\\
+Una vez más sustituyendo, $p(x) = p(1+x) \Rightarrow ax^2 + bx + c = a(1+x)^2 + b(1+x) + c = ax^2 + (2a+b)x + (a+b+c)$. Luego, igualando como potencias de $x$, $a=a$, $b=2a+b \Rightarrow a = 0$, $c=a+b+c \Rightarrow b=0$. Por lo tanto $p(x) = c$ donde $c$ es una constante arbitraria.\\\\
+\item $p(2x) = 2p(x)$\\\\
+Sustituyendo, $p(2x) = 2p(x) \Rightarrow 4ax^2 + 2bx + c = 2ax^2 + 2bx +2c.$. Igualando a las potencias de $x$, $4a=2a \Rightarrow a=0,$ $2b=2b \Rightarrow  b \; arbitrario,$ $c=2c \Rightarrow c=0$.\\
+Así $$p(x)bx, \; b \; arbitrario$$\\\\
+\item $p(2x) = p(x+3)$\\\\
+Sustituyendo $p(3x) = p(x+3) \Rightarrow 9ax^2 + 3bx + c = ax^2 + (6a+b)x + (9a+3b+c)$. Igualando como potencias de $x,$ $9a=a \Rightarrow a=0,$ $3b = 6a+b \Rightarrow b=0,$ $c=9a + 3b + c = c \Rightarrow c \; arbitrario$. Por lo tanto $$p(x)=c \mbox{para c constante arbitrario.}$$\\\\
+\end{enumerate}
+\end{ej}
+
 
 
 \subsection[Teoremas]{Teoremas \footnote{Calculus Vol 1, Tom Apostol, pag 69-70}}
@@ -732,6 +804,64 @@ $f(x)$&$=$&$(x - a_{k+2})h(x)$&$=$&$(x- a_{k+2}) \cdot \displaystyle\sum_{j=0}^k
 Pero dado que todos los coeficientes de $h(x)$ son cero y $f(x) = 0$ para todo $x \in \mathbb{R}$. Por lo tanto, la afirmación es verdadera para el caso $k+1$ y para todo $n \in \mathbb{Z}^+$\\\\
 
 \item Sea $g(x) = \displaystyle\sum_{k=0}^m b_k x^k$ un polinomio de grado $m$, siendo $m \geq n.$ Si $g(x)=f(x),$ para $m+1$ valores reales de $x$ distintos, entonces $m=n$, $b_k =c_k$ para cada valor de $k$, y $g(x)=f(x)$ para todo real $x$\\\\
-Demostración.- \;
+Demostración.- \; Sea $$p(x)=g(x)-f(x) = \displaystyle\sum_{k=0}^m b_k x^k - \sum_{k=0}^n c_k x^k = \sum_{k=0}^m (b_k - c_k)x^k$$ donde $c_k=0$ para $n< k \leq m$, cabe recordar que tenemos $m \geq n$.\\
+Entonces, hay $m+1$ distintos reales $x$ para los cuales $p(x)=0$. Dado que hay $m+1$ valores reales distintos para lo cuál $g(x)=f(x),$ así en cada uno de estos valores $p(x)=g(x)-f(x)=0$. Por lo tanto, por la parte $d)$, $b_k-c_k =0$ para $k=0,...,m$ y $p(x)=0$ para todo $x \in \mathbb{R}$. Es decir $$b_k - c_k =0 \; \; \; \Rightarrow \; \; \; b_k=c_k \; \; \; para \; k=0,...,m$$ y $$p(x)=0 \; \; \; \Rightarrow \; \; \; g(x)-f(x)=0 \; \; \; \Rightarrow \; \; \; f(x)=g(x),$$ para todo $x \in \mathbb{R}$. Ademas desde $b_k -c_k =0$ para $k=0,..., m$ y por supuesto $c_k=0$ para $k=n+1, ... , m,$ tenemos $b_k=0$ para $k= n+1, ... , m.$ Pero entonces, $$g(x)=\displaystyle\sum_{k=0}^n b_k x^k + \sum_{k=n+1}^m 0 \cdot x^k = \sum_{k=0}^n b^k x^k$$ significa que $g(x)$ es un polinomio de grado $n$ también.\\\\
+\end{enumerate}
+\end{teo}
+
+\begin{col.}Probar que:
+$$\displaystyle\sum_{k=0}^n x^k = \dfrac{1 - x^{n+1}}{1-x} \; \; para x\neq 1$$\\\\
+Demostración.- \; Usando propiedades de suma, $$(1-x)\displaystyle\sum_{k=0}^n x^k = \sum_{k=0}^n (x^k - x^{k+1}) = - \sum_{k=0}^n (x^{k+1} - x^k) = -(x^{n+1} -1 = 1 - x{n+1})$$
+En la penultima igualdad se deriva de la propiedad telescópica, por lo tanto nos queda,
+$$\displaystyle\sum_{k=0}^n x^k = \dfrac{1 - x^{n+1}}{1-x}$$ \\\\
+\end{col.}
+
+\begin{col.}Probar la identidad
+$$\displaystyle\prod_{k=1}^n \left( 1 + x^{2^{k-1}} \right) = \dfrac{1 - x^{2^n}}{1-x}, \; \; para \; x\neq 1$$\\\\
+Demostración.- \; Para $n=1$ a la izquierda tenemos,
+$$\displaystyle\prod_{k=1}^n \left( 1 + x^{2^{k-1}} \right) = \prod_{k=0}^1 \left( 1 + x^{2^{k-1}} = 1 + x^{2^0} = 1 + x  \right)$$
+Por otro lado a la derecha se tiene, $$\dfrac{1- x^{2^n}}{1-x} = \dfrac{1 - x^2}{1-x} = \dfrac{(1-x)(1+x)}{1-x} = 1+x$$
+Concluimos que la identidad se mantiene para $n=1$. Ahora supongamos que es válido para algunos $n=m \in \mathbb{Z}^+,$
+\begin{center}
+\begin{tabular}{r c l}
+$\displaystyle\prod_{k=1}^{m+1}$&$=$&$\left( +x^{2^m} \right) \cdot \displaystyle\prod_{k=1}^m \left( 1 + x^{2^{k+1}} \right)$\\\\
+$=$&$\left( 1 + x^{2^m} \right) \cdot  \left( \dfrac{1-x^{2^m}}{1-x} \right)$\\\\
+$=$&$\dfrac{(1+x^{2^m}) (1- x^{2^m})}{1-x}$\\\\
+$=$&$\dfrac{1 - x^{2^{m+1}}}{1-x}$\\\\
+\end{tabular}
+\end{center} 
+Por lo tanto, la afirmación es verdadera para $m+1,$ y así para todo $n \in \mathbb{Z}^+$\\\\
+\end{col.}
+
+% 1.5 problema 12 pag 70
+\begin{teo}
+Demostrar que las expresiones siguientes son polinomios poniéndolas en la forma $\displaystyle\sum_{k=0}^m a_k x^k$ para un valor de $m$ conveniente. En cada caso $n$ es entero positivo.
+\begin{enumerate}[\bfseries a)]
+\item $(1+x)^{2n}$\\\\
+Demostración.- \; Usando el teorema binomial $(1+x)^{2n} = \displaystyle\sum_{k=0}^2n {2n \choose k} x^k$, sea $m=2n$ entonces $\displaystyle\sum_{k=0}^m {m \choose n} x^k$, por lo tanto $\displaystyle\sum_{k=0}^m c_k x^k$ si $c_k = {m \choose k} $ para cada $k$.\\\\
+
+\item $\dfrac{1- x^{n+1}}{1-x}, \; x \neq 1$\\\\
+Demostración.- \; Por el corolario anterior 
+\begin{center}
+\begin{tabular}{r c l}
+$\dfrac{1 - x^{n+1}}{1-x}$&=&$\dfrac{(1-x)(1+x+...+x^n)}{1-x}$\\\\
+&=&$1 + x + ... + x^n$\\\\
+&=&$\displaystyle\sum_{k=0}^n 1 \cdot x^k$\\\\
+\end{tabular}
+\end{center}
+
+\item $\displaystyle\prod_{k=0}^n (1+x^{2^k})$\\\\
+Demostración.- \; Por le corolario anterior,
+\begin{center}
+\begin{tabular}{r c l}
+$\displaystyle\prod_{k=0}^n \left( 1+x^{2^k} \right)$&=&$\dfrac{(1 - x^{2^{n+1}})}{1-x}$\\
+&=&$\dfrac{(1-x^{2^n})(1+x^{2^n})}{1-x}$\\\\
+&=&$\left( \dfrac{1 - x^{2^n}}{1-x} \right) (1+x^{2^n})$\\\\
+&=&$(1+x+...+x^{2^n + 1})(1 + x^{2^n})$\\\\
+&=&$(1+x+...+x^{2^n + 1})(x^{2^n} + x^{2^n +1} + ... + x^{2^{n+1} - 1})$\\\\
+&=&$\displaystyle\sum_{k=0}^{2^{n+1} - 1} 1 \cdot x^k$\\\\
+&=&$\displaystyle\sum_{k=0}^{m} 1 \cdot x^k$ si $m = 2^{n+1} - 1$\\\\
+\end{tabular}
+\end{center}
 \end{enumerate}
 \end{teo}
