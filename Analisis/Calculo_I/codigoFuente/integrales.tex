@@ -38,10 +38,13 @@ nos permite extender la clase de conjuntos medibles de las regiones escalonadas 
 Demostrar que cada uno de los siguientes conjuntos es medible y tiene área nula:
 \begin{enumerate}[\bfseries a)]
 \item Un conjunto que consta de un solo punto.\\\\
-Demostración.- \;   \\\\
+Demostración.- \;  Como todos los rectángulos son medibles con un área igual a $h\cdot k$ donde $h$ \; y \; $k$ son las longitudes de los bordes del rectángulo, un solo punto es medible con área $0$, ya que un punto es rectángulo con $h=k=0$\\\\ 
 
 \item El conjunto de un número finito de puntos.\\\\
-Demostración.- \;   \\\\
+Demostración.- \; Probamos por inducción $n$, el número de puntos. Para el caso $n=1$, la afirmación es verdadera por la parte $a)$. Ahora, suponga que es cierto para algunos $n = k \in \mathbb{Z}^{+}$. Luego, tenemos un conjunto $S \in M$ de $k$ puntos en el plano y $a(S)=0$. Dejar $T$ ser el punto en el plano. Por parte $a)$, $T \in M$ y $a(T)=0.$ Así,
+$$S \cup T \in M \; y \; a(S \cup T) = a(S) + a(T) - a(S \cap T)$$
+Pero $S \cap T \subset S$ entonces $$a(S \cap T) \leq a(S) \Rightarrow a(S \cap T) \leq 0 \Rightarrow a(S \cap T)=0$$.
+(Dónde el axioma 1 nos garantiza que $(S \cap T) no puede ser negativo$). Por lo tanto, $a(S \cup T)=0$, así, la afirmación es verdadera para los $k+1$ puntos en un plano y por lo tanto para todo $n \in \mathbb{Z}^+$\\\\
 
 \item La reunión de una colección finita de segmentos de recta de un plano. \\\\
 Demostración.- \;   \\\\

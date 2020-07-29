@@ -482,8 +482,33 @@ $f(x_1 + ... + x_{n+1})$&=&$f\left( [x_1 + ... + x_n] + x_{x+1} \right)$\\
 \end{center}
 
 \item Demostrar que existe algún número $c$ tal que $f(x) = cx$ para todos los números racionales $x$ (en este punto no intentamos decir nada acerca de $f(x)$ cuando $x$ es irracional). Indicación: Piensese primero en cómo debe ser $c.$ Demostrar luego que $f(x) = cx,$ primero cuando $x$ es un entero, después cuando $x$ es el recíproco de un entero, y finalmente para todo racional $x$.\\\\
+Demostración.- \; Sea $c = f(1).$ Ahora para cualquier numero natural $n.$ $$f(n) = f(1+...+1) = f(1) + ... + f(1) = cn$$
+Ya que $f(x) + f(0) = f(x+0) = f(x),$ se sigue que $f(0) = 0$. Entonces desde $f(x) + f(-x) = f(x + (-x)) = f(0) = 0,$ se sigue que $f(-x) = f(x).$ En particular, para cualquier número natural $n.$ Además $$f \left( \dfrac{1}{n} \right) + ... + f(\dfrac{1}{n}) = \left( \dfrac{1}{n} + ... + \dfrac{1}{n} \right) = f(1) = c,$$
+Así $$f\left( \dfrac{1}{n} \right) = c \cdot \dfrac{1}{n},$$
+ y en consecuencia $$f\left( \dfrac{1}{-n} \right) = f \left( - \dfrac{1}{n} \right) = -f \left( \dfrac{1}{n} \right) = - c \dfrac{1}{n} = c \left(\dfrac{1}{-n} \right)$$
+ Finalmente, algún número racional puede ser escrito como $m/n$,  $m$
+ un número natural, y $n$ un entero, por lo tanto $$f\left( \dfrac{m}{n} \right) = f\left( \dfrac{1}{n} + ... + \dfrac{1}{n} \right) = f\left( \dfrac{1}{n} \right) + ... + f\left( \dfrac{1}{n} \right) = mc \dfrac{1}{n} = c \cdot \dfrac{m}{n}$$\\\\
+\end{enumerate}
+\end{teo}
+
+%capítulo 3 problema 17
+\begin{teo}
+Si $f(x)=0$ para todo $x$, entonces $f$ satisface $f(x+y) = f(x) +f(y)$ para todo $x$ é $y$, también $f(x \cdot y) = f(x) \cdot f(y)$ para todo $x$ é $y$. Supóngase ahora que $f$ satisface estas dos propiedades, pero que $f(x)$ no es siempre $0$. Demostrar que $f(x)=x$ para todo $x$ como sigue:
+\begin{enumerate}[\bfseries a)]
+\item Demostrar que $f(1) = 1$\\\\
+Demostración.- \; Como $f(a)=f(a \cdot 1)=f(a) \cdot f(1)$, tal que $f(a) \neq 0$ para algún $a$, resulta ser $f(1)=1$\\\\
+
+\item Demostrar que $f(x) = x$ si $x$ es racional. \\\\
+Demostración.- \; Según el teorema anterior, $f(x) = f(1)x = x$ para todo número racional $x$\\\\
+
+\item Demostrar que $f(x)> 0$ si $x>0.$ (Esta parte es artificioso, pero habiendo puesto atención a las observaciones filosóficas que van con los problemas de los dos últimos capítulos, se sabrá lo que hacer.)\\\\
 Demostración.- \; 
 
+\item Demostrar que $f(x)>f(y)$ si $x>y$\\\\
+Demostración.- \; 
+
+\item Demostrar que $f(x)=x$ para todo $x$. Indicación: Hágase uso del hecho de que entre dos números cualesquiera existe un número racional.\\\\
+Demostración.- \; 
 \end{enumerate}
 \end{teo}
 

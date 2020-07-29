@@ -451,7 +451,96 @@ $\displaystyle\sum_{k=1}^n k^9$&=&$\dfrac{1}{10}n^{10} + \dfrac{1}{2} n^9 + \dfr
 $\displaystyle\sum_{k=1}^n k^10$&=&$\dfrac{1}{11}n^{11} + \dfrac{1}{2}n^{10} + \dfrac{5}{6}n^9 - 1n^7 + 1n5 - \dfrac{1}{2}n^3 + \dfrac{5}{66}n$\\\\
 \end{tabular}
 \end{center}
-Obsérvese que los coeficientes de la segunda columna son siempre $\dfrac{1}{2}$ y que después de la tercera columna las potencias de $n$ de coeficiente no nulo van decreciendo de dos en dos hasta llegar a $n^2$ o a $n$. Los coeficientes de todas las columnas, salvo las dos primeras, parecen bastante fortuitos, pero en realidad obedecen a cierta regla; encontrarla puede considerarse como una prueba de superperspicacia. Para descifrar todo el asunto, véase el problema 26-17)\\\\
-Demostración.- \; 
+Obsérvese que los coeficientes de la segunda columna son siempre $\dfrac{1}{2}$ y que después de la tercera columna las potencias de $n$ de coeficiente no nulo van decreciendo de dos en dos hasta llegar a $n^2$ o a $n$. Los coeficientes de todas las columnas, salvo las dos primeras, parecen bastante fortuitos, pero en realidad obedecen a cierta regla; encontrarla puede considerarse como una prueba de superspicacia. Para descifrar todo el asunto, véase el problema 26-17)\\\\
+Demostración.- \; La prueba se hará por inducción en $p$. La afirmación es verdadera para $p=1$, ya que $$\displaystyle\sum_{k=1}^n k = \dfrac{n(n+1)}{2} = \dfrac{n^2}{2} + n.$$
+Suponemos que la afirmación es verdadera para todos los números naturales $\leq p$. Por el teorema binomial, tenemos la ecuación, $$(k+1)^{p+1} - k^{p+1} = (p+1)k^p + \mbox{terminos que implican las potencias inferiores a k}$$
+Agragando para $k=1,...,n$ obtenemos,
+$$\dfrac{(n+1)^{p+1}}{p+1} = \displaystyle\sum_{k=1}^n k^p + \mbox{terminos que involucran} \; \sum_{k=1}^n k^r \; para \; r<p$$
+por suposición, tenemos que escribir cada $\displaystyle\sum_{k=1}^n k^r$ como una expresión que involucra las potencias de $n^s$ con $s\leq p$. Se sigue que $$\displaystyle\sum_{k=1}^n k^p = \dfrac{(n+1)^{p+1}}{p+1} + \; \mbox{terminos que involucran las potencias de n menos } \; p+1$$
 \end{teo} 
 
+%capítulo 2, problema 8.
+\begin{teo}
+Demostrar que todo número natural es o par o impar.\\\\
+La demostración esta dada ya que es igual al capítulo 1, ejercicio 3.12, problema 10 Calculus Vol 1 Tom Apostol\\\\
+\end{teo}
+
+%capitulo 2, problema 9.
+\begin{teo}
+Demostrar que si un conjunto $A$ de números naturales contiene $n_0$ y contiene $k+1$ siempre que contenga $k$, entonces $A$ contiene todos los números naturales $\geq n_0$.\\\\
+Demostración.- \; Sea $1 \in A$ y que $n, \; n+1 \in A$. Si $A$ no contiene a todos lo números naturales, entonces el conjunto $B$ de números naturales que no están en $A$ es distinto de $\emptyset$. POr lo tanto $B$ tiene un elemento mínimo $n_o$. Ahora bien, $n_o \neq 1$, ya que $1 \in A$, de modo que podemos poner $n_o = (n_o -1) + 1$ donde $n_o - 1$ es un número natural. Pero $n_o-1$ no está en $B$ y por lo tanto $n_o -1$ está en $A$. Por hipótesis, $n_o$, tiene que estar en $A$, con lo que $n_o$ no está en $B$, contrario a lo supuesto.\\\\
+\end{teo}
+
+%capítulo 2, problema 10
+\begin{teo}
+Demostrar el principio de inducción completa a partir del principio de buena ordenación.\\\\
+Que $1$ está en $B$ claro. Si $k$ está en $B$, entonces $1,...,k$ están todos en $A$, de modo que $k+1$ está en $A$ y así $1,...,k+1$ están en $A$, con lo que $k+1$ está en $B$. Por inducción, $B=N$, así que también $A=N$.\\\\
+\end{teo}
+
+%capítulo 2, problema 11
+\begin{teo}
+Demostrar el principio de inducción completa a partir del principio de inducción ordinario.\\\\
+La demostración se encuentra en la página 38 y 39 del libro calculus vol 1 de Tom Apostol.\\\\
+\end{teo}
+
+%capítulo 2, problema 12
+\begin{teo}Demostrar
+\begin{enumerate}[\bfseries a)]
+\item Si $a$ es racional y \; $b$ es irracional ¿es $a+b$ necesariamente irracional? ¿Y si $a$ \; y \; $b$ es irracional? \\\\
+El mismo ejercicio se encuentra en el capítulo I ejercicio 3.12 problema 7 de calculus vol 1 de Tom Apostol que ya fue demostrada en este libro.\\\\
+
+\item Si $a$ es racional y \; $b$ es irracional, ¿es $ab$ necesariamente irracional?\\\\
+El mismo ejercicio se encuentra en el capítulo I ejercicio 3.12 problema 7 de calculus vol 1 de Tom Apostol que ya fue demostrada en este libro.\\\\
+
+\item ¿Existe algún número $a$ tal que $a^2$ es irracional pero $a^4$ racional?\\\\
+Si existe por ejemplo $\sqrt[4]{2}$\\\\
+
+\item ¿Existen dos números iracionales tales que sean racionales tanto su suma como su producto?\\\\
+Si existen por ejemplo $\sqrt{2}$ y $- \sqrt{2}$\\\\
+\end{enumerate}
+\end{teo}
+
+%capítulo 1, problema 13
+\begin{teo}Demostrar
+\begin{enumerate}[\bfseries a)]
+\item Demostrar que $\sqrt{3}$, $\sqrt{5}$ y $\sqrt{6}$ son irracionales. Indicación: Para tratar $\sqrt{3},$ por ejemplo, aplíquese el hecho de que todo entero es de la forma $3n$ ó $3n+1$ ó $3n+2$ ¿Por qué no es aplicable esta demostración para $\sqrt{4}$?\\\\
+Demostración.- \; Puesto que:
+\begin{center}
+\begin{tabular}{r c l c l}
+$(3n+1)^2$&=&$9n^2 + 6n + 1$&=&$3(3n^2+2n) + 1$\\
+$(3n+2)^2$&=&$9n^2+12n + 4$&=&$3(3n^2 + 4n + 1) + 1$\\
+\end{tabular}
+\end{center}
+queda demostrado que un número no es múltiplo de $3$ si es de la forma $3n+1$ ó $3n+2$.\\
+se sigue que $k^2$ es divisible por $3$, entones $k$ debe ser también divisible por $3$. Supóngase ahora que $\sqrt{3}$ fuese racional, y sea $\sqrt{3} = p/q$, donde $p$ \; y \; $q$ no tienen factores comunes. Entonces $p^2=3q^2,$ de modo que $p^2$ es divisible por $3$, así que también lo debe ser $p$. de este modo, $p=3p^{'}$ para algún número natural $p^{'}$, y en consecuencia $(3p^{'})^2 = 3q^2$ ó $(3p^{'})^2 = q^2.$ Así pues, $q$ es tambien divisible por $3$, lo cual es una contradicción.\\
+Las mismas demostraciones valen para $\sqrt{5}$ y $\sqrt{6}$, ya que las ecuaciones,
+\begin{center}
+\begin{tabular}{rclcl}
+$(5n+1)^2$&=&$25n^2 + 10n + 1$&=&$5(5n^2 + 2n)+1$\\
+$(5n+2)^2$&=&$25n^2 + 20n + 4$&=&$5(5n^2 + 4n)+4$\\
+$(5n+3)^2$&=&$25n^2 + 30n + 9$&=&$5(5n^2 + 6n + 1)+4$\\
+$(5n+4)^2$&=&$25n^2 + 40n + 16$&=&$5(5n^2+8n+3)+1$\\
+\end{tabular}
+\end{center}
+la ecuación correspondiente para los números de la forma $6n+m$ demuestran que si $k^2$ es divisible por $5$ ó $6$, entones también lo debe ser $k$. La demostración falla para $\sqrt{4}$, porque $(4n+2)^2$ es divisible por $4$.\\\\
+
+\item Demostrar que $\sqrt[3]{2}$ y $\sqrt[3]{3}$ son irracionales.\\\\
+Demostración.- \; Puesto que,
+$$(2n+1)^3 = 8n^3 + 12n^2 + 6n + 1 = 2(4n^3 + 6n^2 + 3n) + 1,$$
+se sigue que si $k^3$ es par, entonces $k$ es par. Si $\sqrt[3]{2} = p/q,$ donde $p$ \; y \; $q$ no tienen factores comunes, entonces $p^3 = 2q^3,$ de modo que $p^3$ es divisible por $2,$ por lo que también lo debe ser $p.$ Así pues, $p=2p^{'}$ para algún número natural $p^{'}$ y en consecuencia $(2p^{'})^3 = 2q^3,$ ó $4(p^{'})^3 = q^3.$ Por lo tanto, $q$ es también par, lo cual es una contradicción.\\
+La demostración para $\sqrt[3]{3}$ es análogo, utilizando las ecuaciones.
+$$(3n+1)^3 = 27n^3 + 27n^3 + 27n^2 + 9n +1 = 3(9n^3 + 9n^2 + 3n) + 1,$$
+$$(3n+2)^3 = 27n^3 + 54n^2 + 36n + 8 = 3(9n^2 + 18n^2 + 12n + 2) + 2.$$\\\\
+\end{enumerate}
+\end{teo}
+
+% capítulo 2 problema 14
+\begin{teo}
+\begin{enumerate}[\bfseries a)]
+\item $\sqrt{2} + \sqrt{3}$ es irracional.\\\\
+Demostración.- \; 
+
+\item $\sqrt{6} - \sqrt{2} - \sqrt{3}$ es irracional.\\\\
+Demostración.- \; 
+\end{enumerate}
+\end{teo}
