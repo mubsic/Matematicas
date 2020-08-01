@@ -131,8 +131,21 @@ $\dfrac{k+2}{2k+2}$&=&$\dfrac{k+2}{2k+2}$\\\\
 \end{center}
 \end{ej}
 
-%ejercicio 5.6
-\begin{ej}
+
+
+
+
+\subsection[Teoremas]{Teoremas\footnote{Calculus, Tom Apostol, pag. 45-46}}
+
+%teorema 5.2
+\begin{teo}[principio de buena ordenación]
+Todo conjunto no vacío de enteros positivos contiene uno que es el menor \\\\
+Demostración.- \; Sea $T$ una colección no vacía de enteros positivos. Queremos demostrar que $t_0$ tiene un número que es el menor, esto es, que hay en T un entero positivo t.; tal que $t_0\leq t$ para todo $t$ de $T$.\\
+Supongamos que no fuera así. Demostraremos que esto nos conduce a una contradicción. El entero $1$ no puede pertenecer a $T$ (de otro modo él sería el menor número de $T$). Designemos con $S$ la colección de todos los enteros positivos $n$ tales que $n<t$ para todo $t$ de $T$. Por tanto $1$ pertenece a $S$ porque $1 < t$ para todo $t$ de $T$. Seguidamente, sea $k$ un entero positivo de $S$. Entonces $k < t$ para todo $t$ de $T$. Demostraremos que $k + 1$ también es de $S$. Si no fuera así, entonces para un cierto $t$, de $T$ tendríamos $t_1 \leq k+1$. Puesto que $T$ no posee número mínimo, hay un entero $t_2$ en $T$ tal que $t_2 < t_1$ Y por tanto $t_2 < k + 1$. Pero esto significa que $t_2 \leq k$, en contradicción con el hecho de que $k < t$ para todo $t$ de $T$. Por tanto $k + 1$ pertenece a $S$. Según el principio de inducción, $S$ contiene todos los enteros positivos. Puesto que $T$ es no vacío, existe un entero positivo $t$ en $T$. Pero este $t$ debe ser también de $S$ (ya que $S$ contiene todos los enteros positivos). De la definición de $S$ resulta que $t < t$, lo cual es absurdo. Por consiguiente, la hipótesis de que $T$ no posee un número mínimo nos lleva a una contradicción. Resulta pues que $T$ debe tener un número mínimo, y a su vez esto prueba que el principio de buena ordenación es una consecuencia del de inducción.\\\\
+\end{teo}
+
+%ejercicio I 4.4 PROBLEMA 6 pag 45
+\begin{teo}
 Sea $A(n)$ la proporción: $1+2+...+n=\dfrac{1}{8} (2n+1)^2$.
 \begin{enumerate}[\bfseries a)]
 \item Probar que si $A(k)$, $A(k+1)$ también es cierta.\\\\
@@ -153,47 +166,55 @@ Remplazando $(k+1)$ a $A(k)$ $$1+2+...+(k+1)<\dfrac{1}{8}(2k+1)^2+(k+1)$$
 por último solo nos queda demostrar $$\dfrac{1}{8}(2k+1)^2<\dfrac{1}{8}(2k+1)^2+(k+1)$$
 Así $\dfrac{4k^2+12k+9}{8}<\dfrac{4k^2+12k+9}{8} +(k+1)$, vemos que la inecuación se cumple para cualquier número natural.\\\\ 
 \end{enumerate} 
-\end{ej}
+\end{teo}
 
-%ejercicio 5.7
-\begin{ej}
+%ejercicio I 4.4 problema 7 pag 45
+\begin{teo}
 Sea $n_1$ el menor entero positivo $n$ para el que la desigualdad $(1+x)^n>1+nx+nx^2$ es cierta para todo $x>0$. Calcular $n_1$, y demostrar que la desigualdad es cierta para todos los enteros $n\geq n_1$\\\\
 Demostración.- \; vemos que la proposición es validad para $n_1=3$, $$(1+x)^3>1+3x+3x^2,$$ y no así para $n=1$ \; y \;$n=2$ entonces $A(n)=A(k)\geq 3$, $(1+x)^k>1+kx+kx^2.$ Después para un $A(k+1)$, $(1+x)^{k+1}>1+(k+1)x+(k+1)x^2,$ así \; $(1+kx+kx^2)(1+k)>1+(k+1)x+(k+1)x^2,$ luego se cumple la desigualdad $x(kx^2)+x^2+kx+x+1+x^2>kx^2+x^2+kx+x+1$.\\\\
-\end{ej}
+\end{teo}
 
-%ejercicio 5.8
-\begin{ej}
+%ejercicio I 4.4 problema 8 pag 45
+\begin{teo}
 Dados números reales positivos $a_1,a_2,a_3,...,$ tales que $a_n\leq ca_{a-1}$ para todo $n\geq 2$. Donde $c$ es un número positivo fijo, aplíquese el método de inducción para demostrar que $a_n \leq a_1 c^{n-1}$ para cada $n \geq 1$\\\\
 Demostración.- \; Primero, para el caso $n=1$, tenemos $a_1c^0=a_1$, por lo tanto la desigualdad es validad. Ahora supongamos que la desigualdad es válida para algún número entero $k$: $a_k\leq a_1c^{k-1}$, luego multiplicamos por $c$, $ca_k\leq a_1c^k$, pero dado que se asume por hipótesis $a_{k+1} \leq ca_k$, entonces $a_{k+1}\leq a_1c^k$, por lo tanto, la declaración es válida para todo $n$.\\\\
-\end{ej}
+\end{teo}
 
-%ejercicio 5.9
+%ejercicio I 4.4 problema 9 pag 45
 \begin{ej}
 Demuéstrese por inducción la proposición siguiente: Dado un segmento de longitud unidad, el segmento de longitud $\sqrt{n}$ se puede construir con regla y compás para cada entero positivo $n$.\\\\
 Demostración.- \; Dada una línea de longitud 1, podemos construir una línea de longitud $\sqrt{2}$ tomando la hipotenusa del triángulo rectángulo con patas de longitud 1.\\
 Ahora, supongamos que tenemos una línea de longitud 1 y una línea de longitud $\sqrt{k}$ para algún número entero $k$. Luego podemos formar un triángulo rectángulo con patas de longitud 1 y longitud $\sqrt{k}$. La hipotenusa de este triángulo es $\sqrt{k+1}$. Por lo tanto, si podemos construir una línea de longitud $\sqrt{k}$, entonces podemos construir una línea de longitud $\sqrt{k+1}$. Como podemos construir una línea de longitud $\sqrt{2}$ en el caso base, podemos construir una línea de longitud $\sqrt{n}$ para todos los enteros $n$.\\\\
 \end{ej}
 
-%ejercicio 5.10
-\begin{ej}
+%ejercicio I 4.4. problema 10 pag 45
+\begin{teo}
 Sea $b$ un entero positivo. Demostrar por inducción la proposición siguiente: Para cada entero $n\geq 0$ existen enteros no negativos $q$ \; y \; $r$ tales que:
 $$n=qb+r, \; \; \; 0\leq r < b$$ \\
 Demostración.- \; Sea $b$ ser un entero positivo fijo. Si $n=0$ , luego $q=r=0$, la afirmación es verdadera (ya que $0=0b+0$).\\
 Ahora suponga que la afirmación es cierta para algunos $k \in \mathbb{N}$. Por hipótesis de inducción sabemos que existen enteros no negativos $q$ \; y \; $r$ tales que $$k=qb+r, \; \; \; 0\leq r < b,$$ Por lo tanto, sumando 1 a ambos lados tenemos, $$k+1=qb+(r+1).$$ Pues $0\leq r < b$ entonces sabemos que $0\leq r \leq (b-1)$. Si $0\leq r < b-1,$ entonces $0\leq r+1<b,$ y la declaración aún se mantiene con la misma elección $q$ \; y \; $r+1$ en lugar de $r$.\\
 Por otro lado, si $r=b-1,$ entonces $r+1=b$ y tenemos, $$k+1=qb+b=(q+1)b+0$$
 Por lo tanto, la declaración se mantiene de nuevo, pero con $q+1$ en lugar de $q$ \; y con $r=0$ (que es válido ya que si $r=0$ tenemos $a\leq r < b$). Por ende, si el algoritmo de división es válido para $k$, entonces también es válido para $k+1.$ Entonces, es válido para todos $n \in \mathbb{N}$.\\\\
-\end{ej}
+\end{teo}
 
-%ejercicio 5.11
-\begin{ej}
+%ejercicio I 4.4 problema 11 pag 45
+\begin{teo}
+Sea $n$ \; y \; $d$ enteros. Se dice que $d$ es un divisor de $n$ si $n=cd$ para algún entero $c$. Un entero $n$ se denomina primo si $n>1$ y los únicos divisores de $n$ son $1$ \; y \; $n$. Demostrar por inducción que cada entero $n>1$ es o primo o producto de primos.\\\\
+Demostración.- \; LA prueba se hará por inducción. Si $n=2$ ó $n=3$ entonces $n$ es primo, entonces la proposición es verdadera.\\
+Ahora supongamos que la afirmación es verdadera para todos los enteros desde $2$ hasta $k$. Se debe demostrar que esto implica $k+1$ es primo o un producto de primos. Si $k+1$ es primo, entonces no hay nada que demostrar. Por otro lado, si $k+1$ no es primo, entonces sabemos que hay enteros $c$ \; y \; $d$ tal que $1<c,$ $d<k+1$ en otras palabras decimos que $n$ es divisible por números disntintos de $1$ y de sí mismo.\\
+Por hipótesis de inducción, sabemos que $2\leq c$, $d\leq k$ entonces $c$ \; y \; $d$ son primos o son producto de primos.\\
+Por lo tanto, si la declaración es verdadera para todos los enteros mayores que $1$ hasta $k$ entonces, también es verdadera para $k+1$, así es cierto para todo $n\in \mathbb{Z}^+$\\\\
+\end{teo}
+
+%ejercicio I 4.4  problema 12 pag 45 
+\begin{teo}
 Explíquese el error en la siguiente demostración por inducción.\\
 Proposición.- Dado un conjunto de n niñas rubias, si por 10 menos una de las niñas tiene ojos azules, entonces las n niñas tienen ojos azules.\\
 Demostración.-\; La proposición es evidentemente cierta si $n = 1$. El paso de $k$ a $k + 1$ se puede ilustrar pasando de $n = 3$ a $n = 4$. Supóngase para ello que la proposición es cierta para $n=3$ Y sean $G_1, G_2, G_3, G_4$ cuatro niñas rubias tales que una de ellas, por lo menos, tenga ojos azules, por ejemplo, la $G_1$, Tomando $G_1,G_2, G_3,$ conjuntamente y haciendo uso de la proposición cierta para $n =3$, resulta que también $G_2$ y $G_3$ tienen ojos azules. Repitiendo el proceso con $G_1, G_2$ y $G_4,$ se encuentra igualmente que $G_4$ tiene ojos azules. Es decir, las cuatro tienen ojos azules. Un razonamiento análogo permite el paso de $k$ a $k + 1$ en general.\\
 \textbf{Corolario.} Todas las niñas rubias tienen ojos azules.\\
 Demostración.- \; Puesto que efectivamente existe una niña rubia con ojos azules, se puede aplicar el resultado precedente al conjunto formado por todas las niñas rubias.\\\\
 Esta prueba supone que la afirmación es cierta n = 3, es decir, supone que si hay tres chicas rubias, una de las cuales tiene ojos azules, entonces todas tienen ojos azules. Claramente, esta es una suposición falsa.\\\\
-\end{ej}
-
+\end{teo}
 
 
 \subsection[Teoremas]{Teoremas \footnote{Calculus, Tom Apostol, pag. 54-58}}
@@ -240,14 +261,7 @@ Demostración.- \;
 
 \end{teo}
 
-\subsection[Teoremas]{Teoremas\footnote{Calculus, Tom Apostol, pag. 45-46}}
 
-%teorema 5.2
-\begin{teo}[principio de buena ordenación]
-Todo conjunto no vacío de enteros positivos contiene uno que es el menor \\\\
-Demostración.- \; Sea $T$ una colección no vacía de enteros positivos. Queremos demostrar que $t_0$ tiene un número que es el menor, esto es, que hay en T un entero positivo t.; tal que $t_0\leq t$ para todo $t$ de $T$.\\
-Supongamos que no fuera así. Demostraremos que esto nos conduce a una contradicción. El entero $1$ no puede pertenecer a $T$ (de otro modo él sería el menor número de $T$). Designemos con $S$ la colección de todos los enteros positivos $n$ tales que $n<t$ para todo $t$ de $T$. Por tanto $1$ pertenece a $S$ porque $1 < t$ para todo $t$ de $T$. Seguidamente, sea $k$ un entero positivo de $S$. Entonces $k < t$ para todo $t$ de $T$. Demostraremos que $k + 1$ también es de $S$. Si no fuera así, entonces para un cierto $t$, de $T$ tendríamos $t_1 \leq k+1$. Puesto que $T$ no posee número mínimo, hay un entero $t_2$ en $T$ tal que $t_2 < t_1$ Y por tanto $t_2 < k + 1$. Pero esto significa que $t_2 \leq k$, en contradicción con el hecho de que $k < t$ para todo $t$ de $T$. Por tanto $k + 1$ pertenece a $S$. Según el principio de inducción, $S$ contiene todos los enteros positivos. Puesto que $T$ es no vacío, existe un entero positivo $t$ en $T$. Pero este $t$ debe ser también de $S$ (ya que $S$ contiene todos los enteros positivos). De la definición de $S$ resulta que $t < t$, lo cual es absurdo. Por consiguiente, la hipótesis de que $T$ no posee un número mínimo nos lleva a una contradicción. Resulta pues que $T$ debe tener un número mínimo, y a su vez esto prueba que el principio de buena ordenación es una consecuencia del de inducción.\\\\
-\end{teo}
 
 \subsection[Ejercicios]{Ejercicios\footnote{Cálculo infinitesimal, Michael Spivak,Pag. 35 al 45}}
 %ejercicio 
@@ -535,12 +549,37 @@ $$(3n+2)^3 = 27n^3 + 54n^2 + 36n + 8 = 3(9n^2 + 18n^2 + 12n + 2) + 2.$$\\\\
 \end{teo}
 
 % capítulo 2 problema 14
-\begin{teo}
+\begin{teo} Demostrar:
 \begin{enumerate}[\bfseries a)]
 \item $\sqrt{2} + \sqrt{3}$ es irracional.\\\\
-Demostración.- \; 
+Demostración.- \; Sea $\sqrt{2} + \sqrt{3}$ racional, entonces $\left( \sqrt{2} + \sqrt{3} \right)^2$ sería racional, luego $$5 + 2 \sqrt{6}$$ y en consecuencia $\sqrt{6}$ sería racional lo cual es falso.\\\\
 
 \item $\sqrt{6} - \sqrt{2} - \sqrt{3}$ es irracional.\\\\
-Demostración.- \; 
+Demostración.- \;  Sea $\sqrt{6} - \sqrt{2} - \sqrt{3}$ racional, entonces 
+\begin{center}
+\begin{tabular}{rcl}
+$\left[ \sqrt{6} + \left( \sqrt{2} + \sqrt{3} \right) \right]^2$&=&$6 + \left( \sqrt{2} + \sqrt{3} \right)^2 - 2 \sqrt{6} \left( \sqrt{2} + \sqrt{3} \right)$\\
+&=&$11 + 2\sqrt{6} \left[ 2 - \left( \sqrt{2} + \sqrt{3} \right) \right]$\\
+\end{tabular}
+\end{center}
+Así, $\sqrt{6} \left[ 2 - \left( \sqrt{2} + \sqrt{3} \right) \right]$ sería racional, con lo que de igual manera sería,
+\begin{center}
+\begin{tabular}{r c l}
+$\lbrace \sqrt{6} \left[ 1 - \left( \sqrt{2} + \sqrt{3} \right) \right] \rbrace ^2$&=&$6 \left[ 1 - \left( \sqrt{2} + \sqrt{3} \right) \right]^2$\\
+&=&$11 + 2\sqrt{6} \left[1 - \left( \sqrt{2} + \sqrt{3} \right) \right]$\\
+\end{tabular}
+\end{center}
+De este modo $\sqrt{6} - (\sqrt{2} + \sqrt{3})$ y $\sqrt{6} - 2 \left( \sqrt{2} + \sqrt{3} \right)$ serían racionales, lo que implicaría que $\sqrt{2} + \sqrt{3}$ fuese racional, en contradicción de la parte $a)$.\\\\
+\end{enumerate}
+\end{teo}
+
+%capitulo 2 problema 15 pag 40
+\begin{teo} Demostrar
+\begin{enumerate}[\bfseries a)]
+\item Demostrar que si $x=p+ \sqrt{q}$, donde $p$ \; y \; $q$ son racionales, y \; $m$ es un número natural, entonces $x^m = a + b \sqrt{q}$ siendo $a$ \; y \; $b$ números racionales.\\\\
+Demostración.- \; Sea $m=1$ entonces $(p + \sqrt{q})^1 = a + b\sqrt{q}$. Supongamos que se cumple para $m$, entonces $$(p+\sqrt{q})^{m+1} = (a + b\sqrt{q})(p + \sqrt{q}) = (ap+bq)+(a+pb)\sqrt{q}$$ donde $ap+bq$ y $a+bp$ son racionales.\\\\
+
+\item Demostrar también que $(p- \sqrt{q})^m = a - b\sqrt{q}$\\\\
+Demostración.- \; Similar a la parte $a)$, se cumple para $m=1$. Si es verdad para $m$, entonces $$(p-\sqrt{q})^{m+1} = (a - b\sqrt{q})(p - \sqrt{q}) = (ap+bq)-(a+pb)\sqrt{q}$$.\\\\
 \end{enumerate}
 \end{teo}
