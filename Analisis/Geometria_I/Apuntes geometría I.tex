@@ -1,0 +1,254 @@
+\documentclass[10pt]{book}
+\usepackage[text=17cm,left=2.5cm,right=2.5cm, headsep=20pt, top=2.5cm, bottom = 2cm,letterpaper,showframe = false]{geometry} %configuración página
+\usepackage{latexsym,amsmath,amssymb,amsfonts} %(símbolos de la AMS).7
+\parindent = 0cm  %sangria
+\usepackage[T1]{fontenc} %acentos en español
+\usepackage[spanish]{babel} %español capitulos y secciones
+\usepackage{graphicx} %gráficos y figuras.
+
+%--------------------GRÀFICOS--------------------------
+
+\usepackage{tkz-fct}
+\usepackage{tkz-euclide}
+
+
+%---------------FORMATO de letra--------------------%
+
+\usepackage{lmodern} % tipos de letras
+\usepackage{titlesec} %formato de títulos
+\usepackage[backref=page]{hyperref} %hipervinculos
+\usepackage{multicol} %columnas
+\usepackage{tcolorbox, empheq} %cajas
+\usepackage{enumerate} %indice enumerado
+\usepackage{marginnote}%notas en el margen
+\tcbuselibrary{skins,breakable,listings,theorems}
+\usepackage[Bjornstrup]{fncychap}%diseño de portada de capitulos
+\usepackage[all]{xy}%flechas
+\counterwithout{footnote}{chapter}
+\usepackage{xcolor}
+
+
+%------------------------------------------
+
+\newtheorem{axioma}{\large\textbf{AXIOMA}}
+\newtheorem{teo}{\textbf{TEOREMA}}[chapter]%entorno para teoremas
+\newtheorem{ejem}{{\textbf{EJEMPLO}}}[chapter]%entorno para ejemplos
+\newtheorem{def.}{\textbf{Definición}}[chapter]%entorno para definiciones
+\newtheorem{post}{\textbf{POSTULADO}}[part]%entorno de postulados
+\newtheorem{col.}{\textbf{COROLARIO}}[chapter]
+\newtheorem{ej}{\textbf{EJERCICIO}}[chapter]
+\newtheorem{prop}{\textbf{PROPIEDADES}}[chapter]
+\newtheorem{lema}{\textbf{LEMA}}[chapter]
+
+
+%---------------------------------
+
+\titleformat*{\section}{\LARGE\bfseries\rmfamily}
+\titleformat*{\subsection}{\Large\bfseries\rmfamily}
+\titleformat*{\subsubsection}{\large\bfseries\rmfamily}
+\titleformat*{\paragraph}{\normalsize\bfseries\rmfamily}
+\titleformat*{\subparagraph}{\small\bfseries\rmfamily}
+
+%------------------------------------------
+
+\renewcommand{\labelenumi}{\Roman{enumi}.}%primer piso II) enumerate
+\renewcommand{\labelenumii}{\arabic{enumii}$)$}%segundo piso 2)
+\renewcommand{\labelenumiii}{\alph{enumiii}$)$}%tercer piso a)
+\renewcommand{\labelenumiv}{$\bullet$}%cuarto piso (punto)
+
+%----------Formato título de capítulos-------------
+
+\usepackage{titlesec}
+\renewcommand{\thechapter}{\arabic{chapter}}
+\titleformat{\chapter}[display]
+{\titlerule[2pt]
+\vspace{4ex}\bfseries\sffamily\huge}
+{\filleft\Huge\thechapter}
+{2ex}
+{\filleft}
+
+\usepackage[htt]{hyphenat}
+
+\begin{document}
+\normalfont
+\input xy
+\xyoption{all}
+\author{\Large por FODE}
+\title{GEOMETRÍA EUCLIDIANA \\ \small Apuntes}
+\date{}
+\pagestyle{empty}
+\maketitle
+\thispagestyle{empty}
+\let\cleardoublepage\clearpage
+\tableofcontents 								%indice
+
+
+%------------------------------------------
+ 
+\let\cleardoublepage\clearpage
+
+%------------------------------------------
+\chapter{Rectas y Planos}
+\begin{center}
+\textbf{¿Como podría definirse un punto, una recta, un plano y el espacio?}\\
+\end{center}
+Estos cuatro conceptos son muy importantes en el estudio de la geometría; para estos términos no pueden definirse en términos simples y los llamamos términos no definidos ó primitivos.
+\paragraph{Punto:} Ubicación, sin longitud, anchura, ni altura.
+\paragraph{Recta:} Longitud ilimitada, derecha, sin grosor, ni extremos.
+\paragraph{Plano:} Ilimitado, continuo en todas direcciones, llano, sin grosor.
+\paragraph{Espacio:} Ilimitado, sin logitud, anchura, ni altura.\\\\
+\begin{tcolorbox}
+\begin{def.}[El espacio]
+es la colección de todos los puntos.
+\end{def.}
+\end{tcolorbox}
+
+\subsection*{Notación}
+\begin{itemize}
+\item Los puntos se representan con letras mayúsculas A, B, C, etc.
+\begin{center}
+\begin{tikzpicture}
+\draw[black] (0,0)node[]{$\bullet$} node[below]{$P$};
+\end{tikzpicture}
+\end{center}
+\item Las rectas los denotamos por: \textit{L} ó $\overline{AB}$.
+\begin{center}
+\begin{tikzpicture}
+\draw[<->](0,0)--(5,0)node[right]{$\textit{L} \; ó \; \overline{AB}$}; 
+\draw(1,0)node[]{$\bullet$}node[below]{$A$} (4,0)node[]{$\bullet$}node[below]{$B$};
+\end{tikzpicture}
+\end{center}
+\item Los planos se representará con letras cursivas: \textit{P}.
+\end{itemize}
+\begin{center}
+\begin{tikzpicture}[scale=0.4]
+\draw(0,0)--(10,0)--(12,5)node[right]{$\textit{P}$}--(2,5)--(0,0);
+\draw(2,2)node[]{$\bullet$}node[right]{$P$} ((5,3)node[]{$\bullet$}node[right]{$R$} (8,4)node[]{$\bullet$}node[right]{$Q$};
+\end{tikzpicture}
+\end{center}
+\begin{tcolorbox}
+\begin{def.}Puntos y rectas.
+\begin{itemize}
+\item \textbf{Los puntos colineales} son puntos que están en la misma recta.
+\item \textbf{Los puntos coplanares} son puntos que se encuentram en el mismo plano
+\item \textbf{Las rectas intersecantes} son dos rectas con un punto en común.
+\item \textbf{Las rectas concurrentes} son tres ó más rectas coplanares que tienen un punto en común.
+\end{itemize}
+\end{def.}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+\begin{post}[Postulado de la distancia] A cada par de puntos diferentes le corresponde un número real positivo único.\\
+\end{post}
+
+\begin{def.}
+el número dado por el postulado 1 se llama distancia entre los puntos $P$ y $Q$; lo que se denota por $PQ$.\\
+\begin{center}
+Si $P=Q$ entonces $PQ=0$
+\end{center}
+\end{def.}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+\begin{post}[Postulado de la regla] Podemos establecer una correspondencia entre los puntos de una recta y los números reales de manera que:
+\begin{enumerate}[\bfseries a)]
+\item A cada punto de la recta corresponde exactamente un número real,
+\item a cada número real corresponde exactamente un punto de la recta y
+\item la distancia entre los dos puntos cualesquiera es el valor absoluto de su diferencia.\\
+\end{enumerate}
+\end{post}
+\begin{def.}
+La correspondencia descrita por el postulado 2 se llama sistema de coordenadas.
+\begin{center}
+\begin{tikzpicture}[scale=2]
+\tkzDefPoints{-1/0/P,0/0/Q,1/0/R,2/0/S}
+\tkzDefPoints{-1/0/-1,0/0/0,1/0/1,2/0/2}
+\tkzDrawLine[<->](P,S)
+\tkzLabelPoints(-1,0,1,2)
+\tkzDrawPoints(P,Q,R,S)
+\tkzLabelPoints[above](P,Q,R,S)
+\end{tikzpicture}
+\end{center}
+\end{def.}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+\begin{post}[Posulado de la colocación de la regla]
+Dados dos puntos $P$ y $Q$ de una recta, se puede escoger el sistema de coordenadas de manera que la coordenada de $P$ sea cero y la coordenada de $Q$ sea positiva.\\
+\end{post}
+\begin{def.} $B$ esta $"$entre$"$ $A$ y $B$ si,
+\begin{enumerate}[\bfseries i)]
+\item $A,$ $B$ y $C$ son colineales.
+\item $AB + BC = AC$\\
+\end{enumerate}
+\end{def.}
+\begin{def.}
+Un segmento , $\overline{AB}$ es le conjunto de los puntos $A$ y $B$ de todos los puntos que están entre $A$ y $B$.\\
+\end{def.}
+\begin{def.}
+Un rayo $\overrightarrow{AB}$ es la unión del segmento $\overline{AB}$ y de todos los puntos $C$ para los cuales es verdad que $B$ está entre $A$ y $C,$
+\begin{center}
+\begin{tikzpicture}[scale=1]
+\tkzDefPoints{0/0/A,2/0/B,4/0/C}
+\tkzDrawLine[->](A,C)
+\tkzDrawPoints(A,B,C)
+\tkzLabelPoints(A,B,C)
+\end{tikzpicture}
+\end{center}
+\end{def.}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+\begin{post}[Postulado de la recta]
+Por dos puntos puntos distintos cualesquiera pasa exactamente una recta.
+\begin{center}
+$AB$ se llama longitud del segmento $\overline{AB}$\\
+\end{center}
+\end{post}
+Correspondencia biunivoca .- correspondencia uno a uno
+\end{tcolorbox}
+
+\begin{teo}[Teorema de la localización de puntos]
+Sea $\overrightarrow{AB}$
+un rayo y $x\in \mathbb{R}^+$. Entonces existe exactamente un punto $P\in \overrightarrow{AB} / AP = x$\\\\
+Demostración.- \; Dada la recta $\overleftrightarrow{AB}$; pro el postulado de la colocación de la regla podemos elegir un sistema de coordenadas de $A$ sea cero y la coordenada de $B$ sea un número positivo $r$
+\begin{center}
+\begin{tikzpicture}[scale=1]
+\tkzDefPoints{0/0/A,5/0/B,8/0/P}
+\tkzDefPoints{0/0/0,5/0/r,8/0/x}
+\tkzDrawLine[<->](0,x)
+\tkzLabelPoints(0,r,x)
+\tkzDrawPoints(A,B,P)
+\tkzLabelPoints[above](A,B,P)
+\end{tikzpicture}
+\end{center}
+Sea $P$ el punto cuyo coordenada es $x$; como $x\in \mathbb{R}^+$ entonces $x\in \overrightarrow{AB}$ y $AP=|x-0|=x$; pero $x>0$. La unicidad de $P$ se da por el postulado de la regla.\\\\
+\end{teo}
+
+\begin{tcolorbox}
+\begin{def.}
+Un punto $B$ se llama punto medio de un segmento $\overline{AC}$, si $B$ está entre $A$ y $B$ tal que $AB=BC$\\
+\begin{center}
+Decimos que el punto medio de un segmento \textbf{biseca} al segmento. \\
+\end{center}
+\end{def.}
+\end{tcolorbox}
+
+\begin{teo}
+Todo segmento tiene exactamente un punto medio.\\\\
+Demostración.- \; Si $B$ es el punto medio de $\overline{AC}$ entonces debe cumplirse: 
+\begin{center}
+$\left.
+\begin{array}{rcl}
+AB + BC & = & AC\\ 
+AB & = & BC
+\end{array}
+\right\}
+\Rightarrow AB = \dfrac{AC}{2}$
+\end{center}
+Luego por el Teorema 1, el rayo $\overrightarrow{AC}$ con $x=\dfrac{AC}{2} \in \mathbb{R}^+$ hay exactamente un punto $B$ tal que $AB=\dfrac{AC}{2}$. Así $\overline{AC}$ tiene exactamente un punto medio.\\\\ 
+\end{teo}
+
+
+
+\end{document}

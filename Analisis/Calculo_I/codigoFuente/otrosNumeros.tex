@@ -12,7 +12,7 @@ Demostración.- \; Las propiedades $a)$ y $b)$ nos dicen que $S$ es un conjunto 
 \end{teo}
 
 \section{Teoremas y Ejercicios}
-\subsection[Ejercicios]{Ejercicios\footnote{Tom Apostol Vol 1, pag 44}}
+\subsection[Ejercicios]{Ejercicios\footnote{Tom Apostol Vol 1, pag 44, pag 49}}
 %ejercicio 5.1
 \begin{ej}
 Demostrar por inducción las fórmulas siguientes:
@@ -131,11 +131,30 @@ $\dfrac{k+2}{2k+2}$&=&$\dfrac{k+2}{2k+2}$\\\\
 \end{center}
 \end{ej}
 
+%ejercicio I 4.7 problema 1 pag 49
+\begin{ej}
+Hallar los valores numéricos de las sumas siguientes:
+\begin{enumerate}[\bfseries a)]
+\item $\displaystyle\sum_{k=1}^{4} k = 1 + 2 + 3 + 4 = 10$\\\\
+
+\item $\displaystyle\sum_{n=2}^{5} 2^{n-2} = 2^{0} + 2^{1} + 2^{2} + 2^{3} = 15$\\\\
+
+\item $\displaystyle\sum_{r=0}^{3} 2^{2r+1} = 2^{1} + 2^{3} +  2^{5} + 2^{7} = 2 + 8 + 32 + 128 = 170$ \\\\
+
+\item $\displaystyle\sum_{n=1}^{4} n^n = 1^1 + 2^2 + 3^3 + 4^4 = 1 + 4 + 27 + 256= 288$ \\\\
+
+\item $\displaystyle\sum_{i=0}^{5} (2i + 1) = 1 + 3 + 5 + 7 + 9 + 11 = 36$ \\\\
+
+\item $\displaystyle\sum_{k=1}^{5} \dfrac{1}{k(k+1)} = \dfrac{1}{2} + \dfrac{1}{6} + \dfrac{1}{12} + \dfrac{1}{20} + \dfrac{1}{30} = 0,83333.....$ \\\\
+\end{enumerate}
+\end{ej}
 
 
 
 
-\subsection[Teoremas]{Teoremas\footnote{Calculus, Tom Apostol, pag. 45-46}}
+
+
+\subsection[Teoremas]{Teoremas\footnote{Calculus, Tom Apostol, pag. 45-46, 49-50}}
 
 %teorema 5.2
 \begin{teo}[principio de buena ordenación]
@@ -215,6 +234,83 @@ Demostración.-\; La proposición es evidentemente cierta si $n = 1$. El paso de
 Demostración.- \; Puesto que efectivamente existe una niña rubia con ojos azules, se puede aplicar el resultado precedente al conjunto formado por todas las niñas rubias.\\\\
 Esta prueba supone que la afirmación es cierta n = 3, es decir, supone que si hay tres chicas rubias, una de las cuales tiene ojos azules, entonces todas tienen ojos azules. Claramente, esta es una suposición falsa.\\\\
 \end{teo}
+
+%ejercicio 1 4.7 problema 2 pag 49
+\begin{teo}Establecer las siguientes propiedades del símbolo sumatorio. 
+\begin{enumerate}[\bfseries a)]
+\item $\displaystyle\sum_{k=1}^{n}(a_k + b_k) = \sum_{k=1} a_k + \sum_{k=1}^{n} b_k$ (propiedad aditiva)
+\begin{center}
+\begin{tabular}{r c l l}
+$\displaystyle\sum_{k=1}^{n}(a_k + b_k)$&$=$&$(a_1 + b_1) + (a_2 + b_2) + ... + (a_n + b_n)$&\\\\
+&$=$&$(a_1 + a_2 + ... + a_n) + (b_1 + b_2 + ... + b_n)$&Asociatividad y conmutatividad\\\\
+&$=$&$\displaystyle\sum_{k=1}^{n} a_k + \sum_{k=1}^{n} b_k$&\\\\
+\end{tabular}
+\end{center}
+
+\item $\displaystyle\sum_{k=1}^{n} (ca_k) = c \sum_{k=1}^{n} a_k$ (Prpiedad homogénea)
+\begin{center}
+\begin{tabular}{r c l l}
+$\displaystyle\sum_{k=1}^{n} (ca_k)$&$=$&$ca_1 + ca_2 + ... + ca_n$&\\\\
+&$=$&$c(a_1 + a_2 +...+a_n)$&distributividad\\\\
+&$=$&$ c \displaystyle\sum_{k=1}^{n} a$&\\\\
+\end{tabular}
+\end{center}
+
+\item $\displaystyle\sum_{k=1}^{n} (a_k - a_{k-1}) = a_n - a_0$ (Propiedad telescópica)
+\begin{center}
+\begin{tabular}{r c l l}
+$\displaystyle\sum_{k=1}^{n} (a_k - a_{k-1})$&$=$&$a_n + \displaystyle\sum_{k=1}^{n-1} a_k - \sum_{k=0}^{n-1} a_k$&Reindexando la segunda suma\\\\
+&$=$&$a_n + \displaystyle\sum_{k=1}^{n-1} a_k - a_0 - \sum_{k=1}^{n-1} a_k$&\\\\
+&$=$&$a_n - a_0$&\\\\
+\end{tabular}
+\end{center}
+\end{enumerate}
+\end{teo}
+
+% ejercicio I 4.7 problema 3 pag 49
+\begin{teo}
+$\displaystyle\sum_{k=1}^{n} 1 = n$ (El sentido de esta suma es $\displaystyle\sum_{k=1}^{n} a_k$, cuando $a_k=1$)\\\\
+Demostración.- \; Probemos por inducción, Si $n=1$, entonces la proposición es verdadera ya que $\displaystyle\sum_{k=1}^{1} 1 = 1.$ Ahora supongamos que el enunciado es verdadero para $n=m \in \mathbb{Z}^+.$ Luego, $$\displaystyle\sum_{k=1}^m 1 = m \Rightarrow \left( \sum_{k=1}^m 1 = m \right) + 1 = m + 1$$\\\\
+\end{teo}
+
+% ejercicio I 4.7 problema 4 pag 49
+\begin{teo}
+$\displaystyle\sum_{k=1}^{n} (2k - 1) = n^2$ $[Indicación, \; 2k-1 = k^2 - (k-1)^2]$\\\\
+Demostración.- \; Sea $2k-1 = k^2 - (k^2 - 2k + 1) = k^2 - (k-1)^2$ entonces  por la propiedad telescópica se tiene $\displaystyle\sum_{k=1}^n = \sum_{k=1}^{n} (k^2 - (k-1)^2) = n^2$\\\\
+\end{teo}
+
+% ejercicio I 4.7 problema 5 pag 49
+\begin{teo}
+$\displaystyle\sum_{k=1}^{n} k = \dfrac{n^2}{2} + \dfrac{n}{2} $ \; \; [indicación. \; Úsese el ejercicio 3 y el 4.\\\\
+Demostración.- \;Por aditividad y homogeneidad se tiene $\displaystyle\sum_{k=1}^{n}(2k-1) = 2\displaystyle\sum_{k=1}^{n} k - \sum_{k=1}^{n} 1 = n^2$ entonces $\displaystyle\sum_{k=1}^{n} k - n =n^2$ ya que $\displaystyle\sum_{k=1}^{n} 1 = n$, luego $\displaystyle\sum_{k=1}^{n} k = \dfrac{n^2}{2} + \dfrac{n}{2}$\\\\
+\end{teo}
+
+% ejercicio I 4.7 problema 6 pag 49
+\begin{teo}
+$\\displaystyle\sum_{k=1}^{n} k^2 = \dfrac{n^4}{4} + \dfrac{n^3}{2} + \dfrac{n^2}{4}$ $[Indicación. \; k^3 - (k-1)^3 = 3k^2 - 2k + 1]$\\\\
+Demostración.- \; 
+\end{teo}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \subsection[Teoremas]{Teoremas \footnote{Calculus, Tom Apostol, pag. 54-58}}
@@ -579,7 +675,58 @@ De este modo $\sqrt{6} - (\sqrt{2} + \sqrt{3})$ y $\sqrt{6} - 2 \left( \sqrt{2} 
 \item Demostrar que si $x=p+ \sqrt{q}$, donde $p$ \; y \; $q$ son racionales, y \; $m$ es un número natural, entonces $x^m = a + b \sqrt{q}$ siendo $a$ \; y \; $b$ números racionales.\\\\
 Demostración.- \; Sea $m=1$ entonces $(p + \sqrt{q})^1 = a + b\sqrt{q}$. Supongamos que se cumple para $m$, entonces $$(p+\sqrt{q})^{m+1} = (a + b\sqrt{q})(p + \sqrt{q}) = (ap+bq)+(a+pb)\sqrt{q}$$ donde $ap+bq$ y $a+bp$ son racionales.\\\\
 
-\item Demostrar también que $(p- \sqrt{q})^m = a - b\sqrt{q}$\\\\
+\item Demostrar también que $(p - \sqrt{q})^m = a - b\sqrt{q}$\\\\
 Demostración.- \; Similar a la parte $a)$, se cumple para $m=1$. Si es verdad para $m$, entonces $$(p-\sqrt{q})^{m+1} = (a - b\sqrt{q})(p - \sqrt{q}) = (ap+bq)-(a+pb)\sqrt{q}$$.\\\\
+\end{enumerate}
+\end{teo}
+
+%capitulo 2 problema 16 pag 40
+\begin{teo}Demostrar
+\begin{enumerate}[\bfseries a)]
+\item Demostrar que si $m$ \; y \; $n$ son números naturales y $m^2/n^2 < 2$, entonces $\left( m+2n \right)^2 / \left( m + 2 \right)^2 > 2;$ demostrar, además que $$\dfrac{\left( m + 2n \right)^2}{\left( m + n \right)^2} - 2 < 2 - \dfrac{m^2}{n^2}$$\\\\
+Demostración.- \; Si $m^2/n^2 < 2$ entonces $m^2 < 2 n^2$, sumando $m^2$, $4mn$ y $2n^2$ tenemos $2m^2 + 4mn + 2n^2 < 4n^2 + m^2 + 4mn$, luego $2(m+n)^2 < (m+2n)^2$, así nos queda $(m + 2n)^2 / (m+n)^2 > 2$\\
+Para la segunda parte podemos partir de $m^2 - 2n^2<0$, entonces:
+
+\begin{center}
+\begin{tabular}{r c l l}
+$m^2 - 2n^2$&$<$&$0$&\\\\
+$m^3 - 2mn^2$&$<$&$0$&multiplicando por $m$\\\\
+$mn^2 + m^3 + mn^2 - 4mn^2$&$<$&$0$&escribiendo $mn^2$ de otra manera\\\\
+$mn^2 + 2n^3 + m^3 + m^2 n + mn^2 -2m^2 n - 4mn^2 -2n^3$&$<$&$0$&sumando $2n^3$ y $2m^2 n$\\\\
+$n^2 (m+2n) + \left[ (m^2 + 2mn + n^2)(m-2n) \right]$&$<$&$0$&\\\\
+$ n^2(m+2n)^2  +  \left[ (m+n)^2 (m+2n)(m-2n) \right]$&$<$&$0$&multiplicando por $m+2n$\\\\
+$n^2(m+2n)^2  +  \left[ (m+n)^2 (m^2 - 4n^2) \right]$&$<$&$0$&\\\\
+$\dfrac{n^2(m+2n)^2 - 4n^2(m+n)^2 + m^2(m+n)^2}{n^2(m+n)^2}$&$<$&$0$&dividimos por $n^2(m+n)^2$\\\\
+$\dfrac{(m+2n)^2 - 2(m+2)^2 - 2n^2(m+2)^2}{n^2(m+n)^2}$&$<$&$- \dfrac{m^2}{n^2}$&\\\\
+$\dfrac{(m+2n)^2}{(m+n)^2} - 2$&$<$&$2 - \dfrac{m^2}{n^2}$&\\\\
+\end{tabular}
+\end{center}
+
+\item Demostrar los mismos resultados con todos los signos de desigualdad invertidos. \\\\
+Demostración.- \; Quedará de la siguiente forma, Si $m^2/n^2>2$, entonces $\left( m+2n \right)^2 / \left( m + 2 \right)^2 < 2$, luego demostrar que $$\dfrac{\left( m + 2n \right)^2}{\left( m + n \right)^2} - 2 > 2 - \dfrac{m^2}{n^2}$$
+Similar a la parte $a)$ tendremos $m^2 > 2n^2$, luego $2m^2 + 4mn + 2n^2 > 4n^2 + m^2 + 4mn$, así $ (m+2n)^2 > 2(m + n)^2 $\\
+Después se puede demostrar la segunda parte con facilidad siguiendo el ejemplo $a)$ pero invirtiendo la desigualdad ya que $n$ \; y \; $m$ son números natural.\\\\
+
+\item Demostrar que si $m/n < \sqrt{2}$, entonces existe otro número racional $m^2 / n^2$ con $m/n < m^{'} / n^{'} < \sqrt{2}$\\\\
+Demostración.- \; Sea $m^{'}/n^{'}$ un número racional, por el ejercicio I 3.12 problema 6 de Calculus de Tom Apostol Vol I, queda demostrada la proposición.\\\\
+\end{enumerate}
+\end{teo}
+
+%chapter 2 problema 14 
+\begin{teo}
+Parece normal que $\sqrt{n}$ tenga que ser irracional siempre que el número natural $n$ no sea el cuadrado de otro número natural. Aunque puede usarse en realidad el método del problema 13 del capitulo 2 de Michael Spivak para tratar cualquier caso particular, no está claro, sin más, que este método tenga que dar necesariamente resultados, y para una demostración del caso general se necesita más información. Un número natural $p$ se dice que es un número primo si es imposible escribir $p=ab$; por conveniencia se considera que $1$ no es un número primo. Los primeros números primos son $2,3,5,7,11,13,17,19.$ Si $n>1$ no es primo, entonces $n=ab,$ con $a$ \; y \; $b$ ambos $<n;$ si uno de los dos $a$ \; o \; $b$ no es primo, puede ser factorizado de manera parecido; continuando de esta manera se demuestra que se puede escribir $n$ como producto de números primos. Por ejemplo, $28=2\cdot 2\cdot 7.$\\
+\begin{enumerate}[\bfseries a)]
+\item Conviértase este argumento en una demostración riguroso por inducción completa. (En realidad, cualquier matemático razonable aceptaría este argumento informal, pero ello se debería en parte a que para él estaría claro cómo formularla rigurosamente.)\\
+Un teorema fundamental acerca de enteros, que no demostraremos aquí, afirma que esta factorización es única, salvo en lo que respeta al orden de los factores. Así, por ejemplo, $28$ no puede escribirse nunca como producto de números primos uno de los cuales sea $3$, ni puede ser escrito de manera que $2$ aparezca una sola vez (ahora debería verse clara la razón de no admitir a $1$ como número primo.)\\\\
+demostración.- \; Supóngase que todo número $<n$ puede ser escrito  como un producto de primos. Si $n>1$ no es primo, entonces $n=ab$, para $a,b<n$. Pero $a$ \; y \; $b$ son ambos producto de primos, así que $n=ab$ lo es también.\\\\
+
+\item Utilizando este hecho, demostrar que $\sqrt{n}$ es irracional a no ser que $n=m^2$ para algún número natural $m.$\\\\
+Demostración.- \; Sea $\sqrt{n} = \dfrac{p}{q}$, entonces $nb^2 = a^2,$  luego si descomponemos en producto de factores primos, $nb^2$ y $a^2$ deberían coincidir. Ahora según lo explicado anteriormente, cada número primo debe aparecer un número par de veces en $a^2$ y $b^2$, y por lo tanto deberá ocurrir lo mismo con $n.$ Esto implica que $n$ es un cuadrado perfecto.\\\\
+
+\item Demostrar que $\sqrt[k]{n}$ es irracional a no ser que $n=m^k$\\\\
+Demostración.- \; 
+
+\item Al tratar de números primos no se puede omitir la hermosa demostración de Euclides de que existe un número infinito de ellos. Demuestre que no puede haber sólo un número finito de números primos $p_1, p_2, p_3,...,p_n$ considerando $p_1\cdot p_2 \cdot ... \cdot p_k + 1$\\\\
+Demostración.- \;  
 \end{enumerate}
 \end{teo}
